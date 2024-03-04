@@ -5,8 +5,34 @@ html, body {
 
 .navBar {
   background-color: #ffffff00;
-  font: normal normal 500 25px "Playfair Display";
+  font: normal normal 500 25px "Prata";
   color: #000;
+}
+
+.navBar.scrolled.biggerScreen {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+  border-bottom: 1px solid #00000049;
+  -webkit-filter: drop-shadow(5px 5px 8px #0000003d) !important;
+          filter: drop-shadow(5px 5px 8px #0000003d) !important;
+}
+
+.navBar.scrolled.biggerScreen .linkContainer {
+  border-bottom: 0px !important;
+  padding-bottom: 0px !important;
+  -webkit-box-pack: left !important;
+      -ms-flex-pack: left !important;
+          justify-content: left !important;
+}
+
+.navBar.scrolled.biggerScreen .logoNav img {
+  height: 7vh !important;
+}
+
+.navBar.scrolled.biggerScreen .logoNav img:hover {
+  -webkit-filter: drop-shadow(1px 1px 1px #0000007c) !important;
+          filter: drop-shadow(1px 1px 1px #0000007c) !important;
 }
 
 .navBar.mobileView {
@@ -179,6 +205,8 @@ html, body {
   margin-bottom: 40px;
   -webkit-transition: height 0.5s ease;
   transition: height 0.5s ease;
+  -webkit-filter: drop-shadow(1px 1px 1px #0000007c) !important;
+          filter: drop-shadow(1px 1px 1px #0000007c) !important;
 }
 
 .navBar.mobileView #navMenu.show {
@@ -228,6 +256,13 @@ html, body {
   height: 12vh;
   margin-left: 3vw;
   margin-right: 5vw;
+  -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+}
+
+.navBar.biggerScreen #navBgScn img:hover {
+  -webkit-filter: drop-shadow(1px 1px 1px #0000007c) !important;
+          filter: drop-shadow(1px 1px 1px #0000007c) !important;
 }
 
 .navBar.biggerScreen #navBgScn .linkContainer {
@@ -280,5 +315,34 @@ html, body {
   background-size: cover;
   background-position: top;
   height: 100%;
+}
+
+.landingPage .chefQuote {
+  background-color: #F3F1E5;
+}
+
+.landingPage .chefQuote p {
+  margin: 0px;
+}
+
+.landingPage .chefQuote .upLine {
+  font-size: 63px;
+}
+
+.landingPage .chefQuote .upLine span {
+  font-size: 55px;
+}
+
+.landingPage .chefQuote .dwnLine {
+  font-size: 55px;
+}
+
+.landingPage .chefQuote .dwnLine span {
+  font-size: 58px;
+}
+
+.landingPage img {
+  -webkit-transform: rotate(-2deg);
+          transform: rotate(-2deg);
 }
 /*# sourceMappingURL=style.css.map */

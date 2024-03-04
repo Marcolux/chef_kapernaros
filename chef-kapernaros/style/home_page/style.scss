@@ -7,7 +7,7 @@ html, body {
 $navBackGroundColor: #ffffff00;
 $navBarTextColor: #000;
 $navBtnBackGround: #C4B980;
-$navFont: normal normal 500 25px 'Playfair Display';
+$navFont: normal normal 500 25px 'Prata';
 
 // font: [font-style] [font-variant] [font-weight] [font-size]/[line-height] [font-family];
 
@@ -17,6 +17,31 @@ $navFont: normal normal 500 25px 'Playfair Display';
 	background-color: $navBackGroundColor;
     font: $navFont;
 	color: $navBarTextColor;
+	
+	&.scrolled{
+		
+		&.biggerScreen{
+			transition: all 0.3s ease;
+			background-color: #ffffff;
+			border-bottom: 1px solid #00000049;
+			filter: drop-shadow(5px 5px 8px #0000003d) !important;
+			.linkContainer{
+				border-bottom: 0px !important;
+				padding-bottom: 0px !important;
+				justify-content: left !important;
+			}
+			.logoNav{
+				img{
+					height: 7vh !important;
+					&:hover{
+						// height: 7.1vh !important;
+						// filter: brightness(80%) !important;
+						filter: drop-shadow(1px 1px 1px #0000007c) !important;
+					}
+				}
+			}
+		}
+	}
 
 	&.mobileView {
 		max-width: 50px;
@@ -144,7 +169,8 @@ $navFont: normal normal 500 25px 'Playfair Display';
 			img{
 				height: 0vh;
 				margin-bottom: 40px;
-				transition: height 0.5s ease ;
+				transition: height 0.5s ease;
+				filter: drop-shadow(1px 1px 1px #0000007c) !important;
 			}
 
 			&.show{
@@ -180,6 +206,11 @@ $navFont: normal normal 500 25px 'Playfair Display';
 				height: 12vh;
 				margin-left: 3vw;
 				margin-right: 5vw;
+				filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.5));
+				&:hover{
+					filter: drop-shadow(1px 1px 1px #0000007c) !important;
+
+				}
 			}
             .linkContainer{
                 border-bottom: 1px solid #000;
@@ -229,4 +260,26 @@ $navFont: normal normal 500 25px 'Playfair Display';
     background-size: cover;
     background-position: top;
     height: 100%;
+    .chefQuote{
+        background-color: #F3F1E5;
+        // width: fit-content;
+        p{
+            margin: 0px;
+        }
+        .upLine{
+            font-size: 63px;
+            span{
+                font-size: 55px;
+            }
+        }
+        .dwnLine{
+            font-size: 55px;
+            span{
+                font-size: 58px;
+            }
+        }
+    }
+    img{
+        transform: rotate(-2deg);
+    }
 }

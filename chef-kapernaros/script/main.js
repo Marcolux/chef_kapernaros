@@ -32,4 +32,12 @@ var navBarAdjToScreen = function () {
 };
 window.addEventListener('resize', navBarAdjToScreen);
 navBarAdjToScreen();
+window.addEventListener('scroll', function () {
+    if (window.pageYOffset > 30) {
+        navBar.classList.add('scrolled');
+    }
+    else {
+        navBar.classList.remove('scrolled');
+    }
+});
 console.log('all the time 4 try');
