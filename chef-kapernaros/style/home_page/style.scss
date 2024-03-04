@@ -284,6 +284,58 @@ $navFont: normal normal 500 25px 'Prata';
     }
 }
 
+.middlePic{
+	background-color: #F5F5F5;
+	img{
+		object-fit: cover;
+		aspect-ratio: 1/1.2;
+		width: 33%;
+	}
+}
+.bioLanding{
+	height: 70vh;
+	.bioLandingPicContainer{
+		position: relative;
+		height: 100%;
+		margin-top: 2%;
+		img{
+			position: absolute;
+			height: 40%;
+			box-shadow: 6px 6px 6px #C3C3C3;
+			aspect-ratio: 1/1.1;
+			object-fit: cover;
+			object-position: center;
+			transform: translateX(-820px);
+			scale: 0;
+			transition: all 0.5s ease;
+			&.in-view{
+				scale: 1;
+				transform: translateX(0px);
+				&#pic1{
+					top: 0%;
+					left: 0%;
+					z-index: 4;
+				}
+				&#pic2{
+					top: 22%;
+					left: 20%;
+					z-index: 3;
+				}
+				&#pic3{
+					top: 55%;
+					left: 0%;
+					z-index: 2;
+				}
+				&#pic4{
+					top: 32%;
+					left: -20%;
+					z-index: 1;
+				}
+			}
+		}
+	}
+}
+
 
 // Break Points 
 

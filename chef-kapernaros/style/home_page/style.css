@@ -347,6 +347,74 @@ html, body {
           transform: rotate(-2deg);
 }
 
+.middlePic {
+  background-color: #F5F5F5;
+}
+
+.middlePic img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 1/1.2;
+  width: 33%;
+}
+
+.bioLanding {
+  height: 70vh;
+}
+
+.bioLanding .bioLandingPicContainer {
+  position: relative;
+  height: 100%;
+  margin-top: 2%;
+}
+
+.bioLanding .bioLandingPicContainer img {
+  position: absolute;
+  height: 40%;
+  -webkit-box-shadow: 6px 6px 6px #C3C3C3;
+          box-shadow: 6px 6px 6px #C3C3C3;
+  aspect-ratio: 1/1.1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-transform: translateX(-820px);
+          transform: translateX(-820px);
+  scale: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.bioLanding .bioLandingPicContainer img.in-view {
+  scale: 1;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+.bioLanding .bioLandingPicContainer img.in-view#pic1 {
+  top: 0%;
+  left: 0%;
+  z-index: 4;
+}
+
+.bioLanding .bioLandingPicContainer img.in-view#pic2 {
+  top: 22%;
+  left: 20%;
+  z-index: 3;
+}
+
+.bioLanding .bioLandingPicContainer img.in-view#pic3 {
+  top: 55%;
+  left: 0%;
+  z-index: 2;
+}
+
+.bioLanding .bioLandingPicContainer img.in-view#pic4 {
+  top: 32%;
+  left: -20%;
+  z-index: 1;
+}
+
 @media only screen and (max-width: 700px) {
   .landingPage {
     -webkit-box-pack: end !important;

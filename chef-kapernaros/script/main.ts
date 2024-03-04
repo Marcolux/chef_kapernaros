@@ -35,16 +35,36 @@ const navBarAdjToScreen = () => {
         })
     }
 }
-
-window.addEventListener('resize',navBarAdjToScreen)
-navBarAdjToScreen()
-
-window.addEventListener('scroll', ()=>{
+const navScrolling = ()=>{
     if (window.pageYOffset > 30) {
         navBar.classList.add('scrolled')
     } else {
         navBar.classList.remove('scrolled')
     }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view')
+            } else {
+                entry.target.classList.remove('in-view')
+            }
+        })
+    }, {
+        threshold: 0.1
+    })
+
+    document.querySelectorAll('.bioLandingPicContainer img').forEach(img => {
+        observer.observe(img)
+    })
 })
+
+window.addEventListener('resize',navBarAdjToScreen)
+navBarAdjToScreen()
+
+window.addEventListener('scroll',() => { navScrolling() })
+navScrolling()
 
 console.log('all the time 4 try')
