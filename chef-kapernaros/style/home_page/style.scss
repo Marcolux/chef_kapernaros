@@ -1,5 +1,10 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
 
-$navBackGroundColor: #fff;
+
+$navBackGroundColor: #ffffff00;
 $navBarTextColor: #000;
 $navBtnBackGround: #C4B980;
 $navFont: normal normal 500 25px 'Playfair Display';
@@ -173,8 +178,8 @@ $navFont: normal normal 500 25px 'Playfair Display';
 			align-items: center;
 			img{
 				height: 12vh;
-				margin-left: 2.5vw;
-				margin-right: 6vw;
+				margin-left: 3vw;
+				margin-right: 5vw;
 			}
             .linkContainer{
                 border-bottom: 1px solid #000;
@@ -216,4 +221,12 @@ $navFont: normal normal 500 25px 'Playfair Display';
 			}
 		}
 	}
+}
+
+// LANDING PAGE ========
+.landingPage{
+    background-image: url('https://res.cloudinary.com/drdrs6pdq/image/upload/v1709553929/Home_Page_Chef_Kapernaros_img_HQ_1_q0nf2f.png');
+    background-size: cover;
+    background-position: top;
+    height: 100%;
 }
