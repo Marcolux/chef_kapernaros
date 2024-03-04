@@ -7,6 +7,7 @@ html, body {
 $navBackGroundColor: #ffffff00;
 $navBarTextColor: #000;
 $navBtnBackGround: #C4B980;
+$navBtnBackGroundDK: #000;
 $navFont: normal normal 500 25px 'Prata';
 
 // font: [font-style] [font-variant] [font-weight] [font-size]/[line-height] [font-family];
@@ -34,8 +35,6 @@ $navFont: normal normal 500 25px 'Prata';
 				img{
 					height: 7vh !important;
 					&:hover{
-						// height: 7.1vh !important;
-						// filter: brightness(80%) !important;
 						filter: drop-shadow(1px 1px 1px #0000007c) !important;
 					}
 				}
@@ -52,7 +51,7 @@ $navFont: normal normal 500 25px 'Prata';
 		position: fixed;
 		right: 10px;
 		top: 10px;
-		border: 2px solid $navBtnBackGround;
+		border: 2px solid $navBtnBackGroundDK;
 		border-radius: 40px;
 		transition: max-width 0.4s ease, height 0.4s ease, border-radius 0.6s ease; 
 		z-index: 9999;
@@ -61,6 +60,7 @@ $navFont: normal normal 500 25px 'Prata';
 			height: 99.4%;
 			border-radius: 0px;
 			border-inline: -12px;
+			background-color:#ffffffce;
 			right: 0px;
 			top: 0px;
 			#navMenu{
@@ -131,7 +131,7 @@ $navFont: normal normal 500 25px 'Prata';
 					height: 4px;
 					border-radius: 10px;
 					width: 95%;
-					background-color: $navBtnBackGround;
+					background-color: $navBtnBackGroundDK;
 					border-radius: 10px;
 					transition: all 0.4s ease;	
 				}
@@ -282,4 +282,40 @@ $navFont: normal normal 500 25px 'Prata';
     img{
         transform: rotate(-2deg);
     }
+}
+
+
+// Break Points 
+
+@media only screen and (max-width: 700px) {
+	.landingPage{
+		justify-content: end !important;
+		// background-position: right;
+		background-position-x: 87.5%;
+		.signature{
+			width: 100% !important;
+			// z-index: 9999999;
+			img{
+				width: 70%;
+			}
+			background-color: #ffffff69 !important;
+			margin-top: 0px !important;
+		}
+		.chefQuote{
+			width: 100% !important;
+			padding: 20px 0px !important;
+			background-color: #ffffff69 !important;
+			// z-index: 9999999;
+		}
+		i{
+			font-size: 20px !important;
+		}
+		p{
+			font-size: 25px !important;
+			span{
+				font-size: 28px !important
+			};
+		}
+	}
+
 }

@@ -49,7 +49,7 @@ html, body {
   position: fixed;
   right: 10px;
   top: 10px;
-  border: 2px solid #C4B980;
+  border: 2px solid #000;
   border-radius: 40px;
   -webkit-transition: max-width 0.4s ease, height 0.4s ease, border-radius 0.6s ease;
   transition: max-width 0.4s ease, height 0.4s ease, border-radius 0.6s ease;
@@ -61,6 +61,7 @@ html, body {
   height: 99.4%;
   border-radius: 0px;
   border-inline: -12px;
+  background-color: #ffffffce;
   right: 0px;
   top: 0px;
 }
@@ -153,7 +154,7 @@ html, body {
   height: 4px;
   border-radius: 10px;
   width: 95%;
-  background-color: #C4B980;
+  background-color: #000;
   border-radius: 10px;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -344,5 +345,36 @@ html, body {
 .landingPage img {
   -webkit-transform: rotate(-2deg);
           transform: rotate(-2deg);
+}
+
+@media only screen and (max-width: 700px) {
+  .landingPage {
+    -webkit-box-pack: end !important;
+        -ms-flex-pack: end !important;
+            justify-content: end !important;
+    background-position-x: 87.5%;
+  }
+  .landingPage .signature {
+    width: 100% !important;
+    background-color: #ffffff69 !important;
+    margin-top: 0px !important;
+  }
+  .landingPage .signature img {
+    width: 70%;
+  }
+  .landingPage .chefQuote {
+    width: 100% !important;
+    padding: 20px 0px !important;
+    background-color: #ffffff69 !important;
+  }
+  .landingPage i {
+    font-size: 20px !important;
+  }
+  .landingPage p {
+    font-size: 25px !important;
+  }
+  .landingPage p span {
+    font-size: 28px !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */
