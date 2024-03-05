@@ -9,6 +9,7 @@ $navBarTextColor: #000;
 $navBtnBackGround: #C4B980;
 $navBtnBackGroundDK: #000;
 $navFont: normal normal 500 25px 'Prata';
+$primaryColor: #897400;
 
 // font: [font-style] [font-variant] [font-weight] [font-size]/[line-height] [font-family];
 
@@ -294,6 +295,7 @@ $navFont: normal normal 500 25px 'Prata';
 }
 .bioLanding{
 	height: 70vh;
+	// display: flex;
 	.bioLandingPicContainer{
 		position: relative;
 		height: 100%;
@@ -305,38 +307,95 @@ $navFont: normal normal 500 25px 'Prata';
 			aspect-ratio: 1/1.1;
 			object-fit: cover;
 			object-position: center;
-			transform: translateX(-820px);
+			transform: translateX(200%);
+			opacity: 0;
 			scale: 0;
-			transition: all 0.5s ease;
+			transition: all 0.6s ease;
 			&.in-view{
 				scale: 1;
-				transform: translateX(0px);
+				opacity: 1;
+				transform: translateX(0%);
 				&#pic1{
 					top: 0%;
-					left: 0%;
+					left: 35%;
 					z-index: 4;
+					transition-delay: 0s;
 				}
 				&#pic2{
 					top: 22%;
-					left: 20%;
+					left: 55%;
 					z-index: 3;
+					transition-delay: 0.2s;
 				}
 				&#pic3{
 					top: 55%;
-					left: 0%;
+					left: 35%;
 					z-index: 2;
+					transition-delay: 0.4s;
 				}
 				&#pic4{
 					top: 32%;
-					left: -20%;
+					left: 15%;
 					z-index: 1;
+					transition-delay: 0.6s;
 				}
 			}
 		}
 	}
+	.bioLandingTextContainer{
+		.textBioLanding{
+			font-family: 'Inter';
+			text-align: justify;
+			text-justify: inter-word;
+			padding-right: 60px;
+		}
+	}
+
 }
 
+.titlesChef { 
+	color: #001489;
+    text-align: justify;
+	font: $navFont;
+	font-size: 35px;
+    line-height: normal;
+	position: relative;
+	margin-left: 15px;
+	&::before{
+		content: '';
+		position: absolute;
+		bottom: 0px ;
+		left: -15px;
+		width: 8px;
+		height: 100%;
+		background-color: $primaryColor;
+	}
+}
 
+.btnPrimary {
+	border: 1px solid $primaryColor;
+	color: $primaryColor;
+	font-family: 'Inter';
+	text-decoration: none;
+	padding: 10px 35px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: fit-content;
+	font-size: 20px;
+	filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+	transition: all 0.3s ease;
+	&:hover{
+		filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.55));
+		cursor: pointer;
+	}
+	&:active{
+		filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+		box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+	}
+
+}
 // Break Points 
 
 @media only screen and (max-width: 700px) {

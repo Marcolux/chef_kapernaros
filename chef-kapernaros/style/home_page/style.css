@@ -378,41 +378,117 @@ html, body {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  -webkit-transform: translateX(-820px);
-          transform: translateX(-820px);
+  -webkit-transform: translateX(200%);
+          transform: translateX(200%);
+  opacity: 0;
   scale: 0;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
 }
 
 .bioLanding .bioLandingPicContainer img.in-view {
   scale: 1;
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
+  opacity: 1;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 .bioLanding .bioLandingPicContainer img.in-view#pic1 {
   top: 0%;
-  left: 0%;
+  left: 35%;
   z-index: 4;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
 }
 
 .bioLanding .bioLandingPicContainer img.in-view#pic2 {
   top: 22%;
-  left: 20%;
+  left: 55%;
   z-index: 3;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
 }
 
 .bioLanding .bioLandingPicContainer img.in-view#pic3 {
   top: 55%;
-  left: 0%;
+  left: 35%;
   z-index: 2;
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
 }
 
 .bioLanding .bioLandingPicContainer img.in-view#pic4 {
   top: 32%;
-  left: -20%;
+  left: 15%;
   z-index: 1;
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+.bioLanding .bioLandingTextContainer .textBioLanding {
+  font-family: 'Inter';
+  text-align: justify;
+  text-justify: inter-word;
+  padding-right: 60px;
+}
+
+.titlesChef {
+  color: #001489;
+  text-align: justify;
+  font: normal normal 500 25px "Prata";
+  font-size: 35px;
+  line-height: normal;
+  position: relative;
+  margin-left: 15px;
+}
+
+.titlesChef::before {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: -15px;
+  width: 8px;
+  height: 100%;
+  background-color: #897400;
+}
+
+.btnPrimary {
+  border: 1px solid #897400;
+  color: #897400;
+  font-family: 'Inter';
+  text-decoration: none;
+  padding: 10px 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 20px;
+  -webkit-filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+          filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.btnPrimary:hover {
+  -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.55));
+          filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.55));
+  cursor: pointer;
+}
+
+.btnPrimary:active {
+  -webkit-filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+          filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+  -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+          box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 }
 
 @media only screen and (max-width: 700px) {

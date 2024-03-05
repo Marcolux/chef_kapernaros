@@ -43,28 +43,24 @@ const navScrolling = ()=>{
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('in-view')
-            } else {
-                entry.target.classList.remove('in-view')
-            }
-        })
-    }, {
-        threshold: 0.01
-    })
-
+const picAnimation = () => {
     document.querySelectorAll('.bioLandingPicContainer img').forEach(img => {
-        observer.observe(img)
+        if (window.pageYOffset > 600) {
+            img.classList.add('in-view')
+        } else if (window.pageYOffset < 400) {
+            img.classList.remove('in-view')
+        }
     })
-})
+}
 
 window.addEventListener('resize',navBarAdjToScreen)
 navBarAdjToScreen()
 
-window.addEventListener('scroll',() => { navScrolling() })
+window.addEventListener('scroll',() => { 
+    navScrolling() 
+    picAnimation()
+})
 navScrolling()
+picAnimation()
 
 console.log('all the time 4 try')
