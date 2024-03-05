@@ -33,6 +33,11 @@
   src: url("../../fonts/Inter/Inter-Regular.ttf");
 }
 
+@font-face {
+  font-family: 'Merriweather';
+  src: url("../../fonts/Merriweather/Merriweather-Regular.ttf");
+}
+
 .rotate180 {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -66,6 +71,10 @@
   color: #fff !important;
 }
 
+.textDkGold {
+  color: #B59A07 !important;
+}
+
 .textBlue {
   color: #192f42 !important;
 }
@@ -96,5 +105,37 @@
 ::-webkit-scrollbar-thumb {
   background-color: #000000b1;
   border-radius: 3px;
+}
+
+.font-ledger {
+  font-family: 'Ledger' !important;
+}
+
+.font-bebas-neue {
+  font-family: 'Bebas Neue' !important;
+}
+
+.font-prata {
+  font-family: 'Prata' !important;
+}
+
+.font-bison {
+  font-family: 'Bison' !important;
+}
+
+.font-september-script {
+  font-family: 'September Script' !important;
+}
+
+.font-playfair-display {
+  font-family: 'Playfair Display' !important;
+}
+
+.font-inter {
+  font-family: 'Inter' !important;
+}
+
+.font-merriweather {
+  font-family: 'Merriweather' !important;
 }
 /*# sourceMappingURL=common-style.css.map */

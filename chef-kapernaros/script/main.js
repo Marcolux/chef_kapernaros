@@ -40,10 +40,18 @@ var navScrolling = function () {
 };
 var picAnimation = function () {
     document.querySelectorAll('.bioLandingPicContainer img').forEach(function (img) {
-        if (window.pageYOffset > 600) {
+        if (window.pageYOffset > 600 && window.pageYOffset < 1900) {
             img.classList.add('in-view');
         }
-        else if (window.pageYOffset < 400) {
+        else if (window.pageYOffset < 400 || window.pageYOffset > 1901) {
+            img.classList.remove('in-view');
+        }
+    });
+    document.querySelectorAll('.achCards').forEach(function (img) {
+        if (window.pageYOffset > 1550) {
+            img.classList.add('in-view');
+        }
+        else if (window.pageYOffset < 1100) {
             img.classList.remove('in-view');
         }
     });

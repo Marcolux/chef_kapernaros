@@ -27,7 +27,7 @@ html, body {
 }
 
 .navBar.scrolled.biggerScreen .logoNav img {
-  height: 7vh !important;
+  height: 5vh !important;
 }
 
 .navBar.scrolled.biggerScreen .logoNav img:hover {
@@ -231,7 +231,7 @@ html, body {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  padding-top: 2.5vh;
+  padding-top: 1.5vh;
   padding-bottom: 1.5vh;
   z-index: 9999;
 }
@@ -432,6 +432,82 @@ html, body {
   padding-right: 60px;
 }
 
+.achievementLanding {
+  min-height: 780px;
+  height: 88vh;
+  background-color: #EAEAEA;
+}
+
+.achievementLanding .allAchvmText {
+  position: relative;
+}
+
+.achievementLanding .allAchvmText img {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+}
+
+.achievementLanding .allAchvmText p:not(.titlesChef) {
+  margin-top: 0px !important;
+  margin-bottom: 25px !important;
+}
+
+.achievementLanding .allAchvmText .achCards {
+  background-color: #2F2F2F;
+  color: #e1e0d3;
+  -webkit-box-shadow: 6px 6px 6px #00000059;
+          box-shadow: 6px 6px 6px #00000059;
+  padding: 25px 25px;
+  margin-top: 0px;
+  -webkit-transform: translateY(400%);
+          transform: translateY(400%);
+  scale: 0;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+.achievementLanding .allAchvmText .achCards.in-view {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  scale: 1;
+}
+
+.achievementLanding .allAchvmText .achCards.in-view#card-1 {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  right: 30%;
+}
+
+.achievementLanding .allAchvmText .achCards.in-view#card-2 {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.achievementLanding .allAchvmText .achCards.in-view#card-3 {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.achievementLanding .allAchvmText .achCards.in-view#card-4 {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+.achievementLanding .allAchvmText .achCards.in-view#card-5 {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+
+.achievementLanding .imgAchvm img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  aspect-ratio: 1/1.5;
+}
+
 .titlesChef {
   color: #001489;
   text-align: justify;
@@ -445,8 +521,8 @@ html, body {
 .titlesChef::before {
   content: '';
   position: absolute;
-  bottom: 0px;
-  left: -15px;
+  bottom: 5px;
+  left: -25px;
   width: 8px;
   height: 100%;
   background-color: #897400;
