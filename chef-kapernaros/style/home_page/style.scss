@@ -459,6 +459,95 @@ $primaryColor: #897400;
 }
 // Break Points 
 
+@media only screen and (min-width: 701px) and (max-width: 1590px) {
+	.achievementLanding{
+		.btnPrimary{
+			font-size: 16px !important;
+			padding: 10px 20px !important;
+
+		}
+		.allAchvmText{
+			width: 60% !important;
+			#chef-corps-logo{
+				max-width: 200px !important;
+			}
+			img{
+
+			}
+			p:not(.titlesChef){
+				margin-top: 0px !important;		
+				margin-bottom: 25px !important;		
+			}
+			.achCards{
+	
+				&.in-view{
+					&#card-1{
+						// font-size: ;
+						right: 30%;
+					}
+					&#card-2{
+						font-size: 25px !important;
+					}
+					&#card-3{
+						font-size: 20px !important;
+					}
+					&#card-4{
+						font-size: 17px !important;
+					}
+					&#card-5{
+						font-size: 25px !important;
+					}
+				}
+			}
+	
+		}
+		.imgAchvm{
+			width: 40% !important;
+			img{
+
+			}
+		}
+	}
+}
+@media only screen and (max-width: 1361px) {
+	.btnPrimary{
+		position: absolute;
+		bottom: 30px;
+	}
+}
+@media only screen and (max-width: 1200px) {
+	.achievementLanding{
+
+		.allAchvmText{
+			.cardsLine{
+				flex-wrap: wrap;
+				width: 100% !important;
+			}
+			img{
+
+			}
+			p:not(.titlesChef){
+				margin-top: 0px !important;		
+				margin-bottom: 25px !important;		
+			}
+			.achCards{
+				max-width: 100% !important;
+				width: 100% !important;
+	
+				&.in-view{
+
+				}
+			}
+	
+		}
+		.imgAchvm{
+
+			img{
+
+			}
+		}
+	}
+}
 @media only screen and (max-width: 700px) {
 	.landingPage{
 		justify-content: end !important;

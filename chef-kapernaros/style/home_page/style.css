@@ -567,6 +567,64 @@ html, body {
           box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 }
 
+@media only screen and (min-width: 701px) and (max-width: 1590px) {
+  .achievementLanding .btnPrimary {
+    font-size: 16px !important;
+    padding: 10px 20px !important;
+  }
+  .achievementLanding .allAchvmText {
+    width: 60% !important;
+  }
+  .achievementLanding .allAchvmText #chef-corps-logo {
+    max-width: 200px !important;
+  }
+  .achievementLanding .allAchvmText p:not(.titlesChef) {
+    margin-top: 0px !important;
+    margin-bottom: 25px !important;
+  }
+  .achievementLanding .allAchvmText .achCards.in-view#card-1 {
+    right: 30%;
+  }
+  .achievementLanding .allAchvmText .achCards.in-view#card-2 {
+    font-size: 25px !important;
+  }
+  .achievementLanding .allAchvmText .achCards.in-view#card-3 {
+    font-size: 20px !important;
+  }
+  .achievementLanding .allAchvmText .achCards.in-view#card-4 {
+    font-size: 17px !important;
+  }
+  .achievementLanding .allAchvmText .achCards.in-view#card-5 {
+    font-size: 25px !important;
+  }
+  .achievementLanding .imgAchvm {
+    width: 40% !important;
+  }
+}
+
+@media only screen and (max-width: 1361px) {
+  .btnPrimary {
+    position: absolute;
+    bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .achievementLanding .allAchvmText .cardsLine {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100% !important;
+  }
+  .achievementLanding .allAchvmText p:not(.titlesChef) {
+    margin-top: 0px !important;
+    margin-bottom: 25px !important;
+  }
+  .achievementLanding .allAchvmText .achCards {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
+
 @media only screen and (max-width: 700px) {
   .landingPage {
     -webkit-box-pack: end !important;
