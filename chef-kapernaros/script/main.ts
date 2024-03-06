@@ -45,17 +45,24 @@ const navScrolling = ()=>{
 
 const picAnimation = () => {
     document.querySelectorAll('.bioLandingPicContainer img').forEach(img => {
-        if (window.pageYOffset > 600 && window.pageYOffset < 1900) {
+        if (window.pageYOffset >= 600 && window.pageYOffset < 1650) {
             img.classList.add('in-view')
-        } else if (window.pageYOffset < 400 || window.pageYOffset > 1901) {
+        } else if (window.pageYOffset < 400 || window.pageYOffset > 1651) {
+            img.classList.remove('in-view')
+        }
+    })
+    document.querySelectorAll('.charityLandingPicContainer img').forEach(img => {
+        if (window.pageYOffset >= 1850 && window.pageYOffset < 2650) {
+            img.classList.add('in-view')
+        } else if (window.pageYOffset < 1800 || window.pageYOffset > 2651) {
             img.classList.remove('in-view')
         }
     })
 
     document.querySelectorAll('.achCards').forEach(img => {
-        if (window.pageYOffset > 1550) {
+        if (window.pageYOffset > 1450 && window.pageYOffset <= 2400) {
             img.classList.add('in-view')
-        } else if (window.pageYOffset < 1100) {
+        } else if (window.pageYOffset < 1100 || window.pageYOffset > 2500) {
             img.classList.remove('in-view')
         }
     })
@@ -65,6 +72,7 @@ window.addEventListener('resize',navBarAdjToScreen)
 navBarAdjToScreen()
 
 window.addEventListener('scroll',() => { 
+    console.log(window.pageYOffset)
     navScrolling() 
     picAnimation()
 })

@@ -8,7 +8,7 @@ $navBackGroundColor: #ffffff00;
 $navBarTextColor: #000;
 $navBtnBackGround: #C4B980;
 $navBtnBackGroundDK: #000;
-$navFont: normal normal 500 25px 'Prata';
+$navFont: normal normal 500 20px 'Prata';
 $primaryColor: #897400;
 
 // font: [font-style] [font-variant] [font-weight] [font-size]/[line-height] [font-family];
@@ -352,6 +352,65 @@ $primaryColor: #897400;
 	}
 
 }
+.charityLanding{
+	height: 70vh;
+	flex-direction: row-reverse;
+	.charityLandingPicContainer{
+		position: relative;
+		height: 100%;
+		margin-top: 2%;
+		img{
+			position: absolute;
+			height: 40%;
+			box-shadow: 6px 6px 6px #C3C3C3;
+			aspect-ratio: 1/1.1;
+			object-fit: cover;
+			object-position: center;
+			transform: translateX(200%);
+			opacity: 0;
+			scale: 0;
+			transition: all 0.6s ease;
+			&.in-view{
+				scale: 1;
+				opacity: 1;
+				transform: translateX(0%);
+				&#pic1{
+					top: 0%;
+					left: 35%;
+					z-index: 4;
+					transition-delay: 0s;
+				}
+				&#pic2{
+					top: 22%;
+					left: 55%;
+					z-index: 3;
+					transition-delay: 0.2s;
+				}
+				&#pic3{
+					top: 55%;
+					left: 35%;
+					z-index: 2;
+					transition-delay: 0.4s;
+				}
+				&#pic4{
+					top: 32%;
+					left: 15%;
+					z-index: 1;
+					transition-delay: 0.6s;
+				}
+			}
+		}
+	}
+	.charityLandingTextContainer{
+		padding-left: 80px;
+		.textCharityLanding{
+			font-family: 'Inter';
+			text-align: justify;
+			text-justify: inter-word;
+		}
+	}
+
+}
 .achievementLanding{
 	min-height: 780px;
 	height: 88vh;
@@ -418,16 +477,17 @@ $primaryColor: #897400;
 	color: #001489;
     text-align: justify;
 	font: $navFont;
-	font-size: 35px;
+	font-size: 27px;
     line-height: normal;
 	position: relative;
 	margin-left: 15px;
+	font-weight: 500;
 	&::before{
 		content: '';
 		position: absolute;
 		bottom: 5px ;
-		left: -25px;
-		width: 8px;
+		left: -20px;
+		width: 6px;
 		height: 100%;
 		background-color: $primaryColor;
 	}
@@ -444,7 +504,7 @@ $primaryColor: #897400;
 	align-items: center;
 	text-align: center;
 	width: fit-content;
-	font-size: 20px;
+	font-size: 16px;
 	filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
 	transition: all 0.3s ease;
 	&:hover{

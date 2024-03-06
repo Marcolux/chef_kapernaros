@@ -52,7 +52,7 @@
 	color: #B59A07 !important;
 }
 .textBlue{color: #192f42 !important;}
-.hide {display: none;}
+.hide {display: none !important;}
 .show {display: flex;}
 .text-center{text-align: center !important;}
 
@@ -94,4 +94,19 @@
 }
 .font-merriweather {
 	font-family: 'Merriweather' !important;
+}
+
+footer{
+	background-color: #000000;
+	height: 20vh;
+	color: #fff;
+	i{
+		color: #fff !important;
+		&::before{
+			font-size: 25px;
+		}
+	}
+	img{
+		height: 13vh;
+	}
 }

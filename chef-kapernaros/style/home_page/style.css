@@ -5,7 +5,7 @@ html, body {
 
 .navBar {
   background-color: #ffffff00;
-  font: normal normal 500 25px "Prata";
+  font: normal normal 500 20px "Prata";
   color: #000;
 }
 
@@ -432,6 +432,87 @@ html, body {
   padding-right: 60px;
 }
 
+.charityLanding {
+  height: 70vh;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.charityLanding .charityLandingPicContainer {
+  position: relative;
+  height: 100%;
+  margin-top: 2%;
+}
+
+.charityLanding .charityLandingPicContainer img {
+  position: absolute;
+  height: 40%;
+  -webkit-box-shadow: 6px 6px 6px #C3C3C3;
+          box-shadow: 6px 6px 6px #C3C3C3;
+  aspect-ratio: 1/1.1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-transform: translateX(200%);
+          transform: translateX(200%);
+  opacity: 0;
+  scale: 0;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.charityLanding .charityLandingPicContainer img.in-view {
+  scale: 1;
+  opacity: 1;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.charityLanding .charityLandingPicContainer img.in-view#pic1 {
+  top: 0%;
+  left: 35%;
+  z-index: 4;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.charityLanding .charityLandingPicContainer img.in-view#pic2 {
+  top: 22%;
+  left: 55%;
+  z-index: 3;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.charityLanding .charityLandingPicContainer img.in-view#pic3 {
+  top: 55%;
+  left: 35%;
+  z-index: 2;
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.charityLanding .charityLandingPicContainer img.in-view#pic4 {
+  top: 32%;
+  left: 15%;
+  z-index: 1;
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+.charityLanding .charityLandingTextContainer {
+  padding-left: 80px;
+}
+
+.charityLanding .charityLandingTextContainer .textCharityLanding {
+  font-family: 'Inter';
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 .achievementLanding {
   min-height: 780px;
   height: 88vh;
@@ -511,19 +592,20 @@ html, body {
 .titlesChef {
   color: #001489;
   text-align: justify;
-  font: normal normal 500 25px "Prata";
-  font-size: 35px;
+  font: normal normal 500 20px "Prata";
+  font-size: 27px;
   line-height: normal;
   position: relative;
   margin-left: 15px;
+  font-weight: 500;
 }
 
 .titlesChef::before {
   content: '';
   position: absolute;
   bottom: 5px;
-  left: -25px;
-  width: 8px;
+  left: -20px;
+  width: 6px;
   height: 100%;
   background-color: #897400;
 }
@@ -547,7 +629,7 @@ html, body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 20px;
+  font-size: 16px;
   -webkit-filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
           filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
   -webkit-transition: all 0.3s ease;
