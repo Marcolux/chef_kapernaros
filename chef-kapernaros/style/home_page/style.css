@@ -649,7 +649,7 @@ html, body {
           box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 }
 
-@media only screen and (min-width: 701px) and (max-width: 1590px) {
+@media only screen and (min-width: 701px) and (max-width: 1500px) {
   .achievementLanding .btnPrimary {
     font-size: 16px !important;
     padding: 10px 20px !important;
@@ -685,25 +685,149 @@ html, body {
 }
 
 @media only screen and (max-width: 1361px) {
-  .btnPrimary {
+  .achievementLanding .btnPrimary {
     position: absolute;
     bottom: 30px;
   }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 701px) and (max-width: 1300px) {
+  .achievementLanding {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+  }
+  .achievementLanding .allAchvmText {
+    width: 90%;
+    padding: 0px !important;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
   .achievementLanding .allAchvmText .cardsLine {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: reverse !important;
+        -ms-flex-direction: column-reverse !important;
+            flex-direction: column-reverse !important;
     width: 100% !important;
+  }
+  .achievementLanding .allAchvmText .cardsLine .btnWrap {
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+    margin-top: 30px;
+  }
+  .achievementLanding .allAchvmText .cardsLine .btnWrap .btnPrimary {
+    position: relative !important;
+  }
+  .achievementLanding .allAchvmText #chef-corps-logo {
+    max-width: 200px !important;
+    right: 25px !important;
+    top: 80px !important;
   }
   .achievementLanding .allAchvmText p:not(.titlesChef) {
     margin-top: 0px !important;
     margin-bottom: 25px !important;
   }
   .achievementLanding .allAchvmText .achCards {
-    max-width: 100% !important;
+    max-width: 80% !important;
     width: 100% !important;
+    text-align: center;
+  }
+  .achievementLanding .allAchvmText .achCards.in-view#card-2, .achievementLanding .allAchvmText .achCards.in-view#card-4 {
+    margin-left: 50%;
+  }
+  .achievementLanding .imgAchvm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 50%;
+    width: 60%;
+    margin-left: 0px !important;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .achievementLanding .imgAchvm img {
+    width: 80%;
+    max-height: 50% !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .bioLanding {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+    width: 100%;
+  }
+  .bioLanding .bioLandingPicContainer {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .bioLanding .bioLandingPicContainer img {
+    position: relative !important;
+    top: 0px !important;
+    left: 0px !important;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    width: 23%;
+    height: 75%;
+  }
+  .bioLanding .bioLandingTextContainer {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+  .bioLanding .bioLandingTextContainer .textBioLanding {
+    padding-right: 0px !important;
+  }
+  .charityLanding {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+    width: 100%;
+  }
+  .charityLanding .charityLandingPicContainer {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .charityLanding .charityLandingPicContainer img {
+    position: relative !important;
+    top: 0px !important;
+    left: 0px !important;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    width: 23%;
+    height: 75%;
+  }
+  .charityLanding .charityLandingTextContainer {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+  .charityLanding .charityLandingTextContainer .textCharityLanding {
+    padding-right: 0px !important;
   }
 }
 
@@ -735,6 +859,141 @@ html, body {
   }
   .landingPage p span {
     font-size: 28px !important;
+  }
+  .bioLanding {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+    width: 100%;
+  }
+  .bioLanding .bioLandingPicContainer {
+    width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .bioLanding .bioLandingPicContainer img {
+    position: relative !important;
+    top: 0px !important;
+    left: 0px !important;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    width: 24%;
+  }
+  .bioLanding .bioLandingTextContainer {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+  .bioLanding .bioLandingTextContainer .textBioLanding {
+    padding-right: 0px !important;
+  }
+  .charityLanding {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+    width: 100%;
+  }
+  .charityLanding .charityLandingPicContainer {
+    width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .charityLanding .charityLandingPicContainer img {
+    position: relative !important;
+    top: 0px !important;
+    left: 0px !important;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    width: 24%;
+  }
+  .charityLanding .charityLandingTextContainer {
+    width: 90%;
+    margin-bottom: 30px;
+    padding-left: 0px !important;
+  }
+  .charityLanding .charityLandingTextContainer .textCharityLanding {
+    padding-right: 0px !important;
+  }
+  .achievementLanding {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+  }
+  .achievementLanding .allAchvmText {
+    width: 90%;
+    padding: 0px !important;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .achievementLanding .allAchvmText .cardsLine {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: reverse !important;
+        -ms-flex-direction: column-reverse !important;
+            flex-direction: column-reverse !important;
+    width: 100% !important;
+  }
+  .achievementLanding .allAchvmText .cardsLine .btnWrap {
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+    margin-top: 30px;
+  }
+  .achievementLanding .allAchvmText .cardsLine .btnWrap .btnPrimary {
+    position: relative !important;
+  }
+  .achievementLanding .allAchvmText #chef-corps-logo {
+    max-width: 120px !important;
+    right: 15px !important;
+    top: -15px !important;
+  }
+  .achievementLanding .allAchvmText p:not(.titlesChef) {
+    margin-top: 0px !important;
+    margin-bottom: 25px !important;
+  }
+  .achievementLanding .allAchvmText .card-1Div {
+    width: 100% !important;
+    margin-left: 0%;
+    margin-top: 20px !important;
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: start !important;
+  }
+  .achievementLanding .allAchvmText .card-1Div #card-1 {
+    margin-top: 15px !important;
+  }
+  .achievementLanding .allAchvmText .achCards {
+    max-width: 80% !important;
+    width: 80% !important;
+    text-align: center;
+  }
+  .achievementLanding .allAchvmText .achCards.in-view {
+    margin-left: 0% !important;
+  }
+  .achievementLanding .imgAchvm {
+    display: none;
+  }
+  .titlesChef {
+    font-size: 20px !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

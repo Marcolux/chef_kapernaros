@@ -14,7 +14,7 @@ hambMenu.addEventListener('click', function() {
 
 const navBarAdjToScreen = () => {
     
-    if (window.innerWidth < 505 && navBar.classList.contains('biggerScreen')) {
+    if (window.innerWidth < 750 && navBar.classList.contains('biggerScreen')) {
        
         navBar.classList.add('mobileView')
         navBar.classList.remove('biggerScreen')
@@ -24,7 +24,7 @@ const navBarAdjToScreen = () => {
                 el.prepend(brEl)
             }
         })
-    } else if (window.innerWidth >= 505 && !navBar.classList.contains('biggerScreen')) {
+    } else if (window.innerWidth >= 750 && !navBar.classList.contains('biggerScreen')) {
         
         navBar.classList.remove('mobileView')
         navBar.classList.add('biggerScreen')
