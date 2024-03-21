@@ -328,6 +328,12 @@ html, body {
 
 .landingPage .chefQuote .upLine {
   font-size: 63px;
+  position: relative;
+}
+
+.landingPage .chefQuote .upLine i {
+  position: absolute;
+  left: -40px;
 }
 
 .landingPage .chefQuote .upLine span {
@@ -336,6 +342,11 @@ html, body {
 
 .landingPage .chefQuote .dwnLine {
   font-size: 55px;
+  position: relative;
+}
+
+.landingPage .chefQuote .dwnLine i {
+  position: absolute;
 }
 
 .landingPage .chefQuote .dwnLine span {
@@ -649,7 +660,10 @@ html, body {
           box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 }
 
-@media only screen and (min-width: 701px) and (max-width: 1500px) {
+@media only screen and (min-width: 1301px) and (max-width: 1400px) {
+  .chefQuote {
+    width: 70%;
+  }
   .achievementLanding .btnPrimary {
     font-size: 16px !important;
     padding: 10px 20px !important;
@@ -691,7 +705,34 @@ html, body {
   }
 }
 
+@media only screen and (min-width: 701px) and (max-width: 930px) {
+  .chefQuote {
+    width: 80% !important;
+  }
+  .chefQuote p {
+    font-size: 40px !important;
+  }
+  .chefQuote .fontSize40 {
+    font-size: 28px !important;
+  }
+  .chefQuote .fontSize58 {
+    font-size: 40px !important;
+  }
+}
+
 @media only screen and (min-width: 701px) and (max-width: 1300px) {
+  .chefQuote {
+    width: 60%;
+  }
+  .chefQuote p {
+    font-size: 40px !important;
+  }
+  .chefQuote .fontSize40 {
+    font-size: 28px !important;
+  }
+  .chefQuote .fontSize58 {
+    font-size: 40px !important;
+  }
   .achievementLanding {
     -webkit-box-align: start;
         -ms-flex-align: start;

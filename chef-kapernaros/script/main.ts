@@ -52,9 +52,9 @@ const picAnimation = () => {
         }
     })
     document.querySelectorAll('.charityLandingPicContainer img').forEach(img => {
-        if (window.pageYOffset >= 1850 && window.pageYOffset < 2650) {
+        if (window.pageYOffset >= 1950 && window.pageYOffset < 2650) {
             img.classList.add('in-view')
-        } else if (window.pageYOffset < 1800 || window.pageYOffset > 2651) {
+        } else if (window.pageYOffset < 1900 ) {
             img.classList.remove('in-view')
         }
     })
@@ -72,7 +72,7 @@ window.addEventListener('resize',navBarAdjToScreen)
 navBarAdjToScreen()
 
 window.addEventListener('scroll',() => { 
-    console.log(window.pageYOffset)
+    // console.log(window.pageYOffset)
     navScrolling() 
     picAnimation()
 })

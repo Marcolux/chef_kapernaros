@@ -265,16 +265,25 @@ $primaryColor: #897400;
         background-color: #F3F1E5;
         // width: fit-content;
         p{
-            margin: 0px;
+			margin: 0px;
         }
         .upLine{
-            font-size: 63px;
+			font-size: 63px;
+			position: relative;
+			i{
+				position: absolute;
+				left: -40px;
+			}
             span{
-                font-size: 55px;
+				font-size: 55px;
             }
         }
         .dwnLine{
-            font-size: 55px;
+			font-size: 55px;
+			position: relative;
+			i{
+				position: absolute;
+			}
             span{
                 font-size: 58px;
             }
@@ -519,7 +528,19 @@ $primaryColor: #897400;
 }
 // Break Points 
 
-@media only screen and (min-width: 701px) and (max-width: 1500px) {
+@media only screen and (min-width: 1301px) and (max-width: 1400px) {
+	.chefQuote{
+		width: 70%;
+		// p{
+		// 	font-size: 45px !important;
+		// }
+		// .fontSize40{
+		// 	font-size: 30px !important;
+		// }
+		// .fontSize58{
+		// 	font-size: 45px !important;
+		// }
+	}
 	.achievementLanding{
 		.btnPrimary{
 			font-size: 16px !important;
@@ -577,7 +598,35 @@ $primaryColor: #897400;
 		}
 	} 
 }
+@media only screen and (min-width: 701px) and (max-width: 930px) {
+
+	.chefQuote{
+		width: 80% !important;
+		p{
+			font-size: 40px !important;
+		}
+		.fontSize40{
+			font-size: 28px !important;
+		}
+		.fontSize58{
+			font-size: 40px !important;
+		}
+	}
+}
 @media only screen and (min-width: 701px) and (max-width: 1300px) {
+	
+	.chefQuote{
+		width: 60%;
+		p{
+			font-size: 40px !important;
+		}
+		.fontSize40{
+			font-size: 28px !important;
+		}
+		.fontSize58{
+			font-size: 40px !important;
+		}
+	}
 	.achievementLanding{
 		// flex-direction: column;
 		align-items: start;
