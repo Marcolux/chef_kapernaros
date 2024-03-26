@@ -1,0 +1,69 @@
+.carouselContainer {
+  width: 100%;
+  height: 60%;
+  max-width: 1300px;
+  min-width: 900px;
+  min-height: 450px;
+}
+
+.carouselContainer #carousel {
+  width: 90%;
+  height: 100%;
+}
+
+.carouselContainer #carousel .singleCarouselSlide {
+  height: 100%;
+  width: 100%;
+}
+
+.carouselContainer #carousel .singleCarouselSlide #slideDescription {
+  width: 30%;
+  color: #FFFFFF;
+}
+
+.carouselContainer #carousel .singleCarouselSlide #slidePic {
+  width: 70%;
+}
+
+.carouselContainer #carousel .singleCarouselSlide #slidePic img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+  -o-object-position: center !important;
+     object-position: center !important;
+}
+
+.carouselContainer #timeline {
+  position: relative;
+  padding-left: 40px;
+}
+
+.carouselContainer #timeline #lineWhite {
+  position: absolute;
+  background-color: white;
+  width: 1px;
+  left: calc(50% + 20px);
+}
+
+.carouselContainer #timeline #circleWhite {
+  background-color: white;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  left: calc(50% + 10px);
+  position: absolute;
+}
+
+.carouselContainer #timeline #prevSlide {
+  position: absolute;
+  top: 20px;
+  left: 320%;
+}
+
+.carouselContainer #timeline #nextSlide {
+  position: absolute;
+  bottom: 20px;
+  left: 320%;
+}
+/*# sourceMappingURL=bio.css.map */
