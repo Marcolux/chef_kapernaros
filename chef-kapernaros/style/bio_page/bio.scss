@@ -1,48 +1,58 @@
 .carouselContainer {
     width: 100%;
     height: 60%;
-    max-width: 1300px;
-    min-width: 900px;
-    min-height: 450px;
+
     #carousel{
         width: 100%;
         height: 100%;
+        max-width: 1500px;
+        min-width: 900px;
+        min-height: 480px;
         .singleCarouselSlide{
             position: relative;
-            height: 100%;
+            min-height: 480px;
             width: 100%;
             box-shadow: 6px 6px 6px #aeaeae;
            
             #slideDescription{
                 width: 40%;
-                height: 100%;
+                min-height: 480px;
                 color: #FFFFFF;
                 i{
                     cursor: pointer;
-                    font-size: 70px !important;
+                    font-size: 68px !important;
                     &:hover{
-                        font-size: 71px !important;
+                        font-size: 65px !important;
+                        text-shadow: 3px 0px 2px #b59b07;
+                    }
+                    &:active{
+                        font-size: 68px !important;
+                        text-shadow: 0px 0px 0px #b59b07;
                     }
                 }
                 #prevSlide{
                     position: absolute;
-                    top: 20px;
+                    top: 10px;
                 }
                 #nextSlide{
                     position: absolute;
-                    bottom: 20px;
+                    bottom: 10px;
                 }
             
             }
             #slidePic{
                 width: 70%;
-            }
+                            }
             #slideImg{
                 height: 100%;
                 width: 0%;
                 object-fit: cover !important;
                 object-position: center !important;
-                transition: width 0.7s ease-in-out;
+                transition: width 0.5s ease-in-out;
+            }
+            #slideText{
+                scale: 0;
+                transition: scale 0.5s ease-in-out;
             }
         }
     }
@@ -64,6 +74,34 @@
             position: absolute;
         }
     }
+}
+
+#cardsContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .singleCard{
+        width: 100%;
+        max-width: 1400px;
+        &.reverse{
+            flex-direction: row-reverse;
+        }
+        img{
+            width: 50%;
+            max-width: 500px;
+            object-fit: cover;
+            object-position: center;
+            // aspect-ratio: 1.1/1;
+        }
+        .cardDescr{
+            max-width: 550px;
+        }
+    }
+}
+.maxWidth1500 {
+    max-width: 1500px !important;
 }
 
 @keyframes slideDown {

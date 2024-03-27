@@ -16,7 +16,7 @@ var slidesList = /** @class */ (function () {
             this.head = newSingleSlide;
             this.tail = newSingleSlide;
         }
-        else if (this.tail) { // Tail is not null if the list isn't empty
+        else if (this.tail) {
             this.tail.next = newSingleSlide;
             this.tail = newSingleSlide;
         }
@@ -24,6 +24,7 @@ var slidesList = /** @class */ (function () {
     slidesList.prototype.getSingleSlide = function (index) {
         var currentSingleSlide = this.head;
         var count = 0;
+        // if currentSingleSlide === null means that the while loop reached the end of the list because it will replace the currentSlide with is next currentSingleSlide = currentSingleSlide.next
         while (currentSingleSlide !== null) {
             if (count === index)
                 return currentSingleSlide.data;
@@ -31,6 +32,15 @@ var slidesList = /** @class */ (function () {
             currentSingleSlide = currentSingleSlide.next;
         }
         return null;
+    };
+    slidesList.prototype.getLastIndex = function () {
+        var currentSingleSlide = this.head;
+        var count = 0;
+        while (currentSingleSlide !== null) {
+            count++;
+            currentSingleSlide = currentSingleSlide.next;
+        }
+        return count - 1;
     };
     return slidesList;
 }());
@@ -70,16 +80,17 @@ function initCarousel() {
     var carouselElement = document.querySelector('#carousel');
     function showSlide(index) {
         var slide = newSlidesList.getSingleSlide(index);
-        carouselElement.innerHTML = "\n            <div class=\"flex singleCarouselSlide\">\n                <div id=\"timeline\" class=\"flex flex-column flex-justifyContent-spaceAround\">\n                    \n                    <div id=\"lineWhite\"></div>\n                    <div id=\"circleWhite\"></div>\n                </div>\n                    \n                <div id=\"slideDescription\" class=\"flex flex-column flex-justifyContent-center flex-alignItems-center\" style=\"background-color: ".concat(slide.leftBG, "\"> \n                    <i id=\"prevSlide\" class=\"fa-solid fa-chevron-up fontSize40\"></i>            \n                    <div class=\"p-20 mx-30\" style=\"border: 1px solid #C4B980\">\n                        <p class=\"fontSize18\">").concat(slide.description, "</p>\n                    </div> \n                    <i id=\"nextSlide\" class=\"fa-solid fa-chevron-down fontSize40\"></i>     \n                </div>\n                <div id=\"slidePic\">\n                    <img id=\"slideImg\" class=\"\" src=\"").concat(slide.rightBG, "\" alt=\"\">\n                </div>\n            </div>\n        ");
+        carouselElement.innerHTML = "\n            <div class=\"flex singleCarouselSlide\">\n                <div id=\"timeline\" class=\"flex flex-column flex-justifyContent-spaceAround\">\n                    \n                    <div id=\"lineWhite\"></div>\n                    <div id=\"circleWhite\"></div>\n                </div>\n                    \n                <div id=\"slideDescription\" class=\"flex flex-column flex-justifyContent-center flex-alignItems-center\" style=\"background-color: ".concat(slide.leftBG, "\"> \n                    <i id=\"prevSlide\" class=\"fa-solid fa-chevron-up fontSize40\"></i>            \n                    <div id=\"slideText\" class=\"p-20 mx-30\" style=\"border: 1px solid #C4B980\">\n                        <p class=\"fontSize18\">").concat(slide.description, "</p>\n                    </div> \n                    <i id=\"nextSlide\" class=\"fa-solid fa-chevron-down fontSize40\"></i>     \n                </div>\n                <div id=\"slidePic\">\n                    <img id=\"slideImg\" class=\"\" src=\"").concat(slide.rightBG, "\" alt=\"\">\n                </div>\n            </div>\n        ");
         var prevButton = document.getElementById('prevSlide');
         var nextButton = document.getElementById('nextSlide');
         var slideImg = document.getElementById('slideImg');
+        var slideText = document.getElementById('slideText');
         prevButton.addEventListener('click', function () { return moveSlide(-1); });
         nextButton.addEventListener('click', function () { return moveSlide(1); });
         var timelineElement = document.querySelector('#timeline');
         var lineWhite = document.getElementById('lineWhite');
         timelineElement.style.background = slide.leftBG;
-        if (index >= 4) {
+        if (index >= newSlidesList.getLastIndex()) {
             nextButton.style.display = 'none';
             lineWhite.style.height = '50%';
             lineWhite.style.top = '0px';
@@ -91,23 +102,26 @@ function initCarousel() {
             lineWhite.style.bottom = '0px';
             lineWhite.style.top = '';
         }
-        else if (index > 0 && index <= 4) {
+        else if (index > 0 && index <= newSlidesList.getLastIndex()) {
             prevButton.style.display = '';
             nextButton.style.display = '';
             lineWhite.style.height = '100%';
         }
+        // Animations
         setTimeout(function () {
-            if (slideImg) {
+            if (slideImg && slideText) {
                 slideImg.style.width = '100%';
+                slideText.style.scale = '1';
             }
         }, 200);
     }
+    // initial slide showing on first load defined by currentSlideIndex
     showSlide(0);
     var currentSlideIndex = 0;
     function moveSlide(n) {
         currentSlideIndex = currentSlideIndex + n;
         // Wrap the index if it goes out of bounds
-        var totalSlides = 4;
+        var totalSlides = newSlidesList.getLastIndex();
         if (currentSlideIndex >= totalSlides) {
             currentSlideIndex = totalSlides;
         }

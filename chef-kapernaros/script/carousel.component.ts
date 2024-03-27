@@ -1,4 +1,4 @@
-// Define your linked list, node classes, and any other necessary data structures
+
 interface Slide {
     description: string
     leftBG: string
@@ -6,7 +6,7 @@ interface Slide {
 }
 
 class singleSlide {
-    data: Slide // Consider using a more specific type based on what your singleSlides will store
+    data: Slide 
     next: singleSlide | null
   
     constructor(data: any) {
@@ -30,15 +30,16 @@ class slidesList {
         if (!this.head) {
             this.head = newSingleSlide
             this.tail = newSingleSlide
-        } else if (this.tail) { // Tail is not null if the list isn't empty
+        } else if (this.tail) { 
             this.tail.next = newSingleSlide
             this.tail = newSingleSlide
         }
     }
     
-    getSingleSlide(index: number): Slide | null { // Consider a more specific return type
+    getSingleSlide(index: number): Slide | null { 
         let currentSingleSlide = this.head
         let count = 0
+        // if currentSingleSlide === null means that the while loop reached the end of the list because it will replace the currentSlide with is next currentSingleSlide = currentSingleSlide.next
         while (currentSingleSlide !== null) {
             if (count === index) return currentSingleSlide.data
             count++
@@ -46,7 +47,19 @@ class slidesList {
         }
         return null
     }
+
+    getLastIndex(): number { 
+        let currentSingleSlide = this.head
+        let count = 0
+        
+        while (currentSingleSlide !== null) {  
+            count++
+            currentSingleSlide = currentSingleSlide.next
+        }
+        return count - 1
+    }
 }
+
 
 
 function initCarousel() {
@@ -76,6 +89,7 @@ function initCarousel() {
         rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1711495893/Niko/Group_65_tv5key.png'
     }
     
+    
     const newSlidesList = new slidesList()
     
     // Append slide objects
@@ -100,7 +114,7 @@ function initCarousel() {
                     
                 <div id="slideDescription" class="flex flex-column flex-justifyContent-center flex-alignItems-center" style="background-color: ${slide.leftBG}"> 
                     <i id="prevSlide" class="fa-solid fa-chevron-up fontSize40"></i>            
-                    <div class="p-20 mx-30" style="border: 1px solid #C4B980">
+                    <div id="slideText" class="p-20 mx-30" style="border: 1px solid #C4B980">
                         <p class="fontSize18">${slide.description}</p>
                     </div> 
                     <i id="nextSlide" class="fa-solid fa-chevron-down fontSize40"></i>     
@@ -114,6 +128,7 @@ function initCarousel() {
         const prevButton = document.getElementById('prevSlide') as HTMLElement
         const nextButton = document.getElementById('nextSlide') as HTMLElement
         const slideImg = document.getElementById('slideImg') as HTMLElement
+        const slideText = document.getElementById('slideText') as HTMLElement
         
         prevButton.addEventListener('click', () => moveSlide(-1))
         nextButton.addEventListener('click', () => moveSlide(1))
@@ -122,7 +137,7 @@ function initCarousel() {
         const lineWhite = document.getElementById('lineWhite') as HTMLElement
         timelineElement.style.background = slide.leftBG
 
-        if (index >= 4) {
+        if (index >= newSlidesList.getLastIndex()) {
             nextButton.style.display = 'none'
             lineWhite.style.height = '50%'
             lineWhite.style.top = '0px'
@@ -133,26 +148,29 @@ function initCarousel() {
             lineWhite.style.height = '50%'
             lineWhite.style.bottom = '0px'
             lineWhite.style.top = ''
-        } else if (index > 0 && index <= 4 ) {
+        } else if (index > 0 && index <= newSlidesList.getLastIndex() ) {
             prevButton.style.display = ''
             nextButton.style.display = ''
             lineWhite.style.height = '100%'
         }
-        
+    
+        // Animations
         setTimeout(()=>{
-            if (slideImg) {
+            if (slideImg && slideText) {
                 slideImg.style.width = '100%'
+                slideText.style.scale = '1'
             }
         },200)
     }
-    showSlide(0)
 
-    
+    // initial slide showing on first load defined by currentSlideIndex
+    showSlide(0)
     let currentSlideIndex = 0
+
     function moveSlide(n: number) {
         currentSlideIndex = currentSlideIndex + n
         // Wrap the index if it goes out of bounds
-        const totalSlides = 4
+        const totalSlides = newSlidesList.getLastIndex()
         if (currentSlideIndex >= totalSlides) {
             currentSlideIndex = totalSlides
         } else if (currentSlideIndex === 0) {

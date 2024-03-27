@@ -318,10 +318,6 @@ html, body {
   height: 100%;
 }
 
-.landingPage .chefQuote {
-  background-color: #F3F1E5;
-}
-
 .landingPage .chefQuote p {
   margin: 0px;
 }
@@ -662,7 +658,7 @@ html, body {
 
 @media only screen and (min-width: 1301px) and (max-width: 1400px) {
   .chefQuote {
-    width: 70%;
+    width: 60%;
   }
   .achievementLanding .btnPrimary {
     font-size: 16px !important;
@@ -1036,5 +1032,27 @@ html, body {
   .titlesChef {
     font-size: 20px !important;
   }
+}
+
+.wrapper {
+  line-height: 1.2;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.wrapper p {
+  font-family: "Ledger";
+  margin: auto;
+  text-transform: uppercase;
+  background: linear-gradient(219deg, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0.7) 11%, rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0.8) 31%, black 60%, black 60%, rgba(0, 0, 0, 0.7) 80%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.wrapper .container {
+  padding: 1.5rem;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

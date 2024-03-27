@@ -262,7 +262,7 @@ $primaryColor: #897400;
     background-position: top;
     height: 100%;
     .chefQuote{
-        background-color: #F3F1E5;
+        // background-color: #F3F1E5;
         // width: fit-content;
         p{
 			margin: 0px;
@@ -530,7 +530,7 @@ $primaryColor: #897400;
 
 @media only screen and (min-width: 1301px) and (max-width: 1400px) {
 	.chefQuote{
-		width: 70%;
+		width: 60%;
 		// p{
 		// 	font-size: 45px !important;
 		// }
@@ -893,3 +893,62 @@ $primaryColor: #897400;
 		font-size: 20px !important;
 	}
 }
+
+
+
+  
+
+	$--color-1: rgba(0, 0, 0, 0.7);
+	$--color-2: rgba(0, 0, 0, 0.8);
+	$--color-3: rgba(0, 0, 0, 0.9);
+	$--color-4: rgba(0, 0, 0, 1);
+	$--color-5: #C4B980;
+  
+  
+  
+.wrapper {
+	// background: #000;
+	line-height: 1.2;
+	// min-height: 100%;
+	// width: 100% !important;
+	display: grid;
+	place-items: center;
+	// min-height: calc(100vh - 16px);
+  
+  
+  	p {
+		font-family: "Ledger";
+		// font-size: 15vw;
+		// font-weight: 900;
+		// width: -webkit-min-content;
+		// width: -moz-min-content;
+		// width: min-content;
+		margin: auto;
+		text-transform: uppercase;
+		background: 
+			linear-gradient(219deg, 
+				$--color-1 10%, 
+				
+				$--color-1 11%, $--color-2  30%,
+				
+				$--color-2 31%,$--color-4 60% ,
+				
+				$--color-4 60%, $--color-1 80%,
+			)
+		;
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: transparent;
+	}
+  
+	.container {
+		padding: 1.5rem;   
+		text-align: center;
+	}
+}
+  
+  @media screen and (min-width: 768px) {
+	// h1 {
+	//   font-size: 6.5rem;
+	// }
+  }

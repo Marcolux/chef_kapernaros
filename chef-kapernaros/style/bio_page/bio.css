@@ -1,19 +1,19 @@
 .carouselContainer {
   width: 100%;
   height: 60%;
-  max-width: 1300px;
-  min-width: 900px;
-  min-height: 450px;
 }
 
 .carouselContainer #carousel {
   width: 100%;
   height: 100%;
+  max-width: 1500px;
+  min-width: 900px;
+  min-height: 480px;
 }
 
 .carouselContainer #carousel .singleCarouselSlide {
   position: relative;
-  height: 100%;
+  min-height: 480px;
   width: 100%;
   -webkit-box-shadow: 6px 6px 6px #aeaeae;
           box-shadow: 6px 6px 6px #aeaeae;
@@ -21,27 +21,33 @@
 
 .carouselContainer #carousel .singleCarouselSlide #slideDescription {
   width: 40%;
-  height: 100%;
+  min-height: 480px;
   color: #FFFFFF;
 }
 
 .carouselContainer #carousel .singleCarouselSlide #slideDescription i {
   cursor: pointer;
-  font-size: 70px !important;
+  font-size: 68px !important;
 }
 
 .carouselContainer #carousel .singleCarouselSlide #slideDescription i:hover {
-  font-size: 71px !important;
+  font-size: 65px !important;
+  text-shadow: 3px 0px 2px #b59b07;
+}
+
+.carouselContainer #carousel .singleCarouselSlide #slideDescription i:active {
+  font-size: 68px !important;
+  text-shadow: 0px 0px 0px #b59b07;
 }
 
 .carouselContainer #carousel .singleCarouselSlide #slideDescription #prevSlide {
   position: absolute;
-  top: 20px;
+  top: 10px;
 }
 
 .carouselContainer #carousel .singleCarouselSlide #slideDescription #nextSlide {
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;
 }
 
 .carouselContainer #carousel .singleCarouselSlide #slidePic {
@@ -55,8 +61,14 @@
      object-fit: cover !important;
   -o-object-position: center !important;
      object-position: center !important;
-  -webkit-transition: width 0.7s ease-in-out;
-  transition: width 0.7s ease-in-out;
+  -webkit-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
+}
+
+.carouselContainer #carousel .singleCarouselSlide #slideText {
+  scale: 0;
+  -webkit-transition: scale 0.5s ease-in-out;
+  transition: scale 0.5s ease-in-out;
 }
 
 .carouselContainer #timeline {
@@ -78,6 +90,52 @@
   border-radius: 10px;
   left: calc(50% + 10px);
   position: absolute;
+}
+
+#cardsContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#cardsContainer .singleCard {
+  width: 100%;
+  max-width: 1400px;
+}
+
+#cardsContainer .singleCard.reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+#cardsContainer .singleCard img {
+  width: 50%;
+  max-width: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+#cardsContainer .singleCard .cardDescr {
+  max-width: 550px;
+}
+
+.maxWidth1500 {
+  max-width: 1500px !important;
 }
 
 @-webkit-keyframes slideDown {
