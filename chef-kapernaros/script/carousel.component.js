@@ -34,32 +34,31 @@ var slidesList = /** @class */ (function () {
     };
     return slidesList;
 }());
-// Define functions for carousel functionality
 function initCarousel() {
     var slide1 = {
         description: 'Born and raised in Piraeus, Greece, Chef Nikolaos Kapernaros began his career studying at the Greek Culinary Institute &amp; working on islands such as Rhodes, Kos and Crete.',
         leftBG: '#000B4C',
-        rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1709573633/Kapernaros_middle_pic_3_kqhnrm.png'
+        rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1711495614/Niko/Rectangle_55_rwurxu.png'
     };
     var slide2 = {
-        description: 'description 2',
+        description: 'Grand Resort Lagonissi, Greece, a private peninsula Luxury Resort and member of Leading Hotels of the World.  There, he worked his way up to being the Head Chef for royalty, international athletes, movie stars &amp; musicians during their stay at the resort.',
         leftBG: '#262626',
-        rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1709578128/Kapernaros_bio_landing_1_lprh8i.png'
+        rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1711495915/Niko/Rectangle_54_lltm3q.png'
     };
     var slide3 = {
-        description: 'description 3',
+        description: 'In 2011, Chef Kapernaros began teaching at the Culinary Institute of Greece, Anavissos, showcasing the cooking styles of Greek, French, Mediterranean and other international cuisines. Chef Kapernaros and team worked closely with the Greek Government and the Council of the European Union on exhibitions featuring Greek cuisine and environmental sustainability.',
         leftBG: '#000000',
-        rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1709578128/Kapernaros_bio_landing_2_wn33pg.png'
+        rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1711495906/Niko/Rectangle_52_xrwyz8.png'
     };
     var slide4 = {
-        description: 'description 4',
+        description: 'In 2018, Chef Kapernaros and his family moved to Chicago. He began carving a new career path in the Windy City as Chef de Cuisine at the Hyatt Regency Chicago. Two months into his new position, he won 1st place at the Hyatt Good Taste Series Competition.',
         leftBG: '#262626',
-        rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1709578128/Kapernaros_bio_landing_3_sd75kp.png'
+        rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1711495899/Niko/Group_62_tsi44d.png'
     };
     var slide5 = {
-        description: 'description 5',
+        description: 'In 2021, he joined the Avli Restaurant group and opened Avli on the Park, located in Chicago Lakeshore East, to lead and expand the vision of contemporary Greek cuisine, where everything is made from scratch.',
         leftBG: '#000B4C',
-        rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1709578127/Kapernaros_bio_landing_4_l6yclh.png'
+        rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1711495893/Niko/Group_65_tv5key.png'
     };
     var newSlidesList = new slidesList();
     // Append slide objects
@@ -69,15 +68,16 @@ function initCarousel() {
     newSlidesList.append(slide4);
     newSlidesList.append(slide5);
     var carouselElement = document.querySelector('#carousel');
-    var timelineElement = document.querySelector('#timeline');
-    var prevButton = document.getElementById('prevSlide');
-    var nextButton = document.getElementById('nextSlide');
-    var lineWhite = document.getElementById('lineWhite');
     function showSlide(index) {
-        console.log(index);
-        carouselElement.innerHTML = "";
         var slide = newSlidesList.getSingleSlide(index);
-        carouselElement.innerHTML = "\n                <div class=\"flex singleCarouselSlide\">\n                    <div id=\"slideDescription\" class=\"flex flex-column flex-justifyContent-spaceAround\" style=\"background-color: ".concat(slide.leftBG, "\">              \n                        <div class=\"p-20 m-20\" style=\"border: 1px solid #C4B980\">\n                            <p class=\"fontSize18\">").concat(slide.description, "</p>\n                        </div>       \n                    </div>\n                    <div id=\"slidePic\">\n                        <img class=\"\" src=\"").concat(slide.rightBG, "\" alt=\"\">\n                    </div>\n                </div>\n            ");
+        carouselElement.innerHTML = "\n            <div class=\"flex singleCarouselSlide\">\n                <div id=\"timeline\" class=\"flex flex-column flex-justifyContent-spaceAround\">\n                    \n                    <div id=\"lineWhite\"></div>\n                    <div id=\"circleWhite\"></div>\n                </div>\n                    \n                <div id=\"slideDescription\" class=\"flex flex-column flex-justifyContent-center flex-alignItems-center\" style=\"background-color: ".concat(slide.leftBG, "\"> \n                    <i id=\"prevSlide\" class=\"fa-solid fa-chevron-up fontSize40\"></i>            \n                    <div class=\"p-20 mx-30\" style=\"border: 1px solid #C4B980\">\n                        <p class=\"fontSize18\">").concat(slide.description, "</p>\n                    </div> \n                    <i id=\"nextSlide\" class=\"fa-solid fa-chevron-down fontSize40\"></i>     \n                </div>\n                <div id=\"slidePic\">\n                    <img id=\"slideImg\" class=\"\" src=\"").concat(slide.rightBG, "\" alt=\"\">\n                </div>\n            </div>\n        ");
+        var prevButton = document.getElementById('prevSlide');
+        var nextButton = document.getElementById('nextSlide');
+        var slideImg = document.getElementById('slideImg');
+        prevButton.addEventListener('click', function () { return moveSlide(-1); });
+        nextButton.addEventListener('click', function () { return moveSlide(1); });
+        var timelineElement = document.querySelector('#timeline');
+        var lineWhite = document.getElementById('lineWhite');
         timelineElement.style.background = slide.leftBG;
         if (index >= 4) {
             nextButton.style.display = 'none';
@@ -96,6 +96,11 @@ function initCarousel() {
             nextButton.style.display = '';
             lineWhite.style.height = '100%';
         }
+        setTimeout(function () {
+            if (slideImg) {
+                slideImg.style.width = '100%';
+            }
+        }, 200);
     }
     showSlide(0);
     var currentSlideIndex = 0;
@@ -111,8 +116,6 @@ function initCarousel() {
         }
         showSlide(currentSlideIndex);
     }
-    prevButton.addEventListener('click', function () { return moveSlide(-1); });
-    nextButton.addEventListener('click', function () { return moveSlide(1); });
     console.log('carousel running');
 }
 // Wait for the DOM to fully load before initializing the carousel

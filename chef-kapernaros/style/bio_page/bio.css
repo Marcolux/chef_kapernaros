@@ -7,31 +7,56 @@
 }
 
 .carouselContainer #carousel {
-  width: 90%;
+  width: 100%;
   height: 100%;
 }
 
 .carouselContainer #carousel .singleCarouselSlide {
+  position: relative;
   height: 100%;
   width: 100%;
+  -webkit-box-shadow: 6px 6px 6px #aeaeae;
+          box-shadow: 6px 6px 6px #aeaeae;
 }
 
 .carouselContainer #carousel .singleCarouselSlide #slideDescription {
-  width: 30%;
+  width: 40%;
+  height: 100%;
   color: #FFFFFF;
+}
+
+.carouselContainer #carousel .singleCarouselSlide #slideDescription i {
+  cursor: pointer;
+  font-size: 70px !important;
+}
+
+.carouselContainer #carousel .singleCarouselSlide #slideDescription i:hover {
+  font-size: 71px !important;
+}
+
+.carouselContainer #carousel .singleCarouselSlide #slideDescription #prevSlide {
+  position: absolute;
+  top: 20px;
+}
+
+.carouselContainer #carousel .singleCarouselSlide #slideDescription #nextSlide {
+  position: absolute;
+  bottom: 20px;
 }
 
 .carouselContainer #carousel .singleCarouselSlide #slidePic {
   width: 70%;
 }
 
-.carouselContainer #carousel .singleCarouselSlide #slidePic img {
+.carouselContainer #carousel .singleCarouselSlide #slideImg {
   height: 100%;
-  width: 100%;
+  width: 0%;
   -o-object-fit: cover !important;
      object-fit: cover !important;
   -o-object-position: center !important;
      object-position: center !important;
+  -webkit-transition: width 0.7s ease-in-out;
+  transition: width 0.7s ease-in-out;
 }
 
 .carouselContainer #timeline {
@@ -55,15 +80,58 @@
   position: absolute;
 }
 
-.carouselContainer #timeline #prevSlide {
-  position: absolute;
-  top: 20px;
-  left: 320%;
+@-webkit-keyframes slideDown {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
-.carouselContainer #timeline #nextSlide {
+@keyframes slideDown {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes slideUp {
+  from {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.slidePic {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
   position: absolute;
-  bottom: 20px;
-  left: 320%;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 /*# sourceMappingURL=bio.css.map */
