@@ -48,27 +48,38 @@ function initCarousel() {
     var slide1 = {
         description: 'Born and raised in Piraeus, Greece, Chef Nikolaos Kapernaros began his career studying at the Greek Culinary Institute &amp; working on islands such as Rhodes, Kos and Crete.',
         leftBG: '#000B4C',
-        rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1711495614/Niko/Rectangle_55_rwurxu.png'
+        rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1711495614/Niko/Rectangle_55_rwurxu.png',
+        picNote: 'Piraeus, Attica'
     };
     var slide2 = {
         description: 'Grand Resort Lagonissi, Greece, a private peninsula Luxury Resort and member of Leading Hotels of the World.  There, he worked his way up to being the Head Chef for royalty, international athletes, movie stars &amp; musicians during their stay at the resort.',
         leftBG: '#262626',
-        rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1711495915/Niko/Rectangle_54_lltm3q.png'
+        rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1711495915/Niko/Rectangle_54_lltm3q.png',
+        picNote: 'Lagonissi, Attica'
     };
     var slide3 = {
-        description: 'In 2011, Chef Kapernaros began teaching at the Culinary Institute of Greece, Anavissos, showcasing the cooking styles of Greek, French, Mediterranean and other international cuisines. Chef Kapernaros and team worked closely with the Greek Government and the Council of the European Union on exhibitions featuring Greek cuisine and environmental sustainability.',
+        description: 'In 2011, Chef Kapernaros began teaching at the Culinary Institute of Greece, Anavissos, showcasing the cooking styles of Greek, French, Mediterranean and international cuisines. Chef Kapernaros and team worked closely with the Greek Government and the Council of the European Union on exhibitions featuring Greek cuisine and environmental sustainability.',
         leftBG: '#000000',
-        rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1711495906/Niko/Rectangle_52_xrwyz8.png'
+        rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1711495906/Niko/Rectangle_52_xrwyz8.png',
+        picNote: 'Culinary Institute of Greece, Anavissos, Attica'
     };
     var slide4 = {
-        description: 'In 2018, Chef Kapernaros and his family moved to Chicago. He began carving a new career path in the Windy City as Chef de Cuisine at the Hyatt Regency Chicago. Two months into his new position, he won 1st place at the Hyatt Good Taste Series Competition.',
+        description: 'In 2018, Niko, his wife Pam and daughter Chrysa moved to Chicago. They welcomed their newest member in January 2021, making them a family of four.',
         leftBG: '#262626',
-        rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1711495899/Niko/Group_62_tsi44d.png'
+        rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1712186480/Niko/chef-kapernaros.family2_kxxwzi.jpg',
+        picNote: ''
     };
     var slide5 = {
-        description: 'In 2021, he joined the Avli Restaurant group and opened Avli on the Park, located in Chicago Lakeshore East, to lead and expand the vision of contemporary Greek cuisine, where everything is made from scratch.',
+        description: 'In June 2018, Chef Niko began carving a new path in the Windy City as Chef de Cuisine at the Hyatt Regency Chicago.',
+        leftBG: '#262626',
+        rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1712191409/Niko/Untitled_design_14_hjsup9.png',
+        picNote: 'Hyatt Regency Chicago'
+    };
+    var slide6 = {
+        description: 'In 2021, he joined the Avli restaurant group and opened Avli on the Park, located in Chicago Lakeshore East, to lead and expand the vision of contemporary Greek cuisine, where everything is made from scratch.',
         leftBG: '#000B4C',
-        rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1711495893/Niko/Group_65_tv5key.png'
+        rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1712191635/Niko/IMG_20210701_161941_808_qdmrcm.jpg',
+        picNote: 'Avli on the Park, Lakeshore East, Chicago'
     };
     var newSlidesList = new slidesList();
     // Append slide objects
@@ -77,10 +88,11 @@ function initCarousel() {
     newSlidesList.append(slide3);
     newSlidesList.append(slide4);
     newSlidesList.append(slide5);
+    newSlidesList.append(slide6);
     var carouselElement = document.querySelector('#carousel');
     function showSlide(index) {
         var slide = newSlidesList.getSingleSlide(index);
-        carouselElement.innerHTML = "\n            <div class=\"flex singleCarouselSlide\">\n                <div id=\"timeline\" class=\"flex flex-column flex-justifyContent-spaceAround\">\n                    \n                    <div id=\"lineWhite\"></div>\n                    <div id=\"circleWhite\"></div>\n                </div>\n                    \n                <div id=\"slideDescription\" class=\"flex flex-column flex-justifyContent-center flex-alignItems-center\" style=\"background-color: ".concat(slide.leftBG, "\"> \n                    <i id=\"prevSlide\" class=\"fa-solid fa-chevron-up fontSize40\"></i>            \n                    <div id=\"slideText\" class=\"p-20 mx-30\" style=\"border: 1px solid #C4B980\">\n                        <p class=\"fontSize18\">").concat(slide.description, "</p>\n                    </div> \n                    <i id=\"nextSlide\" class=\"fa-solid fa-chevron-down fontSize40\"></i>     \n                </div>\n                <div id=\"slidePic\">\n                    <img id=\"slideImg\" class=\"\" src=\"").concat(slide.rightBG, "\" alt=\"\">\n                </div>\n            </div>\n        ");
+        carouselElement.innerHTML = "\n            <div class=\"flex singleCarouselSlide\">\n                <div id=\"timeline\" class=\"flex flex-column flex-justifyContent-spaceAround\">\n                    \n                    <div id=\"lineWhite\"></div>\n                    <div id=\"circleWhite\"></div>\n                </div>\n                    \n                <div id=\"slideDescription\" class=\"flex flex-column flex-justifyContent-center flex-alignItems-center\" style=\"background-color: ".concat(slide.leftBG, "\"> \n                    <i id=\"prevSlide\" class=\"fa-solid fa-chevron-up fontSize40\"></i>            \n                    <div id=\"slideText\" class=\"p-20 mx-30\" style=\"border: 1px solid #C4B980\">\n                        <p class=\"fontSize18\">").concat(slide.description, "</p>\n                    </div> \n                    <i id=\"nextSlide\" class=\"fa-solid fa-chevron-down fontSize40\"></i>     \n                </div>\n                <div id=\"slidePic\">\n                    <img id=\"slideImg\" class=\"\" src=\"").concat(slide.rightBG, "\" alt=\"\">\n                    <p class=\"m-0\">").concat(slide.picNote, "</p>\n                </div>\n            </div>\n        ");
         var prevButton = document.getElementById('prevSlide');
         var nextButton = document.getElementById('nextSlide');
         var slideImg = document.getElementById('slideImg');
