@@ -1,22 +1,21 @@
-"use strict";
 console.log('hello world');
-const hambMenu = document.querySelector('.hamburger-menu');
-const navMenu = document.getElementById('navMenu');
-const navBar = document.querySelector('.navBar');
-const spanToBreak = document.querySelectorAll('.brSm');
+var hambMenu = document.querySelector('.hamburger-menu');
+var navMenu = document.getElementById('navMenu');
+var navBar = document.querySelector('.navBar');
+var spanToBreak = document.querySelectorAll('.brSm');
 hambMenu.addEventListener('click', function () {
     navMenu.classList.toggle('show');
     navMenu.classList.toggle('hide', !navMenu.classList.contains('show'));
     hambMenu.classList.toggle('openHam');
     navBar.classList.toggle('expand');
 });
-const navBarAdjToScreen = () => {
+var navBarAdjToScreen = function () {
     if (window.innerWidth < 750 && navBar.classList.contains('biggerScreen')) {
         navBar.classList.add('mobileView');
         navBar.classList.remove('biggerScreen');
-        spanToBreak.forEach(el => {
+        spanToBreak.forEach(function (el) {
             if (!el.firstChild || el.firstChild.nodeName !== 'BR') {
-                const brEl = document.createElement('br');
+                var brEl = document.createElement('br');
                 el.prepend(brEl);
             }
         });
@@ -24,14 +23,14 @@ const navBarAdjToScreen = () => {
     else if (window.innerWidth >= 750 && !navBar.classList.contains('biggerScreen')) {
         navBar.classList.remove('mobileView');
         navBar.classList.add('biggerScreen');
-        spanToBreak.forEach(el => {
+        spanToBreak.forEach(function (el) {
             if (el.firstChild && el.firstChild.nodeName === 'BR') {
                 el.removeChild(el.firstChild);
             }
         });
     }
 };
-const navScrolling = () => {
+var navScrolling = function () {
     if (window.pageYOffset > 30) {
         navBar.classList.add('scrolled');
     }
@@ -39,35 +38,35 @@ const navScrolling = () => {
         navBar.classList.remove('scrolled');
     }
 };
-const picAnimation = () => {
-    document.querySelectorAll('.bioLandingPicContainer img').forEach(img => {
-        if (window.pageYOffset >= 600 && window.pageYOffset < 1650) {
+var picAnimation = function () {
+    document.querySelectorAll('.bioLandingPicContainer img').forEach(function (img) {
+        if (window.pageYOffset >= 600) {
             img.classList.add('in-view');
         }
-        else if (window.pageYOffset < 400 || window.pageYOffset > 1651) {
+        else if (window.pageYOffset < 500) {
             img.classList.remove('in-view');
         }
     });
-    document.querySelectorAll('.charityLandingPicContainer img').forEach(img => {
-        if (window.pageYOffset >= 1950 && window.pageYOffset < 2650) {
+    document.querySelectorAll('.achCards').forEach(function (img) {
+        if (window.pageYOffset > 1250) {
             img.classList.add('in-view');
         }
-        else if (window.pageYOffset < 1900) {
+        else if (window.pageYOffset < 1150) {
             img.classList.remove('in-view');
         }
     });
-    document.querySelectorAll('.achCards').forEach(img => {
-        if (window.pageYOffset > 1450 && window.pageYOffset <= 2400) {
+    document.querySelectorAll('.charityLandingPicContainer img').forEach(function (img) {
+        if (window.pageYOffset >= 1950) {
             img.classList.add('in-view');
         }
-        else if (window.pageYOffset < 1100 || window.pageYOffset > 2500) {
+        else if (window.pageYOffset < 1850) {
             img.classList.remove('in-view');
         }
     });
 };
 window.addEventListener('resize', navBarAdjToScreen);
 navBarAdjToScreen();
-window.addEventListener('scroll', () => {
+window.addEventListener('scroll', function () {
     // console.log(window.pageYOffset)
     navScrolling();
     picAnimation();

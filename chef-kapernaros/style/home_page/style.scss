@@ -215,6 +215,7 @@ $primaryColor: #897400;
 			}
             .linkContainer{
                 border-bottom: 1px solid #000;
+				align-items: baseline;
             }
 			a:not(.logoNav){
 				color: $navBarTextColor;
@@ -316,38 +317,38 @@ $primaryColor: #897400;
 			aspect-ratio: 1/1.1;
 			object-fit: cover;
 			object-position: center;
-			transform: translateX(200%);
+			// transform: translateY(10%);
 			opacity: 0;
-			scale: 0;
-			transition: all 0.6s ease;
+			scale: 0.5;
+			transition: all 0.5s ease;
+			&#pic1{
+				top: 0%;
+				left: 35%;
+				z-index: 4;
+				transition-delay: 0s;
+			}
+			&#pic2{
+				top: 22%;
+				left: 55%;
+				z-index: 3;
+				transition-delay: 0.2s;
+			}
+			&#pic3{
+				top: 55%;
+				left: 35%;
+				z-index: 2;
+				transition-delay: 0.4s;
+			}
+			&#pic4{
+				top: 32%;
+				left: 15%;
+				z-index: 1;
+				transition-delay: 0.6s;
+			}
 			&.in-view{
 				scale: 1;
 				opacity: 1;
-				transform: translateX(0%);
-				&#pic1{
-					top: 0%;
-					left: 35%;
-					z-index: 4;
-					transition-delay: 0s;
-				}
-				&#pic2{
-					top: 22%;
-					left: 55%;
-					z-index: 3;
-					transition-delay: 0.2s;
-				}
-				&#pic3{
-					top: 55%;
-					left: 35%;
-					z-index: 2;
-					transition-delay: 0.4s;
-				}
-				&#pic4{
-					top: 32%;
-					left: 15%;
-					z-index: 1;
-					transition-delay: 0.6s;
-				}
+				// transform: translateY(0%);
 			}
 		}
 	}
@@ -375,38 +376,38 @@ $primaryColor: #897400;
 			aspect-ratio: 1/1.1;
 			object-fit: cover;
 			object-position: center;
-			transform: translateX(200%);
+			
 			opacity: 0;
 			scale: 0;
 			transition: all 0.6s ease;
+			&#pic1{
+				top: 0%;
+				left: 35%;
+				z-index: 4;
+				transition-delay: 0s;
+			}
+			&#pic2{
+				top: 22%;
+				left: 55%;
+				z-index: 3;
+				transition-delay: 0.2s;
+			}
+			&#pic3{
+				top: 55%;
+				left: 35%;
+				z-index: 2;
+				transition-delay: 0.4s;
+			}
+			&#pic4{
+				top: 32%;
+				left: 15%;
+				z-index: 1;
+				transition-delay: 0.6s;
+			}
+
 			&.in-view{
 				scale: 1;
 				opacity: 1;
-				transform: translateX(0%);
-				&#pic1{
-					top: 0%;
-					left: 35%;
-					z-index: 4;
-					transition-delay: 0s;
-				}
-				&#pic2{
-					top: 22%;
-					left: 55%;
-					z-index: 3;
-					transition-delay: 0.2s;
-				}
-				&#pic3{
-					top: 55%;
-					left: 35%;
-					z-index: 2;
-					transition-delay: 0.4s;
-				}
-				&#pic4{
-					top: 32%;
-					left: 15%;
-					z-index: 1;
-					transition-delay: 0.6s;
-				}
 			}
 		}
 	}
@@ -421,7 +422,7 @@ $primaryColor: #897400;
 
 }
 .achievementLanding{
-	min-height: 780px;
+	min-height: 820px;
 	height: 88vh;
 	// max-height: 100vh;
 	background-color: #EAEAEA;
@@ -443,29 +444,29 @@ $primaryColor: #897400;
 			padding: 25px 25px;
 			margin-top: 0px;
 			// position: absolute;
-			transform: translateY(400%);
+			transform: translatex(100%);
 			scale: 0;
-			transition: all 0.8s ease;
+			transition: all 0.6s ease;
 
+			&#card-1{
+				transition-delay: 0s;
+				right: 30%;
+			}
+			&#card-2{
+				transition-delay: 0.2s;
+			}
+			&#card-3{
+				transition-delay: 0.4s;
+			}
+			&#card-4{
+				transition-delay: 0.6s;
+			}
+			&#card-5{
+				transition-delay: 0.8s;
+			}
 			&.in-view{
-				transform: translateY(0%);
+				transform: translatex(0%);
 				scale: 1;
-				&#card-1{
-					transition-delay: 0s;
-					right: 30%;
-				}
-				&#card-2{
-					transition-delay: 0.2s;
-				}
-				&#card-3{
-					transition-delay: 0.4s;
-				}
-				&#card-4{
-					transition-delay: 0.6s;
-				}
-				&#card-5{
-					transition-delay: 0.8s;
-				}
 			}
 		}
 
@@ -481,7 +482,6 @@ $primaryColor: #897400;
 		}
 	}
 }
-
 .titlesChef { 
 	color: #001489;
     text-align: justify;
@@ -501,18 +501,18 @@ $primaryColor: #897400;
 		background-color: $primaryColor;
 	}
 }
-
 .btnPrimary {
 	border: 1px solid $primaryColor;
 	color: $primaryColor;
 	font-family: 'Inter';
 	text-decoration: none;
-	padding: 10px 35px;
+	padding: 10px 25px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
 	width: fit-content;
+	min-width: 85px;
 	font-size: 16px;
 	filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
 	transition: all 0.3s ease;
@@ -894,6 +894,24 @@ $primaryColor: #897400;
 	}
 }
 
+.currentTitle{
+	font-weight: 700 !important;
+	font-size: 24px;
+	pointer-events: none;
+	&::before{
+	
+		height: 6px !important;
+		width: 130% !important;
+		margin-left: -1px;
+	}	
+	&:hover{
+		&::before{
+			height: 50% !important;
+		}
+	}
+	
+
+}
 
 
   

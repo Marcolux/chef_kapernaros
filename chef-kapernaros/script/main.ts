@@ -45,27 +45,27 @@ const navScrolling = ()=>{
 
 const picAnimation = () => {
     document.querySelectorAll('.bioLandingPicContainer img').forEach(img => {
-        if (window.pageYOffset >= 600 && window.pageYOffset < 1650) {
+        if (window.pageYOffset >= 600) {
             img.classList.add('in-view')
-        } else if (window.pageYOffset < 400 || window.pageYOffset > 1651) {
+        } else if (window.pageYOffset < 500) {
+            img.classList.remove('in-view')
+        }
+    })
+    document.querySelectorAll('.achCards').forEach(img => {
+        if (window.pageYOffset > 1250) {
+            img.classList.add('in-view')
+        } else if (window.pageYOffset < 1150) {
             img.classList.remove('in-view')
         }
     })
     document.querySelectorAll('.charityLandingPicContainer img').forEach(img => {
-        if (window.pageYOffset >= 1950 && window.pageYOffset < 2650) {
+        if (window.pageYOffset >= 1950) {
             img.classList.add('in-view')
-        } else if (window.pageYOffset < 1900 ) {
+        } else if (window.pageYOffset < 1850) {
             img.classList.remove('in-view')
         }
     })
 
-    document.querySelectorAll('.achCards').forEach(img => {
-        if (window.pageYOffset > 1450 && window.pageYOffset <= 2400) {
-            img.classList.add('in-view')
-        } else if (window.pageYOffset < 1100 || window.pageYOffset > 2500) {
-            img.classList.remove('in-view')
-        }
-    })
 }
 
 window.addEventListener('resize',navBarAdjToScreen)

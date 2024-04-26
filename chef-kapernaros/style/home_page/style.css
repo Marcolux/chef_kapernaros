@@ -268,6 +268,9 @@ html, body {
 
 .navBar.biggerScreen #navBgScn .linkContainer {
   border-bottom: 1px solid #000;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .navBar.biggerScreen #navBgScn a:not(.logoNav) {
@@ -385,22 +388,13 @@ html, body {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  -webkit-transform: translateX(200%);
-          transform: translateX(200%);
   opacity: 0;
-  scale: 0;
-  -webkit-transition: all 0.6s ease;
-  transition: all 0.6s ease;
+  scale: 0.5;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
-.bioLanding .bioLandingPicContainer img.in-view {
-  scale: 1;
-  opacity: 1;
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
-}
-
-.bioLanding .bioLandingPicContainer img.in-view#pic1 {
+.bioLanding .bioLandingPicContainer img#pic1 {
   top: 0%;
   left: 35%;
   z-index: 4;
@@ -408,7 +402,7 @@ html, body {
           transition-delay: 0s;
 }
 
-.bioLanding .bioLandingPicContainer img.in-view#pic2 {
+.bioLanding .bioLandingPicContainer img#pic2 {
   top: 22%;
   left: 55%;
   z-index: 3;
@@ -416,7 +410,7 @@ html, body {
           transition-delay: 0.2s;
 }
 
-.bioLanding .bioLandingPicContainer img.in-view#pic3 {
+.bioLanding .bioLandingPicContainer img#pic3 {
   top: 55%;
   left: 35%;
   z-index: 2;
@@ -424,12 +418,17 @@ html, body {
           transition-delay: 0.4s;
 }
 
-.bioLanding .bioLandingPicContainer img.in-view#pic4 {
+.bioLanding .bioLandingPicContainer img#pic4 {
   top: 32%;
   left: 15%;
   z-index: 1;
   -webkit-transition-delay: 0.6s;
           transition-delay: 0.6s;
+}
+
+.bioLanding .bioLandingPicContainer img.in-view {
+  scale: 1;
+  opacity: 1;
 }
 
 .bioLanding .bioLandingTextContainer .textBioLanding {
@@ -463,22 +462,13 @@ html, body {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  -webkit-transform: translateX(200%);
-          transform: translateX(200%);
   opacity: 0;
   scale: 0;
   -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
 }
 
-.charityLanding .charityLandingPicContainer img.in-view {
-  scale: 1;
-  opacity: 1;
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
-}
-
-.charityLanding .charityLandingPicContainer img.in-view#pic1 {
+.charityLanding .charityLandingPicContainer img#pic1 {
   top: 0%;
   left: 35%;
   z-index: 4;
@@ -486,7 +476,7 @@ html, body {
           transition-delay: 0s;
 }
 
-.charityLanding .charityLandingPicContainer img.in-view#pic2 {
+.charityLanding .charityLandingPicContainer img#pic2 {
   top: 22%;
   left: 55%;
   z-index: 3;
@@ -494,7 +484,7 @@ html, body {
           transition-delay: 0.2s;
 }
 
-.charityLanding .charityLandingPicContainer img.in-view#pic3 {
+.charityLanding .charityLandingPicContainer img#pic3 {
   top: 55%;
   left: 35%;
   z-index: 2;
@@ -502,12 +492,17 @@ html, body {
           transition-delay: 0.4s;
 }
 
-.charityLanding .charityLandingPicContainer img.in-view#pic4 {
+.charityLanding .charityLandingPicContainer img#pic4 {
   top: 32%;
   left: 15%;
   z-index: 1;
   -webkit-transition-delay: 0.6s;
           transition-delay: 0.6s;
+}
+
+.charityLanding .charityLandingPicContainer img.in-view {
+  scale: 1;
+  opacity: 1;
 }
 
 .charityLanding .charityLandingTextContainer {
@@ -521,7 +516,7 @@ html, body {
 }
 
 .achievementLanding {
-  min-height: 780px;
+  min-height: 820px;
   height: 88vh;
   background-color: #EAEAEA;
 }
@@ -548,43 +543,43 @@ html, body {
           box-shadow: 6px 6px 6px #00000059;
   padding: 25px 25px;
   margin-top: 0px;
-  -webkit-transform: translateY(400%);
-          transform: translateY(400%);
+  -webkit-transform: translatex(100%);
+          transform: translatex(100%);
   scale: 0;
-  -webkit-transition: all 0.8s ease;
-  transition: all 0.8s ease;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
 }
 
-.achievementLanding .allAchvmText .achCards.in-view {
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
-  scale: 1;
-}
-
-.achievementLanding .allAchvmText .achCards.in-view#card-1 {
+.achievementLanding .allAchvmText .achCards#card-1 {
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
   right: 30%;
 }
 
-.achievementLanding .allAchvmText .achCards.in-view#card-2 {
+.achievementLanding .allAchvmText .achCards#card-2 {
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
 }
 
-.achievementLanding .allAchvmText .achCards.in-view#card-3 {
+.achievementLanding .allAchvmText .achCards#card-3 {
   -webkit-transition-delay: 0.4s;
           transition-delay: 0.4s;
 }
 
-.achievementLanding .allAchvmText .achCards.in-view#card-4 {
+.achievementLanding .allAchvmText .achCards#card-4 {
   -webkit-transition-delay: 0.6s;
           transition-delay: 0.6s;
 }
 
-.achievementLanding .allAchvmText .achCards.in-view#card-5 {
+.achievementLanding .allAchvmText .achCards#card-5 {
   -webkit-transition-delay: 0.8s;
           transition-delay: 0.8s;
+}
+
+.achievementLanding .allAchvmText .achCards.in-view {
+  -webkit-transform: translatex(0%);
+          transform: translatex(0%);
+  scale: 1;
 }
 
 .achievementLanding .imgAchvm img {
@@ -622,7 +617,7 @@ html, body {
   color: #897400;
   font-family: 'Inter';
   text-decoration: none;
-  padding: 10px 35px;
+  padding: 10px 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -636,6 +631,7 @@ html, body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  min-width: 85px;
   font-size: 16px;
   -webkit-filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
           filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
@@ -1032,6 +1028,22 @@ html, body {
   .titlesChef {
     font-size: 20px !important;
   }
+}
+
+.currentTitle {
+  font-weight: 700 !important;
+  font-size: 24px;
+  pointer-events: none;
+}
+
+.currentTitle::before {
+  height: 6px !important;
+  width: 130% !important;
+  margin-left: -1px;
+}
+
+.currentTitle:hover::before {
+  height: 50% !important;
 }
 
 .wrapper {
