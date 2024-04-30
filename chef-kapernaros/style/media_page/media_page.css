@@ -7,39 +7,37 @@
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: 14vh;
-  width: 100%;
-  height: 85vh;
+  height: 75vh;
 }
 
 #media_section #mediaSelectorCont {
+  -webkit-box-shadow: 5px 5px #b59b07;
+          box-shadow: 5px 5px #b59b07;
   z-index: 2;
-  height: 85vh;
-  background-position: left;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background: #000000;
+  height: 75vh;
 }
 
 #media_section #mediaSelectorCont #mediaBlackBg {
-  background: -webkit-gradient(linear, left top, right top, from(#ffffff37), to(#00000054));
-  background: linear-gradient(to right, #ffffff37, #00000054);
-  min-height: 85vh;
+  background: #000000;
+  min-height: 75vh;
   color: #FFFFFF;
-  font-family: 'Prata';
+  font-family: 'Inter';
 }
 
-#media_section .picSections li {
+#media_section #mediaSelectorCont #mediaBlackBg .picSections li {
   font-size: 18px;
   text-decoration: none;
-  list-style: circle;
+  list-style: none;
+  -webkit-transition: scale .3s ease;
+  transition: scale .3s ease;
 }
 
-#media_section .picSections li:not(.active):hover {
+#media_section #mediaSelectorCont #mediaBlackBg .picSections li:not(.active):hover {
   cursor: pointer;
   scale: 1.1;
 }
 
-#media_section .picSections li.active {
+#media_section #mediaSelectorCont #mediaBlackBg .picSections li.active {
   color: #b59b07;
   scale: 1.1;
 }
@@ -48,6 +46,8 @@
   height: 100%;
   width: 70%;
   position: relative;
+  -webkit-box-shadow: 5px 5px #b59b07;
+          box-shadow: 5px 5px #b59b07;
 }
 
 #media_section #mediaContainer #brandLogo {
@@ -58,8 +58,7 @@
 
 #media_section #mediaContainer #mediaShowCont {
   z-index: 2;
-  background: -webkit-gradient(linear, left top, right top, from(#000000), color-stop(20%, #00000054), to(#ffffff00));
-  background: linear-gradient(to right, #000000 0%, #00000054 20%, #ffffff00 100%);
+  background-color: #000000;
   min-height: 100%;
   width: 100%;
   -webkit-box-pack: space-evenly;
@@ -75,18 +74,17 @@
   width: 90%;
   overflow-x: scroll;
   overflow-y: hidden;
-  height: 75vh;
-  background-color: #ffffff96;
+  height: 65vh;
+  background-color: #ffffff;
 }
 
 #media_section #mediaContainer #mediaShowCont #bigPic .picToEn {
-  max-height: 72vh;
+  max-height: 62vh;
   -o-object-fit: cover;
      object-fit: cover;
-  max-width: 92%;
   cursor: pointer;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: scale 0.4s ease;
+  transition: scale 0.4s ease;
   margin-right: 20px;
 }
 
@@ -95,24 +93,23 @@
 }
 
 #media_section #mediaContainer #mediaShowCont #bigPic .picToEn.fullscreen-mode {
-  background-color: #ffffff;
   -o-object-fit: contain;
      object-fit: contain;
 }
 
 #media_section #mediaContainer #mediaShowCont #bigPic::-webkit-scrollbar {
-  height: 8px;
+  height: 15px;
 }
 
 #media_section #mediaContainer #mediaShowCont #bigPic::-webkit-scrollbar-track {
-  background-color: #c4b980c4;
+  background-color: #b5b5b571;
   width: 2px !important;
-  border-radius: 2px !important;
+  border-radius: 0px !important;
 }
 
 #media_section #mediaContainer #mediaShowCont #bigPic::-webkit-scrollbar-thumb {
-  background-color: #a28f2f;
+  background-color: #b59b07;
   opacity: 1;
-  border-radius: 3px !important;
+  border-radius: 0px !important;
 }
 /*# sourceMappingURL=media_page.css.map */

@@ -1,3 +1,13 @@
+#carouselSec {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#F5F5F5));
+  background: linear-gradient(#FFFFFF, #F5F5F5);
+}
+
+#valueSec {
+  background: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), to(#FFFFFF));
+  background: linear-gradient(#F5F5F5, #FFFFFF);
+}
+
 .carouselContainer {
   width: 100%;
   height: 60%;
@@ -202,6 +212,11 @@
   max-width: 1500px !important;
 }
 
+.highlights {
+  text-align: justify;
+  text-justify: newspaper;
+}
+
 @-webkit-keyframes slideDown {
   from {
     -webkit-transform: translateY(-100%);
@@ -255,5 +270,64 @@
   width: 100%;
   top: 0;
   left: 0;
+}
+
+section#career-highlights {
+  background-color: #2F2F2F;
+}
+
+section#career-highlights .highlights {
+  padding: 25px 25px 25px 25px;
+  list-style: none;
+}
+
+section#career-highlights .highlights ::marker {
+  color: #b59b07 !important;
+}
+
+section#career-highlights .highlights li {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 600;
+  color: #000;
+  border: 1px solid #2F2F2F;
+  background-color: #ffffff;
+  position: relative;
+  -webkit-transition: background-color .4s ease;
+  transition: background-color .4s ease;
+  z-index: 10;
+}
+
+section#career-highlights .highlights li::before {
+  content: '';
+  background-color: #b59b07;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  left: -10px;
+  bottom: 0px;
+  height: 100%;
+  width: 10px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+section#career-highlights .highlights li:hover {
+  z-index: 33;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+section#career-highlights .highlights li:hover::before {
+  z-index: -1;
+  width: 100%;
+  left: 0px;
+  background-color: #b59b07;
+}
+
+.animated-highlight {
+  color: #b59b07 !important;
 }
 /*# sourceMappingURL=bio.css.map */

@@ -4,43 +4,41 @@ $gold: #b59b07;
     display: flex;
     flex-direction: column;
     margin-top: 14vh;
-    width: 100%;
-    height: 85vh;
+    height: 75vh;
     #mediaSelectorCont{
+        box-shadow: 5px 5px $gold;
         z-index: 2;
-        height: 85vh;
-        background-position: left;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background:  #000000;
+        height: 75vh;
         #mediaBlackBg{
-            background: linear-gradient(to right,#ffffff37, #00000054);
-            min-height: 85vh;
+            background: #000000;
+            min-height: 75vh;
             color: #FFFFFF;
-            font-family: 'Prata';
+            font-family: 'Inter';
+            .picSections{
+                li{
+                    font-size: 18px;
+                    text-decoration: none;
+                    list-style: none ;
+                    transition: scale .3s ease;
+                    
+                    &:not(.active):hover{
+                        cursor: pointer;
+                        scale: 1.1;
+                    }
+                    &.active{
+                        color: $gold;
+                        scale: 1.1;
+                    }
+                }
+            }
         } 
     }
 
-    .picSections{
-        li{
-            font-size: 18px;
-            text-decoration: none;
-            list-style: circle ;
-            
-            &:not(.active):hover{
-                cursor: pointer;
-                scale: 1.1;
-            }
-            &.active{
-                color: $gold;
-                scale: 1.1;
-            }
-        }
-    }
     #mediaContainer{
         height: 100%;
         width: 70%; 
         position: relative;
+        box-shadow: 5px 5px $gold;
         
         #brandLogo{
             position: absolute;
@@ -49,7 +47,7 @@ $gold: #b59b07;
         }
         #mediaShowCont{
             z-index: 2;
-            background: linear-gradient(to right,#000000 0%,#00000054 20%, #ffffff00 100%);
+            background-color: #000000;
             min-height: 100%;
             width: 100%;
             justify-content: space-evenly;
@@ -60,38 +58,36 @@ $gold: #b59b07;
                 width: 90%;
                 overflow-x: scroll;
                 overflow-y: hidden;
-                height: 75vh;
-                background-color: #ffffff96;
+                height: 65vh;
+                background-color: #ffffff;
                 
                 .picToEn{
-                    max-height: 72vh;
+                    max-height: 62vh;
                     object-fit: cover;
-                    max-width: 92%;
                     cursor: pointer;
-                    transition: all 0.4s ease; 
+                    transition: scale 0.4s ease; 
                     margin-right: 20px;
                     &:hover{
                         scale: 1.03;
                     }
                     &.fullscreen-mode {
-                        background-color: #ffffff;
                         object-fit: contain;
                     }
                 }
                 &::-webkit-scrollbar {
-                    height: 8px;
+                    height: 15px;
                 }
                 
                 &::-webkit-scrollbar-track {
-                    background-color: #c4b980c4;
+                    background-color: #b5b5b571;
                     width: 2px !important;
-                    border-radius: 2px !important; 
+                    border-radius: 0px !important; 
                 }
                 
                 &::-webkit-scrollbar-thumb {
-                    background-color: #a28f2f;
+                    background-color: $gold;
                     opacity: 1;
-                    border-radius: 3px !important;
+                    border-radius: 0px !important; 
                 }
             }
         }
