@@ -89,20 +89,23 @@
 }
 
 #media_section #mediaContainer #mediaShowCont #bigPic #picShowing .picToEn {
-  width: 0px;
-  height: 65vh;
+  max-width: 450px;
+  max-height: 65vh;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
   cursor: pointer;
   background-color: transparent !important;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  scale: 1;
+  opacity: 1;
+  -webkit-transition: scale 0.2s ease, opacity 0.5s ease;
+  transition: scale 0.2s ease, opacity 0.5s ease;
 }
 
 #media_section #mediaContainer #mediaShowCont #bigPic #picShowing .picToEn.show {
-  width: 450px;
+  scale: 1;
+  opacity: 1;
 }
 
 #media_section #mediaContainer #mediaShowCont #bigPic #picShowing .picToEn:hover {
