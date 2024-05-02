@@ -25,7 +25,7 @@
 }
 
 #media_section #mediaSelectorCont #mediaBlackBg .picSections li {
-  font-size: 18px;
+  font-size: 17px;
   text-decoration: none;
   list-style: none;
   -webkit-transition: scale .3s ease;
@@ -44,7 +44,6 @@
 
 #media_section #mediaContainer {
   height: 100%;
-  width: 70%;
   position: relative;
   -webkit-box-shadow: 5px 5px #b59b07;
           box-shadow: 5px 5px #b59b07;
@@ -71,30 +70,52 @@
 }
 
 #media_section #mediaContainer #mediaShowCont #bigPic {
-  width: 90%;
-  overflow-x: scroll;
-  overflow-y: hidden;
   height: 65vh;
-  background-color: #ffffff;
+  background-color: #ffffff00;
 }
 
-#media_section #mediaContainer #mediaShowCont #bigPic .picToEn {
-  max-height: 62vh;
+#media_section #mediaContainer #mediaShowCont #bigPic #picShowing button {
+  scale: 1;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  background-color: transparent;
+  border: none;
+  color: #b59b07;
+}
+
+#media_section #mediaContainer #mediaShowCont #bigPic #picShowing button:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
+
+#media_section #mediaContainer #mediaShowCont #bigPic #picShowing .picToEn {
+  width: 0px;
+  height: 65vh;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   cursor: pointer;
-  -webkit-transition: scale 0.4s ease;
-  transition: scale 0.4s ease;
-  margin-right: 20px;
+  background-color: transparent !important;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
-#media_section #mediaContainer #mediaShowCont #bigPic .picToEn:hover {
+#media_section #mediaContainer #mediaShowCont #bigPic #picShowing .picToEn.show {
+  width: 450px;
+}
+
+#media_section #mediaContainer #mediaShowCont #bigPic #picShowing .picToEn:hover {
   scale: 1.03;
 }
 
-#media_section #mediaContainer #mediaShowCont #bigPic .picToEn.fullscreen-mode {
+#media_section #mediaContainer #mediaShowCont #bigPic #picShowing.fullscreen-mode .picToEn {
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+#media_section #mediaContainer #mediaShowCont #bigPic #picShowing.fullscreen-mode button {
+  scale: 0;
 }
 
 #media_section #mediaContainer #mediaShowCont #bigPic::-webkit-scrollbar {

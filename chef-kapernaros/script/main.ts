@@ -82,88 +82,83 @@ picAnimation()
 
 
 
-const images = document.querySelectorAll('.picToEn') as NodeListOf<HTMLImageElement>
-images.forEach(image => {
+// const images = document.querySelectorAll('.picToEn') as NodeListOf<HTMLImageElement>
+// images.forEach(image => {
 
-    image.addEventListener('click', function() {
-        if (!document.fullscreenElement) {
-            this.requestFullscreen().catch(err => {
-                alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`)
-            })
-        } else {
-            if (document.exitFullscreen) {
-                document.exitFullscreen()
-            }
-        }
-    })
+//     image.addEventListener('click', function() {
+//         if (!document.fullscreenElement) {
+//             this.requestFullscreen().catch(err => {
+//                 alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`)
+//             })
+//         } else {
+//             if (document.exitFullscreen) {
+//                 document.exitFullscreen()
+//             }
+//         }
+//     })
     
-    document.addEventListener('fullscreenchange', (event) => {
-        if (document.fullscreenElement) {
-            console.log(`Element: ${document.fullscreenElement.id} entered full-screen mode.`);
-            image.classList.add('fullscreen-mode') // Add the class when entering full screen
-        } else {
-            console.log('Leaving full-screen mode.')
-            image.classList.remove('fullscreen-mode') // Remove the class when exiting
-        }
-    })
-})
+//     document.addEventListener('fullscreenchange', (event) => {
+//         if (document.fullscreenElement) {
+//             console.log(`Element: ${document.fullscreenElement.id} entered full-screen mode.`);
+//             image.classList.add('fullscreen-mode') // Add the class when entering full screen
+//         } else {
+//             console.log('Leaving full-screen mode.')
+//             image.classList.remove('fullscreen-mode') // Remove the class when exiting
+//         }
+//     })
+// })
 
 
 const container = document.querySelector('#bigPic') as HTMLDivElement
-let scrollInterval: any = null // This will hold the interval ID
-let isHovering = false // Tracks if the mouse is over the container
+// let scrollInterval: any = null // This will hold the interval ID
+// let isHovering = false // Tracks if the mouse is over the container
 
-// Function to start scrolling
-function startScrolling(amount: any) {
-    if (!scrollInterval) { // Only set the interval if it's not already set
-        scrollInterval = setInterval(() => {
-            container.scrollBy({ left: amount, behavior: 'smooth' })
-        }, 300) // Adjust the speed as necessary
-    }
-}
-// Function to stop scrolling
-function stopScrolling() {
-    clearInterval(scrollInterval);
-    scrollInterval = null
-}
-// Mouse enter and leave events
-container.addEventListener('mouseenter', () => {
-    isHovering = true
-    container.classList.add('hover-active') // Optional: add visual feedback
-})
-container.addEventListener('mouseleave', () => {
-    isHovering = false
-    container.classList.remove('hover-active') // Optional: remove visual feedback
-    stopScrolling() // Ensure scrolling stops when mouse leaves the container
-})
-// Keydown event for starting scroll
-document.addEventListener('keydown', (event) => {
-    if (isHovering && (event.key === 'ArrowLeft' || event.key === 'ArrowRight')) {
-        const scrollAmount = event.key === 'ArrowLeft' ? -250 : 250
-        startScrolling(scrollAmount)
-    }
-})
-// Keyup event for stopping scroll
-document.addEventListener('keyup', (event) => {
-    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
-        stopScrolling()
-    }
-})
+// // Function to start scrolling
+// function startScrolling(amount: any) {
+//     if (!scrollInterval) { // Only set the interval if it's not already set
+//         scrollInterval = setInterval(() => {
+//             container.scrollBy({ left: amount, behavior: 'smooth' })
+//         }, 300) // Adjust the speed as necessary
+//     }
+// }
+// // Function to stop scrolling
+// function stopScrolling() {
+//     clearInterval(scrollInterval);
+//     scrollInterval = null
+// }
+// // Mouse enter and leave events
+// container.addEventListener('mouseenter', () => {
+//     isHovering = true
+//     container.classList.add('hover-active') // Optional: add visual feedback
+// })
+// container.addEventListener('mouseleave', () => {
+//     isHovering = false
+//     container.classList.remove('hover-active') // Optional: remove visual feedback
+//     stopScrolling() // Ensure scrolling stops when mouse leaves the container
+// })
+// // Keydown event for starting scroll
+// document.addEventListener('keydown', (event) => {
+//     if (isHovering && (event.key === 'ArrowLeft' || event.key === 'ArrowRight')) {
+//         const scrollAmount = event.key === 'ArrowLeft' ? -250 : 250
+//         startScrolling(scrollAmount)
+//     }
+// })
+// // Keyup event for stopping scroll
+// document.addEventListener('keyup', (event) => {
+//     if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+//         stopScrolling()
+//     }
+// })
 
 let allNotActiveTitles = document.querySelectorAll('.secTitles') as NodeListOf<HTMLLIElement>
 allNotActiveTitles.forEach( listEl => {
     listEl.addEventListener('click', () => {
         allNotActiveTitles = document.querySelectorAll('.secTitles') as NodeListOf<HTMLLIElement>
+
         if (!listEl.classList.contains('active')) {
             const titleActive = [...allNotActiveTitles].filter(el => el.classList.contains('active'))[0]
-            const titleIdToRemove = titleActive.id
             titleActive.classList.remove('active')
             listEl.classList.add('active')
-            const titleIdToShow = listEl.id
-            const sectToClean = container.querySelector(`#${titleIdToRemove}`)
-            sectToClean?.classList.add('hide')
-            const sectToShow = container.querySelector(`#${titleIdToShow}`)
-            sectToShow?.classList.remove('hide')
         }
     })
 })
