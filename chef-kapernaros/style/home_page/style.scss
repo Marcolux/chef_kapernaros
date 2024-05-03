@@ -514,6 +514,7 @@ $primaryColor: #897400;
 	width: fit-content;
 	min-width: 85px;
 	font-size: 16px;
+	background-color: transparent;
 	filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
 	transition: all 0.3s ease;
 	&:hover{
@@ -523,6 +524,10 @@ $primaryColor: #897400;
 	&:active{
 		filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
 		box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+	}
+	a{
+		text-decoration: none;
+		color: $primaryColor;
 	}
 
 }

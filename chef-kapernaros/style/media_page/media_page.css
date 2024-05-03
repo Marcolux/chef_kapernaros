@@ -198,4 +198,19 @@
   opacity: 1;
   border-radius: 0px !important;
 }
+
+#videoContainer .video-responsive {
+  overflow: hidden;
+  position: relative;
+  min-height: 30vw;
+  min-width: 30%;
+}
+
+#videoContainer .video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
 /*# sourceMappingURL=media_page.css.map */

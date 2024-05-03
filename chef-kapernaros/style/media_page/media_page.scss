@@ -158,3 +158,24 @@ $shadowInset: #949494;
         }
     }
 }
+
+
+#videoContainer {
+
+    .video-responsive {
+        overflow: hidden;
+        position: relative;
+        min-height: 30vw;
+        min-width: 30%;
+        
+        
+        iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+    }
+}
+
