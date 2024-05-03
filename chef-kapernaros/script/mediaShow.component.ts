@@ -74,9 +74,9 @@ function initPicCollection(newPicturesList: picCollection, collection: Picture[]
 
 
     function showPicture(index: number) {
-
+        carouselElement.innerHTML = ''
+        
         const picture = newPicturesList.getSinglePic(index) as Picture
-
         if (index < newPicturesList.getLastIndex() && index !== 0) {
 
             carouselElement.innerHTML = `
@@ -84,7 +84,7 @@ function initPicCollection(newPicturesList: picCollection, collection: Picture[]
                     <button class="p-20" id="prevPicture">
                         <i class="fa-solid fa-chevron-left fontSize40"></i>
                     </button>
-                    <div class="flex flex-justifyContent-center flex-alignItems-center" style="width: 500px; height: 66vh; background-color: #FFF">
+                    <div class="flex flex-justifyContent-center flex-alignItems-center picDiv" >
                         <img class="picToEn" src="${picture.src}">
                     </div>
                     <button class="p-20" id="nextPicture">
@@ -98,20 +98,20 @@ function initPicCollection(newPicturesList: picCollection, collection: Picture[]
                     <button class="p-20" id="prevPicture">
                         <i class="fa-solid fa-chevron-left fontSize40"></i>
                     </button>
-                    <div class="flex flex-justifyContent-center flex-alignItems-center" style="width: 500px; height: 66vh; background-color: #FFF">
+                    <div class="flex flex-justifyContent-center flex-alignItems-center picDiv" >
                         <img class="picToEn" src="${picture.src}">
                     </div>
 
-                    <button class="p-20" id="nextPicture"></button>
+                    <div class="p-20"></div>
                 </div>
             `
         } else if (index === 0) {
 
             carouselElement.innerHTML = `
                 <div id="picShowing" class="flex flex-alignItems-center">
-                    <button class="p-20" id="prevPicture"></button>
+                    <div class="p-20"></div>
 
-                    <div class="flex flex-justifyContent-center flex-alignItems-center" style="width: 500px; height: 66vh; background-color: #FFF">
+                    <div class="flex flex-justifyContent-center flex-alignItems-center  picDiv" >
                         <img class="picToEn" src="${picture.src}">
                     </div>
                     <button class="p-20" id="nextPicture">
@@ -134,7 +134,7 @@ function initPicCollection(newPicturesList: picCollection, collection: Picture[]
                 if (!document.fullscreenElement) { imgShowing.classList.remove('fullscreen-mode')  }
             })   
 
-        },150)
+        },150) 
     
         const prevButton = document.getElementById('prevPicture') as HTMLElement
         const nextButton = document.getElementById('nextPicture') as HTMLElement
@@ -161,9 +161,9 @@ function initPicCollection(newPicturesList: picCollection, collection: Picture[]
         } else if (currentPictureIndex === 0) {
             currentPictureIndex = 0
         }
-        
         showPicture(currentPictureIndex)
     }
+
     document.addEventListener('keydown', function(event) {
         if (event.key === "ArrowLeft") {  // Left arrow key
             movePicture(-1)
@@ -196,6 +196,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { src: 'friendsCelebList'},
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_80,w_800,h_1200,c_fill/v1714601166/Niko/friends_celeb_1_ydwv20.webp"},
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_80,w_800,h_1200,c_fill/v1714601356/Niko/f_f_2_bpez7h.webp"},
+        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714696956/20231222_160947_lzbtfg.jpg"},
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_80,w_800,h_1200,c_fill/v1714603600/Niko/f_f_3_ypggwg.webp"},
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_80,w_800,h_1200,c_fill/v1714604103/Niko/f_f_4_tu7gvz.webp"},
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_80,w_800,c_fill/v1714604694/Niko/f_f_5_pti2yn.webp"},
@@ -302,8 +303,6 @@ document.addEventListener('DOMContentLoaded', function() {
         {src:"https://res.cloudinary.com/drdrs6pdq/image/upload/v1714620795/Niko/on%20the%20pass/o_t_p_14_f2im1y.webp"},
     ]
     const allSources = [friendsCelebList_src, growingInGreeceList_src, charityEventsList_src, competitionShows_src, onThePass_src]
-
-    
 
     let allNotActiveTi = document.querySelectorAll('.secTitles') as NodeListOf<HTMLLIElement>
     allNotActiveTi.forEach( listEl => {

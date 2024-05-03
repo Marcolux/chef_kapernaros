@@ -1,21 +1,37 @@
 $primaryColor: #f8f8f5;
 $gold: #b59b07;
+$background: #000000e4;
+$shadowInset: #949494;
 #media_section{
  
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-top: 14vh;
     height: 75vh;
+    #sectionPic{
+        // border: 1px solid #aeaeae3b;
+        border: 1px solid $gold;
+        display: flex;
+        width: fit-content !important;
+        box-shadow:  6px 6px 6px #aeaeae;  
+    }
     #mediaSelectorCont{
-        box-shadow: 5px 5px $gold;
+        // box-shadow: 5px 5px $gold;
         z-index: 2;
         height: 75vh;
+        background-color: $background ;
         #mediaBlackBg{
-            background: #000000;
-            min-height: 75vh;
-            color: #FFFFFF;
+            background: #ffffff;
+            height: fit-content;
+            color: #000000;
             font-family: 'Inter';
+            // border: 1px solid #aeaeae65;
+            border: 1px solid $gold;
+            box-shadow:  6px 6px 10px $shadowInset inset,
+                        -6px -6px 10px $shadowInset inset;
             .picSections{
+                width: fit-content;
                 li{
                     font-size: 17px;
                     text-decoration: none;
@@ -25,9 +41,11 @@ $gold: #b59b07;
                     &:not(.active):hover{
                         cursor: pointer;
                         scale: 1.1;
+                        font-weight: 600;
                     }
                     &.active{
                         color: $gold;
+                        font-weight: 600;
                         scale: 1.1;
                     }
                 }
@@ -38,7 +56,7 @@ $gold: #b59b07;
     #mediaContainer{
         height: 100%;
         position: relative;
-        box-shadow: 5px 5px $gold;
+        background-color: $background ;
         
         #brandLogo{
             position: absolute;
@@ -47,7 +65,7 @@ $gold: #b59b07;
         }
         #mediaShowCont{
             z-index: 2;
-            background-color: #000000;
+            // background-color: #000000;
             min-height: 100%;
             width: 100%;
             justify-content: space-evenly;
@@ -55,38 +73,64 @@ $gold: #b59b07;
             position: relative;
             
             #bigPic{
-                // width: 70%;
                 height: 65vh;
                 background-color: #ffffff00;
+                z-index: 55;
+                #singlePicCont{
+                    z-index: 55;
+                }
                 #picShowing{
-
                     button{
                         scale: 1;
                         transition: all 1s ease; 
                         background-color: transparent;
-                        border: none;
+                        border: 2px solid #b59b07;
+                        border-radius: 50%;
+                        width: 50px;
+                        height: 50px;
                         color: #b59b07;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                         &:hover{
                             scale: 1.1;
                             cursor: pointer;
                         }
                     }
-                    .picToEn{
-                        max-width: 450px;
-                        max-height: 65vh;
-                        object-fit: cover;
-                        object-position: center;
-                        cursor: pointer;
-                        background-color: transparent !important;
-                        scale: 1;
-                        opacity: 1;
-                        transition: scale 0.2s ease, opacity 0.5s ease; 
-                        &.show{
-                            scale: 1;
-                            opacity: 1;
-                        }
-                        &:hover{
-                            scale: 1.03;
+                    .picDiv{
+                        overflow: hidden;
+                        width: 500px;
+                        height: 65vh;
+                        padding: 10px;
+                        transition: all 0.3s ease-in-out;
+                        // border: 1px solid #aeaeae5a;
+                        border: 1px solid $gold;
+                        background-color: #ffffff;
+                        // box-shadow:  6px 6px 6px #aeaeae;
+                        box-shadow:  6px 6px 10px $shadowInset inset,
+                        -6px -6px 10px $shadowInset inset;
+                        margin: 0px 20px;
+                        .picToEn{
+                            border: 3px solid #ffffff;
+                            max-width: 450px;
+                            max-height: 65vh;
+                            object-fit: cover;
+                            object-position: center;
+                            cursor: pointer;
+                            border-radius: 30px;
+                            box-shadow:  6px 6px 6px #aeaeae;
+                            transition: all .2s ease-in-out ;  
+                            border: 1px solid $gold;
+                            
+                            &.show{
+                                border-radius: 0px;
+                                border: 0px solid #ffffff;
+                                box-shadow:  0px 0px #aeaeae;
+                            }
+                            &:hover{
+                                border-radius: 10px;
+                                box-shadow:  6px 6px 6px #aeaeae;
+                            }
                         }
                     }
                     &.fullscreen-mode{

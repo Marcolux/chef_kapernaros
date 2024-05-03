@@ -54,15 +54,16 @@ function initPicCollection(newPicturesList, collection) {
         collection.forEach(function (picture) { newPicturesList.append(picture); });
     }
     function showPicture(index) {
+        carouselElement.innerHTML = '';
         var picture = newPicturesList.getSinglePic(index);
         if (index < newPicturesList.getLastIndex() && index !== 0) {
-            carouselElement.innerHTML = "\n                <div id=\"picShowing\" class=\"flex flex-alignItems-center\">\n                    <button class=\"p-20\" id=\"prevPicture\">\n                        <i class=\"fa-solid fa-chevron-left fontSize40\"></i>\n                    </button>\n                    <div class=\"flex flex-justifyContent-center flex-alignItems-center\" style=\"width: 500px; height: 66vh; background-color: #FFF\">\n                        <img class=\"picToEn\" src=\"".concat(picture.src, "\">\n                    </div>\n                    <button class=\"p-20\" id=\"nextPicture\">\n                        <i class=\"fa-solid fa-chevron-right fontSize40\"></i>\n                    </button>\n                </div>\n            ");
+            carouselElement.innerHTML = "\n                <div id=\"picShowing\" class=\"flex flex-alignItems-center\">\n                    <button class=\"p-20\" id=\"prevPicture\">\n                        <i class=\"fa-solid fa-chevron-left fontSize40\"></i>\n                    </button>\n                    <div class=\"flex flex-justifyContent-center flex-alignItems-center picDiv\" >\n                        <img class=\"picToEn\" src=\"".concat(picture.src, "\">\n                    </div>\n                    <button class=\"p-20\" id=\"nextPicture\">\n                        <i class=\"fa-solid fa-chevron-right fontSize40\"></i>\n                    </button>\n                </div>\n            ");
         }
         else if (index === newPicturesList.getLastIndex()) {
-            carouselElement.innerHTML = "\n                <div id=\"picShowing\" class=\"flex flex-alignItems-center\">\n                    <button class=\"p-20\" id=\"prevPicture\">\n                        <i class=\"fa-solid fa-chevron-left fontSize40\"></i>\n                    </button>\n                    <div class=\"flex flex-justifyContent-center flex-alignItems-center\" style=\"width: 500px; height: 66vh; background-color: #FFF\">\n                        <img class=\"picToEn\" src=\"".concat(picture.src, "\">\n                    </div>\n\n                    <button class=\"p-20\" id=\"nextPicture\"></button>\n                </div>\n            ");
+            carouselElement.innerHTML = "\n                <div id=\"picShowing\" class=\"flex flex-alignItems-center\">\n                    <button class=\"p-20\" id=\"prevPicture\">\n                        <i class=\"fa-solid fa-chevron-left fontSize40\"></i>\n                    </button>\n                    <div class=\"flex flex-justifyContent-center flex-alignItems-center picDiv\" >\n                        <img class=\"picToEn\" src=\"".concat(picture.src, "\">\n                    </div>\n\n                    <div class=\"p-20\"></div>\n                </div>\n            ");
         }
         else if (index === 0) {
-            carouselElement.innerHTML = "\n                <div id=\"picShowing\" class=\"flex flex-alignItems-center\">\n                    <button class=\"p-20\" id=\"prevPicture\"></button>\n\n                    <div class=\"flex flex-justifyContent-center flex-alignItems-center\" style=\"width: 500px; height: 66vh; background-color: #FFF\">\n                        <img class=\"picToEn\" src=\"".concat(picture.src, "\">\n                    </div>\n                    <button class=\"p-20\" id=\"nextPicture\">\n                        <i class=\"fa-solid fa-chevron-right fontSize40\"></i>\n                    </button>\n                </div>\n            ");
+            carouselElement.innerHTML = "\n                <div id=\"picShowing\" class=\"flex flex-alignItems-center\">\n                    <div class=\"p-20\"></div>\n\n                    <div class=\"flex flex-justifyContent-center flex-alignItems-center  picDiv\" >\n                        <img class=\"picToEn\" src=\"".concat(picture.src, "\">\n                    </div>\n                    <button class=\"p-20\" id=\"nextPicture\">\n                        <i class=\"fa-solid fa-chevron-right fontSize40\"></i>\n                    </button>\n                </div>\n            ");
         }
         setTimeout(function () {
             var imgs = carouselElement.querySelector('img');
@@ -131,6 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { src: 'friendsCelebList' },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_80,w_800,h_1200,c_fill/v1714601166/Niko/friends_celeb_1_ydwv20.webp" },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_80,w_800,h_1200,c_fill/v1714601356/Niko/f_f_2_bpez7h.webp" },
+        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714696956/20231222_160947_lzbtfg.jpg" },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_80,w_800,h_1200,c_fill/v1714603600/Niko/f_f_3_ypggwg.webp" },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_80,w_800,h_1200,c_fill/v1714604103/Niko/f_f_4_tu7gvz.webp" },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_80,w_800,c_fill/v1714604694/Niko/f_f_5_pti2yn.webp" },
