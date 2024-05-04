@@ -39,7 +39,9 @@ const navScrolling = ()=>{
     if (window.pageYOffset > 30) {
         navBar.classList.add('scrolled')
     } else {
-        navBar.classList.remove('scrolled')
+        if (!navBar.classList.contains('scrolledAlways')) {
+            navBar.classList.remove('scrolled')
+        }
     }
 }
 
@@ -154,6 +156,7 @@ let allNotActiveTitles = document.querySelectorAll('.secTitles') as NodeListOf<H
 allNotActiveTitles.forEach( listEl => {
     listEl.addEventListener('click', () => {
         allNotActiveTitles = document.querySelectorAll('.secTitles') as NodeListOf<HTMLLIElement>
+        console.log(listEl)
 
         if (!listEl.classList.contains('active')) {
             const titleActive = [...allNotActiveTitles].filter(el => el.classList.contains('active'))[0]
@@ -162,6 +165,23 @@ allNotActiveTitles.forEach( listEl => {
         }
     })
 })
+
+declare var emailjs: any;
+emailjs.init('o69p_GM3kd5oX3hnI')
+
+document.getElementById('myForm')?.addEventListener('submit', function(event) {
+    event.preventDefault() // Prevent the default form submission
+  
+    emailjs.sendForm('default_service', 'template_bxw793c', this)
+        .then(function(response: any) {
+        console.log('SUCCESS!', response.status, response.text)
+        alert("Email sent successfully!")
+        }, function(error: any) {
+        console.log('FAILED...', error)
+        alert("Failed to send email.")
+    })
+})
+  
 
 
 console.log('all the time 4 try')

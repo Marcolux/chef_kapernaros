@@ -1,0 +1,71 @@
+#tablePicContainer {
+  padding: 30px;
+}
+
+#tablePicContainer .singlePicTable {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#tablePicContainer .singlePicTable.grow1 {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+#tablePicContainer .singlePicTable.grow2 {
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+}
+
+#tablePicContainer .singlePicTable img {
+  width: 100%;
+  aspect-ratio: 1.2/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+#tablePicContainer .singlePicTable .picDescr {
+  height: 0%;
+  width: 0%;
+  background-color: #00000083;
+  color: #f8f8f5;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  position: absolute;
+  bottom: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#tablePicContainer .singlePicTable .picDescr p {
+  padding: 0px;
+  scale: 0;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+#tablePicContainer .singlePicTable:hover .picDescr {
+  height: calc(100% - 1%);
+  width: 100%;
+}
+
+#tablePicContainer .singlePicTable:hover .picDescr p {
+  padding: 10px;
+  scale: 1;
+  font-family: 'Inter';
+  font-size: 20px;
+}
+/*# sourceMappingURL=chef_table.css.map */

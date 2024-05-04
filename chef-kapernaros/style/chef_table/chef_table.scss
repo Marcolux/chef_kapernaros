@@ -1,0 +1,52 @@
+$primaryColor: #f8f8f5;
+$gold: #b59b07;
+#tablePicContainer{
+    padding: 30px;
+    .singlePicTable{
+        position: relative; 
+        display: flex;
+        &.grow1{
+            flex-grow: 1;
+        }       
+        &.grow2{
+            flex-grow: 3;
+        }       
+        
+        img{
+            width: 100%;
+            aspect-ratio: 1.2/1;
+            object-fit: cover;
+            object-position: center;
+        }
+        .picDescr{
+            height: 0%;
+            width: 0%;
+            background-color: #00000083;
+            color: #f8f8f5;
+            transition: all 0.4s ease-in-out;
+            position: absolute;
+            bottom: 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p{
+                padding: 0px;
+                scale: 0;
+                transition: all 0.4s ease-in-out;
+            }
+        }
+        &:hover{
+            .picDescr{
+                
+                height: calc(100% - 1%);
+                width: 100%;
+                p{
+                    padding: 10px;
+                    scale: 1;
+                    font-family: 'Inter';
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

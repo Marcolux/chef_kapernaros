@@ -1,18 +1,18 @@
-var singlePic = /** @class */ (function () {
-    function singlePic(data) {
+"use strict";
+class singlePic {
+    constructor(data) {
         this.data = data;
         this.next = null;
     }
-    return singlePic;
-}());
-var picCollection = /** @class */ (function () {
-    function picCollection(id) {
+}
+class picCollection {
+    constructor(id) {
         this.head = null;
         this.tail = null;
         this.id = id;
     }
-    picCollection.prototype.append = function (data) {
-        var newSinglePic = new singlePic(data);
+    append(data) {
+        const newSinglePic = new singlePic(data);
         if (!this.head) {
             this.head = newSinglePic;
             this.tail = newSinglePic;
@@ -21,10 +21,10 @@ var picCollection = /** @class */ (function () {
             this.tail.next = newSinglePic;
             this.tail = newSinglePic;
         }
-    };
-    picCollection.prototype.getSinglePic = function (index) {
-        var currentSinglePic = this.head;
-        var count = 0;
+    }
+    getSinglePic(index) {
+        let currentSinglePic = this.head;
+        let count = 0;
         // if currentSinglePic === null means that the while loop reached the end of the list because it will replace the currentPicture with is next currentSinglePic = currentSinglePic.next
         while (currentSinglePic !== null) {
             if (count === index)
@@ -33,68 +33,101 @@ var picCollection = /** @class */ (function () {
             currentSinglePic = currentSinglePic.next;
         }
         return null;
-    };
-    picCollection.prototype.getLastIndex = function () {
-        var currentSinglePic = this.head;
-        var count = 0;
+    }
+    getLastIndex() {
+        let currentSinglePic = this.head;
+        let count = 0;
         while (currentSinglePic !== null) {
             count++;
             currentSinglePic = currentSinglePic.next;
         }
         return count - 1;
-    };
-    return picCollection;
-}());
+    }
+}
 function initPicCollection(newPicturesList, collection) {
-    var bigPic = document.querySelector("#bigPic");
-    var carouselElement = bigPic.querySelector("#singlePicCont");
+    let bigPic = document.querySelector(`#bigPic`);
+    let carouselElement = bigPic.querySelector(`#singlePicCont`);
     carouselElement.innerHTML = '';
-    var first = collection.shift();
+    let first = collection.shift();
     if (!newPicturesList.head) {
-        collection.forEach(function (picture) { newPicturesList.append(picture); });
+        collection.forEach(picture => { newPicturesList.append(picture); });
     }
     function showPicture(index) {
         carouselElement.innerHTML = '';
-        var picture = newPicturesList.getSinglePic(index);
+        const picture = newPicturesList.getSinglePic(index);
         if (index < newPicturesList.getLastIndex() && index !== 0) {
-            carouselElement.innerHTML = "\n                <div id=\"picShowing\" class=\"flex flex-alignItems-center\">\n                    <button class=\"p-20\" id=\"prevPicture\">\n                        <i class=\"fa-solid fa-chevron-left fontSize40\"></i>\n                    </button>\n                    <div class=\"flex flex-justifyContent-center flex-alignItems-center picDiv\" >\n                        <img class=\"picToEn\" src=\"".concat(picture.src, "\">\n                    </div>\n                    <button class=\"p-20\" id=\"nextPicture\">\n                        <i class=\"fa-solid fa-chevron-right fontSize40\"></i>\n                    </button>\n                </div>\n            ");
+            carouselElement.innerHTML = `
+                <div id="picShowing" class="flex flex-alignItems-center">
+                    <button class="p-20" id="prevPicture">
+                        <i class="fa-solid fa-chevron-left fontSize40"></i>
+                    </button>
+                    <div class="flex flex-justifyContent-center flex-alignItems-center picDiv" >
+                        <img class="picToEn" src="${picture.src}">
+                    </div>
+                    <button class="p-20" id="nextPicture">
+                        <i class="fa-solid fa-chevron-right fontSize40"></i>
+                    </button>
+                </div>
+            `;
         }
         else if (index === newPicturesList.getLastIndex()) {
-            carouselElement.innerHTML = "\n                <div id=\"picShowing\" class=\"flex flex-alignItems-center\">\n                    <button class=\"p-20\" id=\"prevPicture\">\n                        <i class=\"fa-solid fa-chevron-left fontSize40\"></i>\n                    </button>\n                    <div class=\"flex flex-justifyContent-center flex-alignItems-center picDiv\" >\n                        <img class=\"picToEn\" src=\"".concat(picture.src, "\">\n                    </div>\n\n                    <div class=\"p-20\"></div>\n                </div>\n            ");
+            carouselElement.innerHTML = `
+                <div id="picShowing" class="flex flex-alignItems-center">
+                    <button class="p-20" id="prevPicture">
+                        <i class="fa-solid fa-chevron-left fontSize40"></i>
+                    </button>
+                    <div class="flex flex-justifyContent-center flex-alignItems-center picDiv" >
+                        <img class="picToEn" src="${picture.src}">
+                    </div>
+
+                    <div class="p-20"></div>
+                </div>
+            `;
         }
         else if (index === 0) {
-            carouselElement.innerHTML = "\n                <div id=\"picShowing\" class=\"flex flex-alignItems-center\">\n                    <div class=\"p-20\"></div>\n\n                    <div class=\"flex flex-justifyContent-center flex-alignItems-center  picDiv\" >\n                        <img class=\"picToEn\" src=\"".concat(picture.src, "\">\n                    </div>\n                    <button class=\"p-20\" id=\"nextPicture\">\n                        <i class=\"fa-solid fa-chevron-right fontSize40\"></i>\n                    </button>\n                </div>\n            ");
+            carouselElement.innerHTML = `
+                <div id="picShowing" class="flex flex-alignItems-center">
+                    <div class="p-20"></div>
+
+                    <div class="flex flex-justifyContent-center flex-alignItems-center  picDiv" >
+                        <img class="picToEn" src="${picture.src}">
+                    </div>
+                    <button class="p-20" id="nextPicture">
+                        <i class="fa-solid fa-chevron-right fontSize40"></i>
+                    </button>
+                </div>
+            `;
         }
-        setTimeout(function () {
-            var imgs = carouselElement.querySelector('img');
-            var imgShowing = carouselElement.querySelector('#picShowing');
+        setTimeout(() => {
+            const imgs = carouselElement.querySelector('img');
+            const imgShowing = carouselElement.querySelector('#picShowing');
             imgs.classList.add('show');
             imgs.addEventListener('click', function () {
                 imgs.requestFullscreen();
                 imgShowing.classList.add('fullscreen-mode');
             });
-            document.addEventListener('fullscreenchange', function () {
+            document.addEventListener('fullscreenchange', () => {
                 if (!document.fullscreenElement) {
                     imgShowing.classList.remove('fullscreen-mode');
                 }
             });
         }, 150);
-        var prevButton = document.getElementById('prevPicture');
-        var nextButton = document.getElementById('nextPicture');
+        const prevButton = document.getElementById('prevPicture');
+        const nextButton = document.getElementById('nextPicture');
         if (prevButton) {
-            prevButton.addEventListener('click', function () { movePicture(-1); });
+            prevButton.addEventListener('click', () => { movePicture(-1); });
         }
         if (nextButton) {
-            nextButton.addEventListener('click', function () { movePicture(1); });
+            nextButton.addEventListener('click', () => { movePicture(1); });
         }
     }
     // initial Picture showing on first load defined by currentPictureIndex
     showPicture(0);
-    var currentPictureIndex = 0;
+    let currentPictureIndex = 0;
     function movePicture(n) {
         currentPictureIndex = currentPictureIndex + n;
         // Wrap the index if it goes out of bounds
-        var totalPictures = newPicturesList.getLastIndex();
+        const totalPictures = newPicturesList.getLastIndex();
         if (currentPictureIndex >= totalPictures) {
             currentPictureIndex = totalPictures;
         }
@@ -116,19 +149,19 @@ function initPicCollection(newPicturesList, collection) {
 }
 // Wait for the DOM to fully load before initializing the carousel
 document.addEventListener('DOMContentLoaded', function () {
-    var friendsCelebList = new picCollection('friendsCelebList');
-    var growingInGreeceList = new picCollection('growingInGreeceList');
-    var charityEventsList = new picCollection('charityEventsList');
-    var competitionShows = new picCollection('competitionShows');
-    var onThePass = new picCollection('onThePass');
-    var allLists = [
+    const friendsCelebList = new picCollection('friendsCelebList');
+    const growingInGreeceList = new picCollection('growingInGreeceList');
+    const charityEventsList = new picCollection('charityEventsList');
+    const competitionShows = new picCollection('competitionShows');
+    const onThePass = new picCollection('onThePass');
+    const allLists = [
         friendsCelebList,
         growingInGreeceList,
         charityEventsList,
         competitionShows,
         onThePass
     ];
-    var friendsCelebList_src = [
+    const friendsCelebList_src = [
         { src: 'friendsCelebList' },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_80,w_800,h_1200,c_fill/v1714601166/Niko/friends_celeb_1_ydwv20.webp" },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_80,w_800,h_1200,c_fill/v1714601356/Niko/f_f_2_bpez7h.webp" },
@@ -170,7 +203,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714613623/Niko/f_f_37_pxhi3p.webp" },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714613639/Niko/f_f_38_mfwtlr.webp" },
     ];
-    var growingInGreeceList_src = [
+    const growingInGreeceList_src = [
         { src: 'growingInGreeceList' },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714614499/Niko/niko-growing%20greece/g_g_5_qva7un.webp" },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714615983/Niko/niko-growing%20greece/g_g_10_h4dbvx.webp" },
@@ -188,7 +221,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714616872/Niko/niko-growing%20greece/g_g_15_o0hg55.webp" },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714617566/Niko/niko-growing%20greece/g_g_16_jrjtzg.webp" },
     ];
-    var charityEventsList_src = [
+    const charityEventsList_src = [
         { src: "charityEventsList" },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714618542/Niko/charity%20events/c_e_1_nnx7ps.webp" },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714618551/Niko/charity%20events/c_e_2_wnpmve.webp" },
@@ -203,7 +236,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714618771/Niko/charity%20events/c_e_11_ffbduo.webp" },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714618781/Niko/charity%20events/c_e_12_pdspri.webp" },
     ];
-    var competitionShows_src = [
+    const competitionShows_src = [
         { src: "competitionShows" },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714619451/Niko/competitions/c_s_1_nzov2c.webp" },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714619460/Niko/competitions/c_s_2_tfjvel.webp" },
@@ -215,7 +248,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714619847/Niko/competitions/c_s_9_a90wfg.webp" },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714619857/Niko/competitions/c_s_10_cgzqss.webp" }
     ];
-    var onThePass_src = [
+    const onThePass_src = [
         { src: "onThePass" },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714620128/Niko/on%20the%20pass/o_t_p_4_efmsmz.webp" },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714620119/Niko/on%20the%20pass/o_t_p_3_wnefgs.webp" },
@@ -232,13 +265,13 @@ document.addEventListener('DOMContentLoaded', function () {
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714620784/Niko/on%20the%20pass/o_t_p_13_bs7c0y.webp" },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714620795/Niko/on%20the%20pass/o_t_p_14_f2im1y.webp" },
     ];
-    var allSources = [friendsCelebList_src, growingInGreeceList_src, charityEventsList_src, competitionShows_src, onThePass_src];
-    var allNotActiveTi = document.querySelectorAll('.secTitles');
-    allNotActiveTi.forEach(function (listEl) {
-        listEl.addEventListener('click', function () {
+    const allSources = [friendsCelebList_src, growingInGreeceList_src, charityEventsList_src, competitionShows_src, onThePass_src];
+    let allNotActiveTi = document.querySelectorAll('.secTitles');
+    allNotActiveTi.forEach(listEl => {
+        listEl.addEventListener('click', () => {
             allNotActiveTi = document.querySelectorAll('.secTitles');
-            var picColl = allLists.filter(function (list) { return list.id === listEl.id; });
-            var picSource = allSources.filter(function (list) { return list[0].src === listEl.id; });
+            const picColl = allLists.filter(list => list.id === listEl.id);
+            const picSource = allSources.filter(list => list[0].src === listEl.id);
             initPicCollection(picColl[0], picSource[0]);
         });
     });

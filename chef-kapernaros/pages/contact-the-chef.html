@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="contactPage">
 
     <head>
 
@@ -14,7 +14,7 @@
         <link rel="stylesheet" type="text/css" href="../style/settings/common_style/common-style.css" media="screen"/>
 
         <link rel="stylesheet" type="text/css" href="../style/home_page/style.css" media="screen"/>
-        <link rel="stylesheet" type="text/css" href="../style/chef_table/chef_table.css" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="../style/contact-chef/contact-chef.css" media="screen"/>
     
         <!-- Logo -->
         <link rel="apple-touch-icon" sizes="180x180" href="/chef-kapernaros/images/favicon/apple-touch-icon.png"> 
@@ -38,8 +38,8 @@
                 <div class="flex col-5 flex-justifyContent-center linkContainer pb-10">
                     <a href="../pages/bio.html">Bio</a>
                     <a href="../pages/media.html">Media</a>
-                    <a href="../pages/chef-table.html" class="currentTitle">The Chef's Table</a>
-                    <a href="../pages/contact-the-chef.html">Contact</a>
+                    <a href="../pages/chef-table.html">The Chef's Table</a>
+                    <a href="../pages/contact-the-chef.html" class="currentTitle">Contact</a>
                 </div>
             </div>
             
@@ -62,46 +62,32 @@
             </div>
             
         </nav>
-        <section style="margin-top: 34vh; height: 100vh;">
+        <section id="chefForm">
 
-            <div class="p-40 maxWidth1500">
-                <p class="fontSize24 text-bold textGold font-inter">Some Title Here</p>
-                <p class="fontSize18 mb-0 font-inter">
-                    Description here, I've had the privilege of crafting unforgettable dining experiences. From mastering traditional techniques to pushing the boundaries of modern cuisine, each milestone reflects my dedication to culinary excellence. Here's a taste of my journey so far.
-                </p>
-            </div>
-            <div class="col-12 flex flex-wrap" id="tablePicContainer">
-                <div class="flex">
-
-                    <div class=" singlePicTable grow1">
-                        <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1714775136/viber_image_2024-01-11_23-53-34-295_cdgkth.jpg" alt="">
-                        <div class="picDescr">
-                            <p>Some text here</p>
-                        </div>
+                <form id="myForm" class="flex flex-column flex-justifyContent-center p-30">
+                    <div class="field flex flex-column">
+                        <label class="mb-5" for="from_name">Name*</label>
+                        <input class="inputText mb-10" type="text" name="from_name" id="from_name" placeholder="Your Name" required>
                     </div>
-                    <div class=" singlePicTable grow2">
-                        <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1714775136/viber_image_2024-01-11_23-53-34-295_cdgkth.jpg" alt="">
-                        <div class="picDescr">
-                            <p>Some text here</p>
-                        </div>
+                    <div class="field flex flex-column">
+                        <label class="mb-5" for="email_address">Email*</label>
+                        <input class="inputText mb-10" type="text" name="email_address" id="email_address">
                     </div>
-                    <div class=" singlePicTable grow1">
-                        <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1714775136/viber_image_2024-01-11_23-53-34-295_cdgkth.jpg" alt="">
-                        <div class="picDescr">
-                            <p>Some text here</p>
-                        </div>
+                    <div class="field flex flex-column">
+                        <label class="mb-5" for="email_address">Message*</label>
+                        <textarea rows="6" class="inputText mb-10" name="message" id="message" placeholder="Your Message" required></textarea>
                     </div>
-                    <div class=" singlePicTable grow2">
-                        <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1714775136/viber_image_2024-01-11_23-53-34-295_cdgkth.jpg" alt="">
-                        <div class="picDescr">
-                            <p>Some text here</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    <button type="submit" class="btnPrimary">Send</button>
+                </form>
+                <div id="lineGold"></div>
+                <div id="lineGold2"></div>
+                <img class="" src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1714803471/3D_full_logo_NK_caligraphy_mrr3ji.png" id="logoPic">
+            
+            
         </section>
 
         <!-- Script -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
         <script defer type="text/javascript" src=../script/main.js></script>
         
 

@@ -1,0 +1,97 @@
+#contactPage {
+  background-color: #818181;
+}
+
+#contactPage #chefForm {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 10vh;
+  padding-right: 50px;
+}
+
+#contactPage #chefForm #lineGold {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 4px;
+  background-color: #b59b07;
+  left: 80%;
+}
+
+#contactPage #chefForm #lineGold2 {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 2px;
+  background-color: #b59b07;
+  left: 79%;
+}
+
+#contactPage #chefForm #logoPic {
+  width: 37vw;
+  height: 37vw;
+  border-radius: 50%;
+  aspect-ratio: 1.7/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  position: absolute;
+  left: 55%;
+  top: 20%;
+  border: 3px solid #b59b07;
+}
+
+#contactPage #chefForm #logoPic::after {
+  content: '';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 2px;
+  background-color: #b59b07;
+}
+
+#contactPage #chefForm #myForm {
+  width: 40% !important;
+  background-color: #2F2F2F;
+  font-family: 'Inter';
+  color: #f8f8f5;
+  border-radius: 6px;
+  z-index: 5;
+  border: 1px solid #ffffff;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+#contactPage #chefForm #myForm input {
+  height: 25px;
+  border-radius: 4px;
+  font-family: 'Inter';
+}
+
+#contactPage #chefForm #myForm input.inputText {
+  border: 1px solid #ffffff;
+}
+
+#contactPage #chefForm #myForm textarea {
+  resize: none;
+  font-family: 'Inter';
+}
+
+#contactPage #chefForm #myForm button {
+  border-color: #ffffff !important;
+  border-radius: 4px;
+  color: #ffffff !important;
+}
+/*# sourceMappingURL=contact-chef.css.map */
