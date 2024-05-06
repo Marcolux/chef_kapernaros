@@ -182,32 +182,7 @@ document.getElementById('myForm')?.addEventListener('submit', function(event) {
     })
 })
 
-// Cloudinary
 
-// Load Cloudinary module
-import { v2 as cloudinary } from 'cloudinary';
-
-
-
-// Configure Cloudinary with your credentials
-cloudinary.config({
-    cloud_name: 'Chef_Kapernaros',
-    api_key: '556769291727766',
-    api_secret: 'GHtqk_rLeOkCE56JDM4IDYjW1dw'
-});
-
-// Function to fetch and log all image URLs
-// A simple function to list assets
-async function listAssets() {
-    try {
-      const result = await cloudinary.api.resources();
-      console.log(result);
-    } catch (error) {
-      console.error("Error fetching resources:", error);
-    }
-  }
-  
-  listAssets();
 
   
 
