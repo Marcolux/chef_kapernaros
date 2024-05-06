@@ -1,24 +1,8 @@
-#tablePicContainer {
-  padding: 30px;
-}
-
 #tablePicContainer .singlePicTable {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-#tablePicContainer .singlePicTable.grow1 {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
-#tablePicContainer .singlePicTable.grow2 {
-  -webkit-box-flex: 3;
-      -ms-flex-positive: 3;
-          flex-grow: 3;
 }
 
 #tablePicContainer .singlePicTable img {
@@ -32,13 +16,13 @@
 
 #tablePicContainer .singlePicTable .picDescr {
   height: 0%;
-  width: 0%;
+  width: 100%;
   background-color: #00000083;
   color: #f8f8f5;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   position: absolute;
-  bottom: 3px;
+  bottom: 0%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -58,7 +42,7 @@
 }
 
 #tablePicContainer .singlePicTable:hover .picDescr {
-  height: calc(100% - 1%);
+  height: 100%;
   width: 100%;
 }
 

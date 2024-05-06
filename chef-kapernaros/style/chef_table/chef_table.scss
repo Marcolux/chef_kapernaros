@@ -1,15 +1,18 @@
 $primaryColor: #f8f8f5;
 $gold: #b59b07;
 #tablePicContainer{
-    padding: 30px;
+    // padding: 30px;
+    // margin-left: 2%;
     .singlePicTable{
         position: relative; 
         display: flex;
-        &.grow1{
-            flex-grow: 1;
-        }       
+        
+        // &.grow1{
+        //     padding-left: 2%;
+            // flex-grow: 1;
+        // }       
         &.grow2{
-            flex-grow: 3;
+            // flex-grow: 3;
         }       
         
         img{
@@ -20,15 +23,16 @@ $gold: #b59b07;
         }
         .picDescr{
             height: 0%;
-            width: 0%;
+            width: 100%;
             background-color: #00000083;
             color: #f8f8f5;
             transition: all 0.4s ease-in-out;
             position: absolute;
-            bottom: 3px;
+            bottom: 0%;
             display: flex;
             justify-content: center;
             align-items: center;
+            // margin: 30px;
             p{
                 padding: 0px;
                 scale: 0;
@@ -38,7 +42,7 @@ $gold: #b59b07;
         &:hover{
             .picDescr{
                 
-                height: calc(100% - 1%);
+                height: 100%;
                 width: 100%;
                 p{
                     padding: 10px;

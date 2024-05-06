@@ -1,7 +1,8 @@
 $primaryColor: #f8f8f5;
 $gold: #b59b07;
 #contactPage{
-    background-color: #cccccc05;
+    // background-color: #cccccc05;
+    background-color: #eeededfa;
     #chefForm{
         height: 100vh;
         display: flex;
@@ -27,22 +28,21 @@ $gold: #b59b07;
             height: 100%;
             width: 2px;
             background-color: #b59b07;
-            left: 79%;
+            left: 79.5%;
         }
         
         #logoPic{
-            width: 37vw;
-            height: 37vw;
+            width: 35vw;
+            height: 35vw;
             border-radius: 50%;
-            aspect-ratio: 1.7/1;
+            aspect-ratio: 1/1;
             object-fit: cover;
             object-position: center; 
-            
             position: absolute;
             // background-position-y: 8vh;
             left: 55%;
             top: 20%;
-            border: 10px solid $gold;
+            border: 7px solid $gold;
             &::after{
                 content: '';
                 display: flex;;
@@ -58,11 +58,14 @@ $gold: #b59b07;
             // margin-right: -150px;
             // position: absolute;
             // margin-top: 10px;
-            background-color: #2F2F2F;
+            // background-color: #2F2F2F;
+            // background-color: #eeededfa;
+            background-color: #fffffffa;
             font-family: 'Inter';
             color: #b59b07;
             // border-radius: 6px;
-            box-shadow: 6px 6px 6px #727272ca ;
+            border: 1px solid #72727222;
+            box-shadow: 6px 6px 6px #75757525 ;
             z-index: 5;
             
                 // border: 1px solid #ffffff;
@@ -74,7 +77,18 @@ $gold: #b59b07;
                 font-family: 'Inter';
                 color: #b59b07;
                 &:focus-visible{
-                    border: 0px solid black !important;
+                    border-top: 0px;
+                    border-left: 0px;
+                    border-right: 0px;
+                    border-bottom: 1px solid #b59b07;
+                    // outline: 0px;
+                    // outline-style: none;
+                    outline-width: 0px;
+                    // box-shadow: 0 0 8px rgba(0, 86, 179, 0.5);
+                    background-color: transparent;
+                }
+                &:focus{
+                    // /border: 1px solid rgba(251, 251, 251, 0.009) !important;
                 }
                 &.inputText{
                     border-top: 0px;
@@ -89,6 +103,12 @@ $gold: #b59b07;
                 font-family: 'Inter';
                 background-color: transparent;
                 border: 1px solid #b59b07;
+                padding: 5px;
+                &:focus-visible{
+                    outline-width: 0px;
+                    border: 1px solid #b59b07;
+                    // border-color: #b59b07 !important;
+                }
             }
             button{
                 border-color: #b59b07 !important;
