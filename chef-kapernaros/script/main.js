@@ -1,31 +1,23 @@
-var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
-    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
-        if (ar || !(i in from)) {
-            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
-            ar[i] = from[i];
-        }
-    }
-    return to.concat(ar || Array.prototype.slice.call(from));
-};
+"use strict";
 var _a;
 console.log('hello world');
-var hambMenu = document.querySelector('.hamburger-menu');
-var navMenu = document.getElementById('navMenu');
-var navBar = document.querySelector('.navBar');
-var spanToBreak = document.querySelectorAll('.brSm');
+const hambMenu = document.querySelector('.hamburger-menu');
+const navMenu = document.getElementById('navMenu');
+const navBar = document.querySelector('.navBar');
+const spanToBreak = document.querySelectorAll('.brSm');
 hambMenu.addEventListener('click', function () {
     navMenu.classList.toggle('show');
     navMenu.classList.toggle('hide', !navMenu.classList.contains('show'));
     hambMenu.classList.toggle('openHam');
     navBar.classList.toggle('expand');
 });
-var navBarAdjToScreen = function () {
+const navBarAdjToScreen = () => {
     if (window.innerWidth < 750 && navBar.classList.contains('biggerScreen')) {
         navBar.classList.add('mobileView');
         navBar.classList.remove('biggerScreen');
-        spanToBreak.forEach(function (el) {
+        spanToBreak.forEach(el => {
             if (!el.firstChild || el.firstChild.nodeName !== 'BR') {
-                var brEl = document.createElement('br');
+                const brEl = document.createElement('br');
                 el.prepend(brEl);
             }
         });
@@ -33,14 +25,14 @@ var navBarAdjToScreen = function () {
     else if (window.innerWidth >= 750 && !navBar.classList.contains('biggerScreen')) {
         navBar.classList.remove('mobileView');
         navBar.classList.add('biggerScreen');
-        spanToBreak.forEach(function (el) {
+        spanToBreak.forEach(el => {
             if (el.firstChild && el.firstChild.nodeName === 'BR') {
                 el.removeChild(el.firstChild);
             }
         });
     }
 };
-var navScrolling = function () {
+const navScrolling = () => {
     if (window.pageYOffset > 30) {
         navBar.classList.add('scrolled');
     }
@@ -50,8 +42,8 @@ var navScrolling = function () {
         }
     }
 };
-var picAnimation = function () {
-    document.querySelectorAll('.bioLandingPicContainer img').forEach(function (img) {
+const picAnimation = () => {
+    document.querySelectorAll('.bioLandingPicContainer img').forEach(img => {
         if (window.pageYOffset >= 600) {
             img.classList.add('in-view');
         }
@@ -59,7 +51,7 @@ var picAnimation = function () {
             img.classList.remove('in-view');
         }
     });
-    document.querySelectorAll('.achCards').forEach(function (img) {
+    document.querySelectorAll('.achCards').forEach(img => {
         if (window.pageYOffset > 1250) {
             img.classList.add('in-view');
         }
@@ -67,7 +59,7 @@ var picAnimation = function () {
             img.classList.remove('in-view');
         }
     });
-    document.querySelectorAll('.charityLandingPicContainer img').forEach(function (img) {
+    document.querySelectorAll('.charityLandingPicContainer img').forEach(img => {
         if (window.pageYOffset >= 1950) {
             img.classList.add('in-view');
         }
@@ -78,7 +70,7 @@ var picAnimation = function () {
 };
 window.addEventListener('resize', navBarAdjToScreen);
 navBarAdjToScreen();
-window.addEventListener('scroll', function () {
+window.addEventListener('scroll', () => {
     // console.log(window.pageYOffset)
     navScrolling();
     picAnimation();
@@ -108,7 +100,7 @@ picAnimation();
 //         }
 //     })
 // })
-var container = document.querySelector('#bigPic');
+const container = document.querySelector('#bigPic');
 // let scrollInterval: any = null // This will hold the interval ID
 // let isHovering = false // Tracks if the mouse is over the container
 // // Function to start scrolling
@@ -147,22 +139,22 @@ var container = document.querySelector('#bigPic');
 //         stopScrolling()
 //     }
 // })
-var allNotActiveTitles = document.querySelectorAll('.secTitles');
-allNotActiveTitles.forEach(function (listEl) {
-    listEl.addEventListener('click', function () {
+let allNotActiveTitles = document.querySelectorAll('.secTitles');
+allNotActiveTitles.forEach(listEl => {
+    listEl.addEventListener('click', () => {
         allNotActiveTitles = document.querySelectorAll('.secTitles');
         console.log(listEl);
         if (!listEl.classList.contains('active')) {
-            var titleActive = __spreadArray([], allNotActiveTitles, true).filter(function (el) { return el.classList.contains('active'); })[0];
+            const titleActive = [...allNotActiveTitles].filter(el => el.classList.contains('active'))[0];
             titleActive.classList.remove('active');
             listEl.classList.add('active');
         }
     });
 });
-emailjs.init('o69p_GM3kd5oX3hnI');
+emailjs.init('0wA6kpUaumn2FNdbg');
 (_a = document.getElementById('myForm')) === null || _a === void 0 ? void 0 : _a.addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent the default form submission
-    emailjs.sendForm('default_service', 'template_bxw793c', this)
+    emailjs.sendForm('service_m5a5vcb', 'template_1jfyvjh', this)
         .then(function (response) {
         console.log('SUCCESS!', response.status, response.text);
         alert("Email sent successfully!");

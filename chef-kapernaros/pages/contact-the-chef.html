@@ -65,17 +65,29 @@
         <section id="chefForm">
 
                 <form id="myForm" class="flex flex-column flex-justifyContent-center p-30">
-                    <div class="field mb-15 flex flex-column">
-                        <label class="mb-5" for="from_name">Name*</label>
-                        <input class="inputText mb-10" type="text" name="from_name" id="from_name" placeholder="Your Name" required>
-                        <div class="lineBorder"></div>
+                    <div class="col-12 flex">
+
+                        <div class="field mb-15 flex flex-column col-6">
+                            <label class="mb-5" for="from_first_name">First Name*</label>
+                            <input class="inputText mb-10" type="text" name="from_first_name" id="from_first_name" placeholder="Your First Name" required>
+                            <div class="lineBorder"></div>
+                        </div>
+                        <div class="field mb-15 flex flex-column ml-20 col-6">
+                            <label class="mb-5" for="from_last_name">Last Name*</label>
+                            <input class="inputText mb-10" type="text" name="from_last_name" id="from_last_name" placeholder="Your Last Name" required>
+                            <div class="lineBorder"></div>
+                        </div>
                     </div>
                     <div class="field mb-15 flex flex-column">
-                        <label class="mb-5" for="email_address">Email*</label>
+                        <label class="mb-5" for="email_subject">Email Subject*</label>
+                        <input class="inputText mb-10" type="text" name="email_subject" id="email_subject">
+                    </div>
+                    <div class="field mb-15 flex flex-column">
+                        <label class="mb-5" for="email_address">Email Address*</label>
                         <input class="inputText mb-10" type="text" name="email_address" id="email_address">
                     </div>
                     <div class="field mb-15 flex flex-column">
-                        <label class="mb-5" for="email_address">Message*</label>
+                        <label class="mb-5" for="message">Message*</label>
                         <textarea rows="6" class="inputText mb-10" name="message" id="message" placeholder="Your Message" required></textarea>
                     </div>
                     <button type="submit" class="btnPrimary">Send</button>

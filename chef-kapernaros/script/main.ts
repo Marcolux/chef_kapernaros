@@ -167,12 +167,12 @@ allNotActiveTitles.forEach( listEl => {
 })
 
 declare var emailjs: any;
-emailjs.init('o69p_GM3kd5oX3hnI')
+emailjs.init('0wA6kpUaumn2FNdbg')
 
 document.getElementById('myForm')?.addEventListener('submit', function(event) {
     event.preventDefault() // Prevent the default form submission
   
-    emailjs.sendForm('default_service', 'template_bxw793c', this)
+    emailjs.sendForm('service_m5a5vcb', 'template_1jfyvjh', this)
         .then(function(response: any) {
         console.log('SUCCESS!', response.status, response.text)
         alert("Email sent successfully!")
@@ -181,8 +181,6 @@ document.getElementById('myForm')?.addEventListener('submit', function(event) {
         alert("Failed to send email.")
     })
 })
-
-
 
   
 
