@@ -1,13 +1,30 @@
+#tablePicContainer {
+  background-color: #2F2F2F;
+}
+
 #tablePicContainer .singlePicTable {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 23%;
+  margin-right: 15px;
+  margin-top: 15px;
+  border: 1.5px solid #b59b07;
+  -webkit-box-shadow: 5px 5px 5px #00000074;
+          box-shadow: 5px 5px 5px #00000074;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+#tablePicContainer .singlePicTable:hover {
+  scale: 1.05;
+  z-index: 5;
 }
 
 #tablePicContainer .singlePicTable img {
   width: 100%;
-  aspect-ratio: 1.2/1;
+  aspect-ratio: 1/0.8;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -26,6 +43,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -34,7 +55,29 @@
           align-items: center;
 }
 
-#tablePicContainer .singlePicTable .picDescr p {
+#tablePicContainer .singlePicTable .picDescr h3 {
+  padding: 0px;
+  margin: 0px;
+  font-size: 16px;
+  text-shadow: 1px 1px 1px #000000, -1px 1px 1px #000000, 1px -1px 1px #000000, -1px -1px 1px #000000;
+}
+
+#tablePicContainer .singlePicTable .picDescr ul {
+  font-size: 14px !important;
+  text-decoration: none;
+  list-style: none;
+  margin-left: 10px;
+  color: #fafafa;
+  text-shadow: 1px 1px #000000, -1px 1px #000000, 1px -1px #000000, -1px -1px #000000;
+}
+
+#tablePicContainer .singlePicTable .picDescr ul li {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+#tablePicContainer .singlePicTable .picDescr h3, #tablePicContainer .singlePicTable .picDescr ul {
   padding: 0px;
   scale: 0;
   -webkit-transition: all 0.4s ease-in-out;
@@ -46,8 +89,7 @@
   width: 100%;
 }
 
-#tablePicContainer .singlePicTable:hover .picDescr p {
-  padding: 10px;
+#tablePicContainer .singlePicTable:hover .picDescr h3, #tablePicContainer .singlePicTable:hover .picDescr ul {
   scale: 1;
   font-family: 'Inter';
   font-size: 20px;

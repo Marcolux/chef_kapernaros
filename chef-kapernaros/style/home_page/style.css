@@ -5,7 +5,7 @@ html, body {
 
 .navBar {
   background-color: #ffffff00;
-  font: normal normal 500 20px "Prata";
+  font: normal normal 500 17px "Prata";
   color: #000;
 }
 
@@ -594,7 +594,7 @@ html, body {
 .titlesChef {
   color: #001489;
   text-align: justify;
-  font: normal normal 500 20px "Prata";
+  font: normal normal 500 17px "Prata";
   font-size: 27px;
   line-height: normal;
   position: relative;
@@ -1038,7 +1038,7 @@ html, body {
 
 .currentTitle {
   font-weight: 700 !important;
-  font-size: 24px;
+  font-size: 20px;
   pointer-events: none;
   margin-right: 5px;
 }

@@ -67,90 +67,19 @@ const picAnimation = () => {
             img.classList.remove('in-view')
         }
     })
-
 }
 
 window.addEventListener('resize',navBarAdjToScreen)
 navBarAdjToScreen()
 
 window.addEventListener('scroll',() => { 
-    // console.log(window.pageYOffset)
     navScrolling() 
     picAnimation()
 })
 navScrolling()
 picAnimation()
 
-
-
-
-// const images = document.querySelectorAll('.picToEn') as NodeListOf<HTMLImageElement>
-// images.forEach(image => {
-
-//     image.addEventListener('click', function() {
-//         if (!document.fullscreenElement) {
-//             this.requestFullscreen().catch(err => {
-//                 alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`)
-//             })
-//         } else {
-//             if (document.exitFullscreen) {
-//                 document.exitFullscreen()
-//             }
-//         }
-//     })
-    
-//     document.addEventListener('fullscreenchange', (event) => {
-//         if (document.fullscreenElement) {
-//             console.log(`Element: ${document.fullscreenElement.id} entered full-screen mode.`);
-//             image.classList.add('fullscreen-mode') // Add the class when entering full screen
-//         } else {
-//             console.log('Leaving full-screen mode.')
-//             image.classList.remove('fullscreen-mode') // Remove the class when exiting
-//         }
-//     })
-// })
-
-
 const container = document.querySelector('#bigPic') as HTMLDivElement
-// let scrollInterval: any = null // This will hold the interval ID
-// let isHovering = false // Tracks if the mouse is over the container
-
-// // Function to start scrolling
-// function startScrolling(amount: any) {
-//     if (!scrollInterval) { // Only set the interval if it's not already set
-//         scrollInterval = setInterval(() => {
-//             container.scrollBy({ left: amount, behavior: 'smooth' })
-//         }, 300) // Adjust the speed as necessary
-//     }
-// }
-// // Function to stop scrolling
-// function stopScrolling() {
-//     clearInterval(scrollInterval);
-//     scrollInterval = null
-// }
-// // Mouse enter and leave events
-// container.addEventListener('mouseenter', () => {
-//     isHovering = true
-//     container.classList.add('hover-active') // Optional: add visual feedback
-// })
-// container.addEventListener('mouseleave', () => {
-//     isHovering = false
-//     container.classList.remove('hover-active') // Optional: remove visual feedback
-//     stopScrolling() // Ensure scrolling stops when mouse leaves the container
-// })
-// // Keydown event for starting scroll
-// document.addEventListener('keydown', (event) => {
-//     if (isHovering && (event.key === 'ArrowLeft' || event.key === 'ArrowRight')) {
-//         const scrollAmount = event.key === 'ArrowLeft' ? -250 : 250
-//         startScrolling(scrollAmount)
-//     }
-// })
-// // Keyup event for stopping scroll
-// document.addEventListener('keyup', (event) => {
-//     if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
-//         stopScrolling()
-//     }
-// })
 
 let allNotActiveTitles = document.querySelectorAll('.secTitles') as NodeListOf<HTMLLIElement>
 allNotActiveTitles.forEach( listEl => {
@@ -171,7 +100,7 @@ emailjs.init('0wA6kpUaumn2FNdbg')
 
 document.getElementById('myForm')?.addEventListener('submit', function(event) {
     event.preventDefault() // Prevent the default form submission
-  
+    
     emailjs.sendForm('service_m5a5vcb', 'template_1jfyvjh', this)
         .then(function(response: any) {
         console.log('SUCCESS!', response.status, response.text)
@@ -181,8 +110,5 @@ document.getElementById('myForm')?.addEventListener('submit', function(event) {
         alert("Failed to send email.")
     })
 })
-
-  
-
 
 console.log('all the time 4 try')

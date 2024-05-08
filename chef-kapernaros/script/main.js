@@ -1,23 +1,31 @@
-"use strict";
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
 var _a;
 console.log('hello world');
-const hambMenu = document.querySelector('.hamburger-menu');
-const navMenu = document.getElementById('navMenu');
-const navBar = document.querySelector('.navBar');
-const spanToBreak = document.querySelectorAll('.brSm');
+var hambMenu = document.querySelector('.hamburger-menu');
+var navMenu = document.getElementById('navMenu');
+var navBar = document.querySelector('.navBar');
+var spanToBreak = document.querySelectorAll('.brSm');
 hambMenu.addEventListener('click', function () {
     navMenu.classList.toggle('show');
     navMenu.classList.toggle('hide', !navMenu.classList.contains('show'));
     hambMenu.classList.toggle('openHam');
     navBar.classList.toggle('expand');
 });
-const navBarAdjToScreen = () => {
+var navBarAdjToScreen = function () {
     if (window.innerWidth < 750 && navBar.classList.contains('biggerScreen')) {
         navBar.classList.add('mobileView');
         navBar.classList.remove('biggerScreen');
-        spanToBreak.forEach(el => {
+        spanToBreak.forEach(function (el) {
             if (!el.firstChild || el.firstChild.nodeName !== 'BR') {
-                const brEl = document.createElement('br');
+                var brEl = document.createElement('br');
                 el.prepend(brEl);
             }
         });
@@ -25,14 +33,14 @@ const navBarAdjToScreen = () => {
     else if (window.innerWidth >= 750 && !navBar.classList.contains('biggerScreen')) {
         navBar.classList.remove('mobileView');
         navBar.classList.add('biggerScreen');
-        spanToBreak.forEach(el => {
+        spanToBreak.forEach(function (el) {
             if (el.firstChild && el.firstChild.nodeName === 'BR') {
                 el.removeChild(el.firstChild);
             }
         });
     }
 };
-const navScrolling = () => {
+var navScrolling = function () {
     if (window.pageYOffset > 30) {
         navBar.classList.add('scrolled');
     }
@@ -42,8 +50,8 @@ const navScrolling = () => {
         }
     }
 };
-const picAnimation = () => {
-    document.querySelectorAll('.bioLandingPicContainer img').forEach(img => {
+var picAnimation = function () {
+    document.querySelectorAll('.bioLandingPicContainer img').forEach(function (img) {
         if (window.pageYOffset >= 600) {
             img.classList.add('in-view');
         }
@@ -51,7 +59,7 @@ const picAnimation = () => {
             img.classList.remove('in-view');
         }
     });
-    document.querySelectorAll('.achCards').forEach(img => {
+    document.querySelectorAll('.achCards').forEach(function (img) {
         if (window.pageYOffset > 1250) {
             img.classList.add('in-view');
         }
@@ -59,7 +67,7 @@ const picAnimation = () => {
             img.classList.remove('in-view');
         }
     });
-    document.querySelectorAll('.charityLandingPicContainer img').forEach(img => {
+    document.querySelectorAll('.charityLandingPicContainer img').forEach(function (img) {
         if (window.pageYOffset >= 1950) {
             img.classList.add('in-view');
         }
@@ -70,82 +78,20 @@ const picAnimation = () => {
 };
 window.addEventListener('resize', navBarAdjToScreen);
 navBarAdjToScreen();
-window.addEventListener('scroll', () => {
-    // console.log(window.pageYOffset)
+window.addEventListener('scroll', function () {
     navScrolling();
     picAnimation();
 });
 navScrolling();
 picAnimation();
-// const images = document.querySelectorAll('.picToEn') as NodeListOf<HTMLImageElement>
-// images.forEach(image => {
-//     image.addEventListener('click', function() {
-//         if (!document.fullscreenElement) {
-//             this.requestFullscreen().catch(err => {
-//                 alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`)
-//             })
-//         } else {
-//             if (document.exitFullscreen) {
-//                 document.exitFullscreen()
-//             }
-//         }
-//     })
-//     document.addEventListener('fullscreenchange', (event) => {
-//         if (document.fullscreenElement) {
-//             console.log(`Element: ${document.fullscreenElement.id} entered full-screen mode.`);
-//             image.classList.add('fullscreen-mode') // Add the class when entering full screen
-//         } else {
-//             console.log('Leaving full-screen mode.')
-//             image.classList.remove('fullscreen-mode') // Remove the class when exiting
-//         }
-//     })
-// })
-const container = document.querySelector('#bigPic');
-// let scrollInterval: any = null // This will hold the interval ID
-// let isHovering = false // Tracks if the mouse is over the container
-// // Function to start scrolling
-// function startScrolling(amount: any) {
-//     if (!scrollInterval) { // Only set the interval if it's not already set
-//         scrollInterval = setInterval(() => {
-//             container.scrollBy({ left: amount, behavior: 'smooth' })
-//         }, 300) // Adjust the speed as necessary
-//     }
-// }
-// // Function to stop scrolling
-// function stopScrolling() {
-//     clearInterval(scrollInterval);
-//     scrollInterval = null
-// }
-// // Mouse enter and leave events
-// container.addEventListener('mouseenter', () => {
-//     isHovering = true
-//     container.classList.add('hover-active') // Optional: add visual feedback
-// })
-// container.addEventListener('mouseleave', () => {
-//     isHovering = false
-//     container.classList.remove('hover-active') // Optional: remove visual feedback
-//     stopScrolling() // Ensure scrolling stops when mouse leaves the container
-// })
-// // Keydown event for starting scroll
-// document.addEventListener('keydown', (event) => {
-//     if (isHovering && (event.key === 'ArrowLeft' || event.key === 'ArrowRight')) {
-//         const scrollAmount = event.key === 'ArrowLeft' ? -250 : 250
-//         startScrolling(scrollAmount)
-//     }
-// })
-// // Keyup event for stopping scroll
-// document.addEventListener('keyup', (event) => {
-//     if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
-//         stopScrolling()
-//     }
-// })
-let allNotActiveTitles = document.querySelectorAll('.secTitles');
-allNotActiveTitles.forEach(listEl => {
-    listEl.addEventListener('click', () => {
+var container = document.querySelector('#bigPic');
+var allNotActiveTitles = document.querySelectorAll('.secTitles');
+allNotActiveTitles.forEach(function (listEl) {
+    listEl.addEventListener('click', function () {
         allNotActiveTitles = document.querySelectorAll('.secTitles');
         console.log(listEl);
         if (!listEl.classList.contains('active')) {
-            const titleActive = [...allNotActiveTitles].filter(el => el.classList.contains('active'))[0];
+            var titleActive = __spreadArray([], allNotActiveTitles, true).filter(function (el) { return el.classList.contains('active'); })[0];
             titleActive.classList.remove('active');
             listEl.classList.add('active');
         }
