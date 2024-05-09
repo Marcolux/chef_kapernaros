@@ -98,12 +98,17 @@ allNotActiveTitles.forEach(function (listEl) {
     });
 });
 emailjs.init('0wA6kpUaumn2FNdbg');
+var messageSent = document.querySelector('#messageSent');
+var inputText = document.querySelectorAll('.inputText');
 (_a = document.getElementById('myForm')) === null || _a === void 0 ? void 0 : _a.addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent the default form submission
     emailjs.sendForm('service_m5a5vcb', 'template_1jfyvjh', this)
         .then(function (response) {
+        messageSent.classList.remove('hide');
+        inputText.forEach(function (text) { return text.value = ''; });
         console.log('SUCCESS!', response.status, response.text);
-        alert("Email sent successfully!");
+        setTimeout(function () { messageSent.classList.add('hide'); }, 5000);
+        // alert("Email sent successfully!")
     }, function (error) {
         console.log('FAILED...', error);
         alert("Failed to send email.");

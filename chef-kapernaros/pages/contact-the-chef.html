@@ -69,12 +69,12 @@
 
                         <div class="field mb-15 flex flex-column col-6">
                             <label class="mb-5" for="from_first_name">First Name*</label>
-                            <input class="inputText mb-10" type="text" name="from_first_name" id="from_first_name" placeholder="Your First Name" required>
+                            <input class="inputText mb-10" type="text" name="from_first_name" id="from_first_name" required>
                             <div class="lineBorder"></div>
                         </div>
                         <div class="field mb-15 flex flex-column ml-20 col-6">
                             <label class="mb-5" for="from_last_name">Last Name*</label>
-                            <input class="inputText mb-10" type="text" name="from_last_name" id="from_last_name" placeholder="Your Last Name" required>
+                            <input class="inputText mb-10" type="text" name="from_last_name" id="from_last_name" required>
                             <div class="lineBorder"></div>
                         </div>
                     </div>
@@ -88,9 +88,13 @@
                     </div>
                     <div class="field mb-15 flex flex-column">
                         <label class="mb-5" for="message">Message*</label>
-                        <textarea rows="6" class="inputText mb-10" name="message" id="message" placeholder="Your Message" required></textarea>
+                        <textarea rows="6" class="inputText mb-10 p-5" name="message" id="message" required></textarea>
                     </div>
-                    <button type="submit" class="btnPrimary">Send</button>
+                    <div class="flex flex-justifyContent-spaceBetween">
+                        <button type="submit" class="btnPrimary py-5">Send</button>
+                        <p id="messageSent" class="hide text-bold fontSize18 my-0" style="color: #000000;">Message Sent! Thank You!</p>
+
+                    </div>
                 </form>
                 <div id="lineGold"></div>
                 <div id="lineGold2"></div>

@@ -27,7 +27,7 @@ html, body {
 }
 
 .navBar.scrolled.biggerScreen .logoNav img {
-  height: 5vh !important;
+  height: 6vh !important;
 }
 
 .navBar.scrolled.biggerScreen .logoNav img:hover {

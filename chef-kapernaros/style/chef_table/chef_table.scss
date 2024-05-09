@@ -1,10 +1,7 @@
 $primaryColor: #f8f8f5;
 $gold: #b59b07;
 #tablePicContainer{
-    // padding: 30px;
-    // margin-left: 2%;
     background-color: #2F2F2F;
-    // background-color: #000000;
 
     .singlePicTable{
         position: relative; 
@@ -15,25 +12,11 @@ $gold: #b59b07;
         border: 1.5px solid $gold;
         box-shadow: 5px 5px 5px #00000074;
         transition: all 0.4s ease-in-out;
-        // transition-delay: 0.2s;
         
         &:hover{
             scale: 1.05;
             z-index: 5;
-            // margin: 20px;
-            // transform: translate(-10px, -12px)
-           
-            // margin: 20px;
-        }
-        
-        // &.grow1{
-        //     padding-left: 2%;
-            // flex-grow: 1;
-        // }       
-        // &.grow2{
-        //     // flex-grow: 3;
-        // }       
-        
+        }      
         img{
             width: 100%;
             aspect-ratio: 1/0.8;
@@ -43,7 +26,7 @@ $gold: #b59b07;
         .picDescr{
             height: 0%;
             width: 100%;
-            background-color: #00000083;
+            background-color: #00000096;
             color: #f8f8f5;
             transition: all 0.4s ease-in-out;
             position: absolute;
@@ -51,17 +34,17 @@ $gold: #b59b07;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
-            // transition-delay: 0.5s;
-            // margin: 30px;
+            align-items: start;
             h3{
-                padding: 0px;
-                margin: 0px;
+                display: flex;
+                margin:  0px 0px 0px 35px;
                 font-size: 16px;
-                text-shadow: 1px 1px 1px #000000,
-                -1px 1px 1px #000000,
-                1px -1px 1px #000000,
-                -1px -1px 1px #000000,
+                text-shadow:     
+                    -1px -1px 1px #000000,
+                    1px -1px 1px #000000,
+                    -1px 1px 1px #000000,
+                    1px 1px 1px #000000;
+                text-align: start;
             }
             ul{
                 font-size: 14px !important;
@@ -69,30 +52,25 @@ $gold: #b59b07;
                 list-style: none;
                 margin-left: 10px;
                 color: #fafafa;
-                // font-weight: bold;
-                li{
 
-                    width: fit-content;
-                }
-                text-shadow: 1px 1px #000000,
-                -1px 1px #000000,
-                1px -1px #000000,
-                -1px -1px #000000,
+                li{ width: fit-content;}
+
+                text-shadow:     
+                    -1px -1px 1px #000000,
+                    1px -1px 1px #000000,
+                    -1px 1px 1px #000000,
+                    1px 1px 1px #000000;
             }
             h3, ul{
                 padding: 0px;
                 scale: 0;
                 transition: all 0.4s ease-in-out;
-
-                // transition-delay: 0.5s;
             }
         }
         &:hover{
             .picDescr{
-                
                 height: 100%;
                 width: 100%;
-                // padding: 10px;
                 h3, ul{
                     scale: 1;
                     font-family: 'Inter';

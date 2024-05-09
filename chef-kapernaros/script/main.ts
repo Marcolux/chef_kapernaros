@@ -97,15 +97,21 @@ allNotActiveTitles.forEach( listEl => {
 
 declare var emailjs: any;
 emailjs.init('0wA6kpUaumn2FNdbg')
+const messageSent = document.querySelector('#messageSent') as HTMLElement
+const inputText = document.querySelectorAll('.inputText') as NodeListOf <HTMLInputElement>
+
 
 document.getElementById('myForm')?.addEventListener('submit', function(event) {
     event.preventDefault() // Prevent the default form submission
     
     emailjs.sendForm('service_m5a5vcb', 'template_1jfyvjh', this)
-        .then(function(response: any) {
+    .then(function(response: any) {
+        messageSent.classList.remove('hide')
+        inputText.forEach(text => text.value= '')
         console.log('SUCCESS!', response.status, response.text)
-        alert("Email sent successfully!")
-        }, function(error: any) {
+        setTimeout(()=>{ messageSent.classList.add('hide') }, 5000)
+        // alert("Email sent successfully!")
+    }, function(error: any) {
         console.log('FAILED...', error)
         alert("Failed to send email.")
     })

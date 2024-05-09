@@ -34,7 +34,7 @@
 #tablePicContainer .singlePicTable .picDescr {
   height: 0%;
   width: 100%;
-  background-color: #00000083;
+  background-color: #00000096;
   color: #f8f8f5;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
@@ -50,16 +50,19 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
 
 #tablePicContainer .singlePicTable .picDescr h3 {
-  padding: 0px;
-  margin: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px 0px 0px 35px;
   font-size: 16px;
-  text-shadow: 1px 1px 1px #000000, -1px 1px 1px #000000, 1px -1px 1px #000000, -1px -1px 1px #000000;
+  text-shadow: -1px -1px 1px #000000, 1px -1px 1px #000000, -1px 1px 1px #000000, 1px 1px 1px #000000;
+  text-align: start;
 }
 
 #tablePicContainer .singlePicTable .picDescr ul {
@@ -68,7 +71,7 @@
   list-style: none;
   margin-left: 10px;
   color: #fafafa;
-  text-shadow: 1px 1px #000000, -1px 1px #000000, 1px -1px #000000, -1px -1px #000000;
+  text-shadow: -1px -1px 1px #000000, 1px -1px 1px #000000, -1px 1px 1px #000000, 1px 1px 1px #000000;
 }
 
 #tablePicContainer .singlePicTable .picDescr ul li {

@@ -65,6 +65,7 @@
   width: 40% !important;
   background-color: #fffffffa;
   font-family: 'Inter';
+  font-size: 15px;
   color: #b59b07;
   border: 1px solid #72727222;
   -webkit-box-shadow: 6px 6px 6px #75757525;
@@ -78,7 +79,8 @@
 #contactPage #chefForm #myForm input {
   height: 25px;
   font-family: 'Inter';
-  color: #b59b07;
+  font-size: 15px;
+  color: #000000;
   background-color: transparent;
 }
 
@@ -101,6 +103,7 @@
 #contactPage #chefForm #myForm textarea {
   resize: none;
   font-family: 'Inter';
+  font-size: 15px;
   background-color: transparent;
   border: 1px solid #b59b07;
   padding: 5px;
