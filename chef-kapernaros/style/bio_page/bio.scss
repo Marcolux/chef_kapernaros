@@ -209,16 +209,145 @@ section#career-highlights{
 .animated-highlight { color: $gold !important; }
 
 @media only screen and (min-width: 1301px) and (max-width: 1400px) {
-
+    
 }
-@media only screen and (max-width: 1361px) {
+@media only screen and (max-width: 1200px) {
+    #cardsContainer { width: 95% !important;}
  
 }
 @media only screen and (min-width: 701px) and (max-width: 930px) {
+    body{
+        width: 100% !important;
+        position: relative;
+    }
 
-}
-@media only screen and (min-width: 701px) and (max-width: 1300px) {
+    section{
+        width: 95% !important;
+        padding: 0px !important;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        &#valueSec{
+            padding: 0px !important;
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+            width: 100%;
+        }
+        &#career-highlights{
+            padding: 0px !important;
+            width: 100% !important;
+            li{
+                font-size: 14px;
+            }
+            p{
+                font-size: 16px !important;
+                &.textGold{
+                    font-size: 22px !important;
+                }
+            }
+        }
+        p{
+            text-align: left;
+            font-size: 16px !important;
+            span.textGold{
+                font-size: 22px !important;
+            }
+        }
+    }
+    #carouselSec{ 
+        margin-top: 14vh !important;
+        padding: 20px !important;
+        width: 95% !important;
+        >div {
+            padding: 0px !important;
+            p{
+                text-align: left;
+                font-size: 16px !important;
+                span.textGold{
+                    font-size: 22px !important;
+                }
+            }
+        }
+    
+        #carousel{
+            margin-top: 30px;
+            min-width: 95% !important;
+            max-height: 400px;
+            min-height: 400px;
+            .singleCarouselSlide{
+                max-height: 400px;
+                min-height: 400px;
+                #timeline{
+    
+                    background-color:  #ffffff !important;
+                    padding-left: 0px;
+                    z-index: 15;
+                    #lineWhite{
+                        background-color: #ffffff !important;
+                    }
+                    #circleWhite{
+                        background-color: #ffffff !important;
+                    }
+                }
+                #slideDescription{
+                    width: 100%;
+                    min-width: 300px !important;
+                    max-height: 400px;
+                    min-height: 400px;
+                    background-color:  #00000047 !important;
+                    padding-left: 10px;
+                    z-index: 11;
+                    #slideText{
+                        background-color: #000000a3;
+                        padding: 10px !important;
+                        font-size: 14px;
+                    }
+                    i{
+                        font-size: 45px !important;
+                    }
+                    #nextSlide{
+                        bottom: 2%;
+    
+                    }
+                    #prevSlide{
+                        top: 2%;
+                    }
+                }
+                #slidePic{
+                    position: absolute;
+                    width: 100%;
+                    img{
+                        height: 400px !important;
+                    }
+                    #picNote{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .singleCard {
 
+        img{
+            width: 40%;
+            min-width: 40%;
+            max-width: 40%;
+        }
+        .cardDescr{
+            padding: 20px !important;
+            .cardText{
+                margin-top: 0px !important;
+                margin-bottom: 30px !important;
+            } 
+        }
+    }
+    #cardsContainer {
+        width: 100% !important;
+    }
+    .cardsIntro{
+        p.fontSize18{
+            font-size: 16px !important;
+        }
+    }
 
 }
 @media only screen and (max-width: 700px) {
@@ -246,16 +375,12 @@ section#career-highlights{
             }
         }
         p{
-            // margin: 0px;
-            // text-align: justify;
-            // text-justify: inter-word ;
             text-align: left;
             font-size: 16px !important;
             span.textGold{
                 font-size: 22px !important;
             }
         }
-
     }
     #carouselSec{ 
         margin-top: 0px !important;
@@ -266,9 +391,6 @@ section#career-highlights{
         >div {
             padding: 0px !important;
             p{
-                // margin: 0px;
-                // text-align: justify;
-                // text-justify: inter-word ;
                 text-align: left;
                 font-size: 16px !important;
                 span.textGold{
@@ -359,7 +481,6 @@ section#career-highlights{
     }
     .cardsIntro{
         p.fontSize18{
-
             font-size: 16px !important;
         }
     }
