@@ -1,7 +1,6 @@
 $primaryColor: #f8f8f5;
 $gold: #b59b07;
 #contactPage{
-    // background-color: #cccccc05;
     background-color: #eeededfa;
     #chefForm{
         height: 100vh;
@@ -9,11 +8,6 @@ $gold: #b59b07;
         align-items: center;
         padding-left: 10vh;
         padding-right: 50px;
-
-        // background: linear-gradient(#0e0e0e -20vh, transparent 10vh), url('https://res.cloudinary.com/drdrs6pdq/image/upload/v1714794246/chef_logo-shadow_fiw8d0.png');
-        // background-size: cover; /* or specific size like 100% auto */
-        // background-position-y: 8vh;
-        // background-repeat: no-repeat;
         #lineGold{
             position: absolute;
             display: flex;;
@@ -29,8 +23,7 @@ $gold: #b59b07;
             width: 2px;
             background-color: #b59b07;
             left: 79.5%;
-        }
-        
+        }  
         #logoPic{
             width: 35vw;
             height: 35vw;
@@ -39,7 +32,6 @@ $gold: #b59b07;
             object-fit: cover;
             object-position: center; 
             position: absolute;
-            // background-position-y: 8vh;
             left: 55%;
             top: 20%;
             border: 7px solid $gold;
@@ -49,49 +41,31 @@ $gold: #b59b07;
                 height: 100%;
                 width: 2px;
                 background-color: #b59b07;
-            }
-            
+            }  
         }
         #myForm{
-            // height: 80%;
             width: 40% !important;
-            // margin-right: -150px;
-            // position: absolute;
-            // margin-top: 10px;
-            // background-color: #2F2F2F;
-            // background-color: #eeededfa;
+            height: fit-content;
             background-color: #fffffffa;
             font-family: 'Inter';
             font-size: 15px;
             color: #b59b07;
-            // border-radius: 6px;
             border: 1px solid #72727222;
             box-shadow: 6px 6px 6px #75757525 ;
             z-index: 5;
             
-                // border: 1px solid #ffffff;
-                height: fit-content;
-            
             input{
                 height: 25px;
-                // border-radius: 4px;
                 font-family: 'Inter';
                 font-size: 15px;
-                // color: #b59b07;
                 color: #000000;
                 &:focus-visible{
                     border-top: 0px;
                     border-left: 0px;
                     border-right: 0px;
                     border-bottom: 1px solid #b59b07;
-                    // outline: 0px;
-                    // outline-style: none;
                     outline-width: 0px;
-                    // box-shadow: 0 0 8px rgba(0, 86, 179, 0.5);
                     background-color: transparent;
-                }
-                &:focus{
-                    // /border: 1px solid rgba(251, 251, 251, 0.009) !important;
                 }
                 &.inputText{
                     border-top: 0px;
@@ -111,13 +85,10 @@ $gold: #b59b07;
                 &:focus-visible{
                     outline-width: 0px;
                     border: 1px solid #b59b07;
-                    // border-color: #b59b07 !important;
                 }
             }
             button{
                 border-color: #b59b07 !important;
-                // border-radius: 4px;
-                
                 color: #b59b07 !important;
             }
         }
@@ -134,10 +105,97 @@ $gold: #b59b07;
 @media only screen and (min-width: 701px) and (max-width: 930px) {
 
 }
-@media only screen and (min-width: 701px) and (max-width: 1300px) {
-
+@media only screen and (min-width: 701px) and (max-width: 1100px) {
+    #chefForm{
+        margin-top: 14vh;
+    }
 
 }
-@media only screen and (max-width: 700px) {
-
+@media only screen and (max-width: 1080px) {
+    #contactPage{
+        background-color: #eeededfa;
+        width: 100%;
+        height: 80vh;
+        #chefForm{
+            height: 90%;
+            // width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-left: 30px;
+            padding-right: 30px;
+            #lineGold{
+                position: absolute;
+                display: flex;;
+                height: 4px;
+                width: 100%;
+                background-color: #b59b07;
+                left: 0%;
+                bottom: 50px;
+            }
+            #lineGold2{
+                position: absolute;
+                display: flex;;
+                width: 100%;
+                height: 2px;
+                background-color: #b59b07;
+                left: 0%;
+                bottom: 40px;
+            }  
+            #logoPic{
+                display: none !important;
+            }
+            #myForm{
+                margin-top: 70px;
+                width: 90% !important;
+                height: fit-content;
+                background-color: #fffffffa;
+                font-family: 'Inter';
+                font-size: 15px;
+                color: #b59b07;
+                border: 1px solid #72727222;
+                box-shadow: 6px 6px 6px #75757525 ;
+                z-index: 5;
+                
+                input{
+                    height: 25px;
+                    font-family: 'Inter';
+                    font-size: 15px;
+                    color: #000000;
+                    &:focus-visible{
+                        border-top: 0px;
+                        border-left: 0px;
+                        border-right: 0px;
+                        border-bottom: 1px solid #b59b07;
+                        outline-width: 0px;
+                        background-color: transparent;
+                    }
+                    &.inputText{
+                        border-top: 0px;
+                        border-left: 0px;
+                        border-right: 0px;
+                        border-bottom: 1px solid #b59b07;
+                    }
+                    background-color: transparent;
+                }
+                textarea{
+                    resize: none;
+                    font-family: 'Inter';
+                    font-size: 15px;
+                    background-color: transparent;
+                    border: 1px solid #b59b07;
+                    padding: 5px;
+                    &:focus-visible{
+                        outline-width: 0px;
+                        border: 1px solid #b59b07;
+                    }
+                }
+                button{
+                    border-color: #b59b07 !important;
+                    color: #b59b07 !important;
+                }
+            }
+        }
+    }
 }
