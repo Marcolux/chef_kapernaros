@@ -102,14 +102,14 @@ function initPicCollection(newPicturesList: picCollection, collection: Picture[]
                         <img class="picToEn" src="${picture.src}">
                     </div>
 
-                    <div class="p-20"></div>
+                    <div class="p-20 emptyBox"></div>
                 </div>
             `
         } else if (index === 0) {
 
             carouselElement.innerHTML = `
                 <div id="picShowing" class="flex flex-alignItems-center">
-                    <div class="p-20"></div>
+                    <div class="p-20 emptyBox"></div>
 
                     <div class="flex flex-justifyContent-center flex-alignItems-center  picDiv" >
                         <img class="picToEn" src="${picture.src}">

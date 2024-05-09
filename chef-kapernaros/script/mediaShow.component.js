@@ -1,18 +1,18 @@
-"use strict";
-class singlePic {
-    constructor(data) {
+var singlePic = /** @class */ (function () {
+    function singlePic(data) {
         this.data = data;
         this.next = null;
     }
-}
-class picCollection {
-    constructor(id) {
+    return singlePic;
+}());
+var picCollection = /** @class */ (function () {
+    function picCollection(id) {
         this.head = null;
         this.tail = null;
         this.id = id;
     }
-    append(data) {
-        const newSinglePic = new singlePic(data);
+    picCollection.prototype.append = function (data) {
+        var newSinglePic = new singlePic(data);
         if (!this.head) {
             this.head = newSinglePic;
             this.tail = newSinglePic;
@@ -21,10 +21,10 @@ class picCollection {
             this.tail.next = newSinglePic;
             this.tail = newSinglePic;
         }
-    }
-    getSinglePic(index) {
-        let currentSinglePic = this.head;
-        let count = 0;
+    };
+    picCollection.prototype.getSinglePic = function (index) {
+        var currentSinglePic = this.head;
+        var count = 0;
         // if currentSinglePic === null means that the while loop reached the end of the list because it will replace the currentPicture with is next currentSinglePic = currentSinglePic.next
         while (currentSinglePic !== null) {
             if (count === index)
@@ -33,101 +33,68 @@ class picCollection {
             currentSinglePic = currentSinglePic.next;
         }
         return null;
-    }
-    getLastIndex() {
-        let currentSinglePic = this.head;
-        let count = 0;
+    };
+    picCollection.prototype.getLastIndex = function () {
+        var currentSinglePic = this.head;
+        var count = 0;
         while (currentSinglePic !== null) {
             count++;
             currentSinglePic = currentSinglePic.next;
         }
         return count - 1;
-    }
-}
+    };
+    return picCollection;
+}());
 function initPicCollection(newPicturesList, collection) {
-    let bigPic = document.querySelector(`#bigPic`);
-    let carouselElement = bigPic.querySelector(`#singlePicCont`);
+    var bigPic = document.querySelector("#bigPic");
+    var carouselElement = bigPic.querySelector("#singlePicCont");
     carouselElement.innerHTML = '';
-    let first = collection.shift();
+    var first = collection.shift();
     if (!newPicturesList.head) {
-        collection.forEach(picture => { newPicturesList.append(picture); });
+        collection.forEach(function (picture) { newPicturesList.append(picture); });
     }
     function showPicture(index) {
         carouselElement.innerHTML = '';
-        const picture = newPicturesList.getSinglePic(index);
+        var picture = newPicturesList.getSinglePic(index);
         if (index < newPicturesList.getLastIndex() && index !== 0) {
-            carouselElement.innerHTML = `
-                <div id="picShowing" class="flex flex-alignItems-center">
-                    <button class="p-20" id="prevPicture">
-                        <i class="fa-solid fa-chevron-left fontSize40"></i>
-                    </button>
-                    <div class="flex flex-justifyContent-center flex-alignItems-center picDiv" >
-                        <img class="picToEn" src="${picture.src}">
-                    </div>
-                    <button class="p-20" id="nextPicture">
-                        <i class="fa-solid fa-chevron-right fontSize40"></i>
-                    </button>
-                </div>
-            `;
+            carouselElement.innerHTML = "\n                <div id=\"picShowing\" class=\"flex flex-alignItems-center\">\n                    <button class=\"p-20\" id=\"prevPicture\">\n                        <i class=\"fa-solid fa-chevron-left fontSize40\"></i>\n                    </button>\n                    <div class=\"flex flex-justifyContent-center flex-alignItems-center picDiv\" >\n                        <img class=\"picToEn\" src=\"".concat(picture.src, "\">\n                    </div>\n                    <button class=\"p-20\" id=\"nextPicture\">\n                        <i class=\"fa-solid fa-chevron-right fontSize40\"></i>\n                    </button>\n                </div>\n            ");
         }
         else if (index === newPicturesList.getLastIndex()) {
-            carouselElement.innerHTML = `
-                <div id="picShowing" class="flex flex-alignItems-center">
-                    <button class="p-20" id="prevPicture">
-                        <i class="fa-solid fa-chevron-left fontSize40"></i>
-                    </button>
-                    <div class="flex flex-justifyContent-center flex-alignItems-center picDiv" >
-                        <img class="picToEn" src="${picture.src}">
-                    </div>
-
-                    <div class="p-20"></div>
-                </div>
-            `;
+            carouselElement.innerHTML = "\n                <div id=\"picShowing\" class=\"flex flex-alignItems-center\">\n                    <button class=\"p-20\" id=\"prevPicture\">\n                        <i class=\"fa-solid fa-chevron-left fontSize40\"></i>\n                    </button>\n                    <div class=\"flex flex-justifyContent-center flex-alignItems-center picDiv\" >\n                        <img class=\"picToEn\" src=\"".concat(picture.src, "\">\n                    </div>\n\n                    <div class=\"p-20 emptyBox\"></div>\n                </div>\n            ");
         }
         else if (index === 0) {
-            carouselElement.innerHTML = `
-                <div id="picShowing" class="flex flex-alignItems-center">
-                    <div class="p-20"></div>
-
-                    <div class="flex flex-justifyContent-center flex-alignItems-center  picDiv" >
-                        <img class="picToEn" src="${picture.src}">
-                    </div>
-                    <button class="p-20" id="nextPicture">
-                        <i class="fa-solid fa-chevron-right fontSize40"></i>
-                    </button>
-                </div>
-            `;
+            carouselElement.innerHTML = "\n                <div id=\"picShowing\" class=\"flex flex-alignItems-center\">\n                    <div class=\"p-20 emptyBox\"></div>\n\n                    <div class=\"flex flex-justifyContent-center flex-alignItems-center  picDiv\" >\n                        <img class=\"picToEn\" src=\"".concat(picture.src, "\">\n                    </div>\n                    <button class=\"p-20\" id=\"nextPicture\">\n                        <i class=\"fa-solid fa-chevron-right fontSize40\"></i>\n                    </button>\n                </div>\n            ");
         }
-        setTimeout(() => {
-            const imgs = carouselElement.querySelector('img');
-            const imgShowing = carouselElement.querySelector('#picShowing');
+        setTimeout(function () {
+            var imgs = carouselElement.querySelector('img');
+            var imgShowing = carouselElement.querySelector('#picShowing');
             imgs.classList.add('show');
             imgs.addEventListener('click', function () {
                 imgs.requestFullscreen();
                 imgShowing.classList.add('fullscreen-mode');
             });
-            document.addEventListener('fullscreenchange', () => {
+            document.addEventListener('fullscreenchange', function () {
                 if (!document.fullscreenElement) {
                     imgShowing.classList.remove('fullscreen-mode');
                 }
             });
         }, 150);
-        const prevButton = document.getElementById('prevPicture');
-        const nextButton = document.getElementById('nextPicture');
+        var prevButton = document.getElementById('prevPicture');
+        var nextButton = document.getElementById('nextPicture');
         if (prevButton) {
-            prevButton.addEventListener('click', () => { movePicture(-1); });
+            prevButton.addEventListener('click', function () { movePicture(-1); });
         }
         if (nextButton) {
-            nextButton.addEventListener('click', () => { movePicture(1); });
+            nextButton.addEventListener('click', function () { movePicture(1); });
         }
     }
     // initial Picture showing on first load defined by currentPictureIndex
     showPicture(0);
-    let currentPictureIndex = 0;
+    var currentPictureIndex = 0;
     function movePicture(n) {
         currentPictureIndex = currentPictureIndex + n;
         // Wrap the index if it goes out of bounds
-        const totalPictures = newPicturesList.getLastIndex();
+        var totalPictures = newPicturesList.getLastIndex();
         if (currentPictureIndex >= totalPictures) {
             currentPictureIndex = totalPictures;
         }
@@ -149,19 +116,19 @@ function initPicCollection(newPicturesList, collection) {
 }
 // Wait for the DOM to fully load before initializing the carousel
 document.addEventListener('DOMContentLoaded', function () {
-    const friendsCelebList = new picCollection('friendsCelebList');
-    const growingInGreeceList = new picCollection('growingInGreeceList');
-    const charityEventsList = new picCollection('charityEventsList');
-    const competitionShows = new picCollection('competitionShows');
-    const onThePass = new picCollection('onThePass');
-    const allLists = [
+    var friendsCelebList = new picCollection('friendsCelebList');
+    var growingInGreeceList = new picCollection('growingInGreeceList');
+    var charityEventsList = new picCollection('charityEventsList');
+    var competitionShows = new picCollection('competitionShows');
+    var onThePass = new picCollection('onThePass');
+    var allLists = [
         friendsCelebList,
         growingInGreeceList,
         charityEventsList,
         competitionShows,
         onThePass
     ];
-    const friendsCelebList_src = [
+    var friendsCelebList_src = [
         { src: 'friendsCelebList' },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714608753/Niko/f_f_14_dulpgp.webp" },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714611082/Niko/f_f_16_i861kj.webp" },
@@ -209,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714613366/Niko/f_f_36_j484sl.webp" },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714613639/Niko/f_f_38_mfwtlr.webp" },
     ];
-    const growingInGreeceList_src = [
+    var growingInGreeceList_src = [
         { src: 'growingInGreeceList' },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714618491/Niko/niko-growing%20greece/g_g_17_mrjstu.webp" },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714614499/Niko/niko-growing%20greece/g_g_5_qva7un.webp" },
@@ -230,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/w_1300,h_900,c_fill/v1714614224/Niko/niko-growing%20greece/g_g_2_myfflq.webp" },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714617566/Niko/niko-growing%20greece/g_g_16_jrjtzg.webp" },
     ];
-    const charityEventsList_src = [
+    var charityEventsList_src = [
         { src: "charityEventsList" },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714618577/Niko/charity%20events/c_e_5_ybs4do.webp" },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714618551/Niko/charity%20events/c_e_2_wnpmve.webp" },
@@ -250,7 +217,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714619460/Niko/competitions/c_s_2_tfjvel.webp" },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1715043470/viber_image_2024-05-06_19-24-23-920_c1p4hs.jpg" },
     ];
-    const competitionShows_src = [
+    var competitionShows_src = [
         { src: "competitionShows" },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714619837/Niko/competitions/c_s_8_a7ucnk.webp" },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714619857/Niko/competitions/c_s_10_cgzqss.webp" },
@@ -270,7 +237,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1715044520/viber_image_2024-05-06_20-14-21-324_ehbbdj.jpg" },
         // {src:"AAAAAA"},
     ];
-    const onThePass_src = [
+    var onThePass_src = [
         { src: "onThePass" },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714620128/Niko/on%20the%20pass/o_t_p_4_efmsmz.webp" },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714620119/Niko/on%20the%20pass/o_t_p_3_wnefgs.webp" },
@@ -287,13 +254,13 @@ document.addEventListener('DOMContentLoaded', function () {
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714620784/Niko/on%20the%20pass/o_t_p_13_bs7c0y.webp" },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714620795/Niko/on%20the%20pass/o_t_p_14_f2im1y.webp" },
     ];
-    const allSources = [friendsCelebList_src, growingInGreeceList_src, charityEventsList_src, competitionShows_src, onThePass_src];
-    let allNotActiveTi = document.querySelectorAll('.secTitles');
-    allNotActiveTi.forEach(listEl => {
-        listEl.addEventListener('click', () => {
+    var allSources = [friendsCelebList_src, growingInGreeceList_src, charityEventsList_src, competitionShows_src, onThePass_src];
+    var allNotActiveTi = document.querySelectorAll('.secTitles');
+    allNotActiveTi.forEach(function (listEl) {
+        listEl.addEventListener('click', function () {
             allNotActiveTi = document.querySelectorAll('.secTitles');
-            const picColl = allLists.filter(list => list.id === listEl.id);
-            const picSource = allSources.filter(list => list[0].src === listEl.id);
+            var picColl = allLists.filter(function (list) { return list.id === listEl.id; });
+            var picSource = allSources.filter(function (list) { return list[0].src === listEl.id; });
             initPicCollection(picColl[0], picSource[0]);
         });
     });

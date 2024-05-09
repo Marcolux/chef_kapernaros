@@ -180,16 +180,269 @@ $shadowInset: #949494;
 @media only screen and (min-width: 1301px) and (max-width: 1400px) {
 
 }
-@media only screen and (max-width: 1361px) {
+@media only screen and (min-width: 701px) and (max-width: 1150px) {
  
 }
-@media only screen and (min-width: 701px) and (max-width: 930px) {
+@media only screen and (min-width: 701px) and (max-width: 1200px) {
 
-}
-@media only screen and (min-width: 701px) and (max-width: 1300px) {
-
-
+    body{
+        width: 100% !important;
+        #navBgScn{
+            width: 100% !important;
+        }
+        #media_section{
+            align-items: center;
+            margin-top: 14vh;
+            height: fit-content !important;
+            width: 95%;
+            padding: 20px !important;
+            >div{
+                padding: 0px !important;
+            }
+            #sectionPic{
+                display: flex;
+                width: 100% !important; 
+                height: 45vh !important;
+                margin-bottom: 20px;
+                background-color: #000000;
+                #mediaSelectorCont{
+                    z-index: 2;
+                    height: 41vh !important;
+                    width: 75% !important;
+                    padding: 20px !important;
+                    align-items: flex-start;
+                    justify-content: center !important;
+                    #mediaBlackBg{
+                        height: fit-content !important;
+                        width: 100% !important;
+                        padding: 0px !important;
+                        margin-top: 20px;
+                        align-self: flex-end;
+                        .picSections{
+                            width: 100% !important;
+                            padding: 10px 30px !important;
+                            li{
+                                font-size: 15px;
+                            }
+                        }
+                    } 
+                }
+            }
+        
+            #mediaContainer{
+                width: 89% !important;
+                background-color: $background ;
+                padding: 0px 20px !important;
+                height: 100% !important;
+                align-items: center !important;
+                #brandLogo{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                }
+                #mediaShowCont{
+                    z-index: 2;
+                    height: 450px !important;
+                    min-height: 450px !important;
+                    max-height: 450px !important;
+                    width: 100% !important;
+                    padding: 0px !important;
+                    align-items: baseline !important;
+                    justify-content: flex-start;
+                    
+                    #bigPic{
+                        width: 100% !important;
+                        height: fit-content;
+                        z-index: 55;
+                        padding: 5px 0px !important;
+                        align-items: flex-start;
+                        align-self: flex-start;
+                        justify-content: flex-start;
+                        #singlePicCont{
+                            z-index: 55;
+                            width: 100% !important;
+                            align-self: baseline ;
+                        }
+                        #picShowing{
+                            display: flex;
+                            flex-direction: column-reverse;
+                            justify-content: flex-end;
+                            height: 380px !important;
+                            .emptyBox{
+                                display: none;
+                            }
+                            button{
+                                margin: 10px;
+                                position: absolute;
+                                bottom: 0px;
+                                &#nextPicture{
+                                    margin: 10px;
+                                    left: 50%;
+                                }
+                                &#prevPicture{
+                                    left: 30%;
+                                }
+                            }
+                            .picDiv{
+                                overflow: hidden;
+                                width: 100%;
+                                padding: 0px;
+                                margin: 10px !important;
+                                .picToEn{
+                                    max-width: 300px;
+                                    max-height: 360px;
+                                }
+                            }
+                            &.fullscreen-mode{
+                                .picToEn{ object-fit: contain; }
+                                button{ scale: 0; }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #videoContainer {
+            flex-direction: column;
+            width: 100%;
+    
+            .video-responsive {
+                overflow: hidden;
+                position: relative;
+                min-width: 80%;
+                aspect-ratio: 1.5/1;
+                margin: 10px 0px !important;
+            }
+        }
+    }
+    
 }
 @media only screen and (max-width: 700px) {
-
+    body{
+        width: 100% !important;
+        #media_section{
+     
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 0px;
+            height: fit-content !important;
+            width: 90%;
+            padding: 20px !important;
+            >div{
+                padding: 0px !important;
+            }
+            #sectionPic{
+                display: flex;
+                flex-direction: column;
+                width: 100% !important; 
+                height: fit-content !important;
+                background-color: #000000;
+                align-items: center;
+                justify-content: flex-start;
+                #mediaSelectorCont{
+                    z-index: 2;
+                    height: fit-content !important;
+                    width: 89% !important;
+                    padding: 20px !important;
+                    #mediaBlackBg{
+                        height: fit-content;
+                        width: 100% !important;
+                        padding: 0px !important;
+                        .picSections{
+                            width: 100% !important;
+                            padding: 10px 30px !important;
+                            li{
+                                font-size: 15px;
+                            }
+                        }
+                    } 
+                }
+            }
+        
+            #mediaContainer{
+                width: 89% !important;
+                background-color: $background ;
+                padding: 0px 20px !important;
+                height: fit-content !important;
+                #brandLogo{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                }
+                #mediaShowCont{
+                    z-index: 2;
+                    height: 450px !important;
+                    min-height: 450px !important;
+                    max-height: 450px !important;
+                    width: 100% !important;
+                    padding: 0px !important;
+                    align-items: baseline !important;
+                    justify-content: flex-start;
+                    
+                    #bigPic{
+                        width: 100% !important;
+                        height: fit-content;
+                        z-index: 55;
+                        padding: 5px 0px !important;
+                        align-items: flex-start;
+                        align-self: flex-start;
+                        justify-content: flex-start;
+                        #singlePicCont{
+                            z-index: 55;
+                            width: 100% !important;
+                            align-self: baseline ;
+                        }
+                        #picShowing{
+                            display: flex;
+                            flex-direction: column-reverse;
+                            justify-content: flex-end;
+                            height: 380px !important;
+                            .emptyBox{
+                                display: none;
+                            }
+                            button{
+                                margin: 10px;
+                                position: absolute;
+                                bottom: 0px;
+                                &#nextPicture{
+                                    margin: 10px;
+                                    left: 50%;
+                                }
+                                &#prevPicture{
+                                    left: 30%;
+                                }
+                            }
+                            .picDiv{
+                                overflow: hidden;
+                                width: 100%;
+                                padding: 0px;
+                                margin: 10px !important;
+                                .picToEn{
+                                    max-width: 300px;
+                                    max-height: 360px;
+                                }
+                            }
+                            &.fullscreen-mode{
+                                .picToEn{ object-fit: contain; }
+                                button{ scale: 0; }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #videoContainer {
+            flex-direction: column;
+            width: 100%;
+    
+            .video-responsive {
+                overflow: hidden;
+                position: relative;
+                min-width: 100%;
+                aspect-ratio: 1.5/1;
+                margin: 10px 0px !important;
+            }
+        }
+    }
 }
