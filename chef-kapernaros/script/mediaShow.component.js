@@ -175,6 +175,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714613151/Niko/f_f_33_ke48sd.webp" },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714613366/Niko/f_f_36_j484sl.webp" },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714613639/Niko/f_f_38_mfwtlr.webp" },
+        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1715304167/viber_image_2024-05-07_22-30-12-805_kndjk7.jpg" },
     ];
     var growingInGreeceList_src = [
         { src: 'growingInGreeceList' },
