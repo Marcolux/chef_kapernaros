@@ -659,6 +659,120 @@ html, body {
   color: #897400;
 }
 
+.comingSoonCont {
+  background-color: #2f2f2f11;
+  border: 1px solid #0000004a;
+  border-radius: 8px;
+  -webkit-box-shadow: inset 5px 5px 6px #00000030, inset -5px -5px 6px #00000030, 3px 3px 6px #00000050, -3px -3px 6px #00000030, 3px -3px 3px #00000030, -3px 3px 3px #00000030;
+          box-shadow: inset 5px 5px 6px #00000030, inset -5px -5px 6px #00000030, 3px 3px 6px #00000050, -3px -3px 6px #00000030, 3px -3px 3px #00000030, -3px 3px 3px #00000030;
+  /* bottom-right outer shadow */
+  /* Delay the animation of each letter */
+}
+
+.comingSoonCont .comingSoon {
+  font-size: 60px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Ledger';
+}
+
+.comingSoonCont .comingSoon span {
+  opacity: 0.9;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-animation: dropIn 10s infinite;
+          animation: dropIn 10s infinite;
+  color: #000000;
+  margin-left: -3px;
+}
+
+@-webkit-keyframes dropIn {
+  0%, 50%, 100% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    -webkit-filter: blur(0.3px);
+            filter: blur(0.3px);
+    opacity: 0.8;
+  }
+  25%, 75% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+}
+
+@keyframes dropIn {
+  0%, 50%, 100% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    -webkit-filter: blur(0.3px);
+            filter: blur(0.3px);
+    opacity: 0.8;
+  }
+  25%, 75% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+}
+
+.comingSoonCont .comingSoon span:nth-child(1) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.comingSoonCont .comingSoon span:nth-child(2) {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+.comingSoonCont .comingSoon span:nth-child(3) {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+.comingSoonCont .comingSoon span:nth-child(4) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.comingSoonCont .comingSoon span:nth-child(5) {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+.comingSoonCont .comingSoon span:nth-child(6) {
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+}
+
+.comingSoonCont .comingSoon span:nth-child(7) {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+.comingSoonCont .comingSoon span:nth-child(8) {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+.comingSoonCont .comingSoon span:nth-child(9) {
+  -webkit-animation-delay: 1.1s;
+          animation-delay: 1.1s;
+}
+
+.comingSoonCont .comingSoon span:nth-child(10) {
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+}
+
 @media only screen and (min-width: 1301px) and (max-width: 1400px) {
   .chefQuote {
     width: 60%;
