@@ -670,13 +670,15 @@ html, body {
 }
 
 .comingSoonCont .comingSoon {
-  font-size: 60px;
+  font-size: 50px;
   font-weight: bold;
   letter-spacing: 2px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   font-family: 'Ledger';
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .comingSoonCont .comingSoon span {
@@ -990,7 +992,7 @@ html, body {
     -webkit-box-pack: center !important;
         -ms-flex-pack: center !important;
             justify-content: center !important;
-    padding: 0px 40px !important;
+    padding: 0px 20px !important;
     background-position-x: 87.5%;
   }
   .landingPage .comingSoonCont {
@@ -998,8 +1000,12 @@ html, body {
     padding-left: 0px;
     margin-top: 20px;
   }
+  .landingPage .comingSoonCont .comingSoon {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .landingPage .comingSoonCont .comingSoon span {
-    font-size: 45px !important;
+    font-size: 40px !important;
   }
   .landingPage .signature {
     width: 100% !important;
