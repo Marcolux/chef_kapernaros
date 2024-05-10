@@ -318,7 +318,7 @@ html, body {
 .landingPage {
   background-image: url("https://res.cloudinary.com/drdrs6pdq/image/upload/v1709553929/Niko/Home_Page_Chef_Kapernaros_img_HQ_1_q0nf2f.png");
   background-size: cover;
-  background-position: top;
+  background-position: right;
   height: 100%;
 }
 
@@ -660,7 +660,7 @@ html, body {
 }
 
 .comingSoonCont {
-  background-color: #2f2f2f11;
+  background-color: #ffffffb4;
   border: 1px solid #0000004a;
   border-radius: 8px;
   -webkit-box-shadow: inset 5px 5px 6px #00000030, inset -5px -5px 6px #00000030, 3px 3px 6px #00000050, -3px -3px 6px #00000030, 3px -3px 3px #00000030, -3px 3px 3px #00000030;
@@ -685,7 +685,7 @@ html, body {
           transform: translateY(0px);
   -webkit-animation: dropIn 10s infinite;
           animation: dropIn 10s infinite;
-  color: #000000;
+  color: #000000d7;
   margin-left: -3px;
 }
 
@@ -693,9 +693,9 @@ html, body {
   0%, 50%, 100% {
     -webkit-transform: translateY(-10px);
             transform: translateY(-10px);
-    -webkit-filter: blur(0.3px);
-            filter: blur(0.3px);
-    opacity: 0.8;
+    -webkit-filter: blur(0.2px);
+            filter: blur(0.2px);
+    opacity: 0.9;
   }
   25%, 75% {
     -webkit-transform: translateY(0);
@@ -710,9 +710,9 @@ html, body {
   0%, 50%, 100% {
     -webkit-transform: translateY(-10px);
             transform: translateY(-10px);
-    -webkit-filter: blur(0.3px);
-            filter: blur(0.3px);
-    opacity: 0.8;
+    -webkit-filter: blur(0.2px);
+            filter: blur(0.2px);
+    opacity: 0.9;
   }
   25%, 75% {
     -webkit-transform: translateY(0);
@@ -987,10 +987,19 @@ html, body {
 
 @media only screen and (max-width: 700px) {
   .landingPage {
-    -webkit-box-pack: end !important;
-        -ms-flex-pack: end !important;
-            justify-content: end !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    padding: 0px 40px !important;
     background-position-x: 87.5%;
+  }
+  .landingPage .comingSoonCont {
+    width: 100% !important;
+    padding-left: 0px;
+    margin-top: 20px;
+  }
+  .landingPage .comingSoonCont .comingSoon span {
+    font-size: 45px !important;
   }
   .landingPage .signature {
     width: 100% !important;

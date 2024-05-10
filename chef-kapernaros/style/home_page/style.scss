@@ -261,7 +261,7 @@ $primaryColor: #897400;
 .landingPage{
     background-image: url('https://res.cloudinary.com/drdrs6pdq/image/upload/v1709553929/Niko/Home_Page_Chef_Kapernaros_img_HQ_1_q0nf2f.png');
     background-size: cover;
-    background-position: top;
+    background-position: right;
     height: 100%;
     .chefQuote{
         // background-color: #F3F1E5;
@@ -536,7 +536,7 @@ $primaryColor: #897400;
 
 .comingSoonCont{
 	
-		background-color: #2f2f2f11;
+		background-color: #ffffffb4;
 		border: 1px solid #0000004a;
 		border-radius: 8px;
 		box-shadow: 
@@ -559,7 +559,7 @@ $primaryColor: #897400;
 			opacity: 0.9;
 			transform: translateY(0px);
 			animation: dropIn 10s infinite;
-			color: #000000;
+			color: #000000d7;
 			margin-left:  -3px;
 		}
 	}
@@ -567,8 +567,8 @@ $primaryColor: #897400;
 	@keyframes dropIn {
 		0%, 50%, 100% { 
 			transform: translateY(-10px);
-			filter: blur(0.3px);
-			opacity: 0.8;
+			filter: blur(0.2px);
+			opacity: 0.9;
 		}
 		25%, 75% { 
 			transform: translateY(0); 
@@ -808,7 +808,20 @@ $primaryColor: #897400;
 }
 @media only screen and (max-width: 700px) {
 	.landingPage{
-		justify-content: end !important;
+		// justify-content: end !important;
+		justify-content: center !important;
+		padding: 0px 40px !important;
+		.comingSoonCont{
+			width: 100% !important;
+			padding-left: 0px;
+			margin-top: 20px;
+			.comingSoon{
+				// width: 50% !important;
+				span{
+					font-size: 45px !important;
+				}
+			}
+		}
 		// background-position: right;
 		background-position-x: 87.5%;
 		.signature{
