@@ -22,6 +22,10 @@
   z-index: 5;
 }
 
+#tablePicContainer .singlePicTable:hover .noBG {
+  background-color: transparent !important;
+}
+
 #tablePicContainer .singlePicTable img {
   width: 100%;
   aspect-ratio: 1/0.8;
@@ -31,7 +35,12 @@
      object-position: center;
 }
 
-#tablePicContainer .singlePicTable .picDescr {
+#tablePicContainer .singlePicTable ul {
+  text-decoration: none !important;
+  list-style: none !important;
+}
+
+#tablePicContainer .singlePicTable .picDescr:not(.noBG) {
   height: 0%;
   width: 100%;
   background-color: #00000096;
@@ -55,7 +64,7 @@
           align-items: start;
 }
 
-#tablePicContainer .singlePicTable .picDescr h3 {
+#tablePicContainer .singlePicTable .picDescr:not(.noBG) h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,7 +74,7 @@
   text-align: start;
 }
 
-#tablePicContainer .singlePicTable .picDescr ul {
+#tablePicContainer .singlePicTable .picDescr:not(.noBG) ul {
   font-size: 14px !important;
   text-decoration: none;
   list-style: none;
@@ -74,13 +83,13 @@
   text-shadow: -1px -1px 1px #000000, 1px -1px 1px #000000, -1px 1px 1px #000000, 1px 1px 1px #000000;
 }
 
-#tablePicContainer .singlePicTable .picDescr ul li {
+#tablePicContainer .singlePicTable .picDescr:not(.noBG) ul li {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-#tablePicContainer .singlePicTable .picDescr h3, #tablePicContainer .singlePicTable .picDescr ul {
+#tablePicContainer .singlePicTable .picDescr:not(.noBG) h3, #tablePicContainer .singlePicTable .picDescr:not(.noBG) ul {
   padding: 0px;
   scale: 0;
   -webkit-transition: all 0.4s ease-in-out;
@@ -96,5 +105,26 @@
   scale: 1;
   font-family: 'Inter';
   font-size: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+  #chefTableSec {
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+  }
+  #chefTableSec .picDescr:hover {
+    display: none;
+  }
+  #tablePicContainer {
+    background-color: #2F2F2F;
+  }
+  #tablePicContainer .singlePicTable {
+    width: 30%;
+    margin-right: 5px;
+    margin-top: 5px;
+  }
+  #tablePicContainer .singlePicTable .picDescr:not(.noBG) {
+    display: none;
+  }
 }
 /*# sourceMappingURL=chef_table.css.map */

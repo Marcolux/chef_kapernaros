@@ -16,6 +16,9 @@ $gold: #b59b07;
         &:hover{
             scale: 1.05;
             z-index: 5;
+            .noBG{
+                background-color: transparent !important;
+            }
         }      
         img{
             width: 100%;
@@ -23,7 +26,11 @@ $gold: #b59b07;
             object-fit: cover;
             object-position: center;
         }
-        .picDescr{
+        ul{
+            text-decoration: none !important;
+            list-style: none !important;
+        }
+        .picDescr:not(.noBG){
             height: 0%;
             width: 100%;
             background-color: #00000096;
@@ -95,5 +102,24 @@ $gold: #b59b07;
 
 }
 @media only screen and (max-width: 700px) {
+    #chefTableSec{
+        margin-top: 0px !important;
+        padding-top: 0px !important;
+        .picDescr:hover{
+            display: none;
+        }
+    }
+    #tablePicContainer{
+        background-color: #2F2F2F;
+    
+        .singlePicTable{
+            width: 30%;
+            margin-right: 5px;
+            margin-top: 5px;
+            .picDescr:not(.noBG){
+                display: none;
+            }
 
+        }
+    }
 }
