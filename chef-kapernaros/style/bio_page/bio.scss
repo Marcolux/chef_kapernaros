@@ -66,6 +66,9 @@ $gold: #b59b07;
                     -1px -1px 2px #000,
                      1px -1px 2px #000,
                     -1px  1px 2px #000;
+                    background-color: #00000093;
+                    padding: 0px 10px;
+                    font-size: 20px !important;
                     &:not(.note_0){
                         opacity: 0;
                     }
@@ -112,7 +115,7 @@ $gold: #b59b07;
             }
 
             &:not(.circle_0).moveDown{ transform: translateY(-1150%); }
-            &:not(.circle_5).moveUp{ transform: translateY(1150%); }
+            &:not(.circle_6).moveUp{ transform: translateY(1150%); }
         }
     }
 }
@@ -208,8 +211,18 @@ section#career-highlights{
 }
 .animated-highlight { color: $gold !important; }
 
-@media only screen and (min-width: 1301px) and (max-width: 1400px) {
-    
+@media only screen and (min-width: 930px) and (max-width: 1170px) {
+    .singleCarouselSlide {
+        width: 100% !important;
+    }
+    #slide_2,#slide_3,#slide_4,#slide_6 {
+        #slideText{
+            padding: 15px !important;
+            p {
+                font-size: 15px !important;
+            }
+        }
+    }
 }
 @media only screen and (max-width: 1200px) {
     #cardsContainer { width: 95% !important;}
@@ -335,7 +348,7 @@ section#career-highlights{
         .cardDescr{
             padding: 20px !important;
             .cardText{
-                margin-top: 0px !important;
+                margin-top: 10px !important;
                 margin-bottom: 30px !important;
             } 
         }
@@ -370,21 +383,18 @@ section#career-highlights{
             p{
                 font-size: 16px !important;
                 &.textGold{
-                    font-size: 22px !important;
+                    font-size: 24px !important;
                 }
             }
         }
         p{
             text-align: left;
             font-size: 16px !important;
-            span.textGold{
-                font-size: 22px !important;
-            }
         }
     }
     #carouselSec{ 
-        margin-top: 0px !important;
-        padding: 20px !important;
+        margin-top: 20px !important;
+        padding: 50px 20px 20px 20px !important;
         width: 100%;
         min-width: 330px;
         max-width: 400px !important;
@@ -394,7 +404,8 @@ section#career-highlights{
                 text-align: left;
                 font-size: 16px !important;
                 span.textGold{
-                    font-size: 22px !important;
+                    margin-top: 20px !important;
+                    font-size: 18px !important;
                 }
             }
         }
@@ -406,7 +417,6 @@ section#career-highlights{
             max-height: 400px;
             min-height: 400px;
             .singleCarouselSlide{
-                // width: 300px;
                 max-height: 400px;
                 min-height: 400px;
                 #timeline{
@@ -432,7 +442,10 @@ section#career-highlights{
                     #slideText{
                         background-color: #000000a3;
                         padding: 10px !important;
-                        font-size: 14px;
+                        scale: 1;
+                        p{
+                            font-size: 14px !important;
+                        }
                     }
                     i{
                         font-size: 45px !important;
@@ -450,6 +463,7 @@ section#career-highlights{
                     width: 100%;
                     img{
                         height: 400px !important;
+                        width: 100%;
                     }
                     #picNote{
                         display: none;
@@ -472,7 +486,7 @@ section#career-highlights{
     .cardDescr{
         padding: 0px !important;
         .cardText{
-            margin-top: 0px !important;
+            margin-top: 10px !important;
             margin-bottom: 30px !important;
         } 
     }

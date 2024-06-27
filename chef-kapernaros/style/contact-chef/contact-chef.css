@@ -1,8 +1,18 @@
 #contactPage {
-  background-color: #eeededfa;
+  background-color: #f8f8f5;
+}
+
+#contactPage #contactIntro {
+  position: absolute;
+  top: 17vh;
+  width: 50% !important;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 #contactPage #chefForm {
+  position: relative;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -37,8 +47,8 @@
 }
 
 #contactPage #chefForm #logoPic {
-  width: 35vw;
-  height: 35vw;
+  width: 32vw;
+  height: 32vw;
   border-radius: 50%;
   aspect-ratio: 1/1;
   -o-object-fit: cover;
@@ -46,19 +56,11 @@
   -o-object-position: center;
      object-position: center;
   position: absolute;
-  left: 55%;
+  left: 60%;
   top: 20%;
-  border: 7px solid #b59b07;
-}
-
-#contactPage #chefForm #logoPic::after {
-  content: '';
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  width: 2px;
-  background-color: #b59b07;
+  border: 6px solid #b59b07;
+  -webkit-filter: brightness(0.85);
+          filter: brightness(0.85);
 }
 
 #contactPage #chefForm #myForm {
@@ -67,43 +69,57 @@
   height: -moz-fit-content;
   height: fit-content;
   background-color: #fffffffa;
-  font-family: 'Inter';
-  font-size: 15px;
-  color: #b59b07;
-  border: 1px solid #72727222;
+  border-radius: 6px;
+  position: absolute;
+  top: 30vh;
+  font-family: 'Ledger';
+  font-size: 16px;
+  color: #000000;
+  border: 1px solid #b59b07;
   -webkit-box-shadow: 6px 6px 6px #75757525;
           box-shadow: 6px 6px 6px #75757525;
   z-index: 5;
 }
 
 #contactPage #chefForm #myForm input {
-  height: 25px;
-  font-family: 'Inter';
-  font-size: 15px;
+  height: 23px;
+  font-family: 'Ledger';
+  font-size: 16px;
   color: #000000;
   background-color: transparent;
 }
 
 #contactPage #chefForm #myForm input:focus-visible {
-  border-top: 0px;
-  border-left: 0px;
-  border-right: 0px;
-  border-bottom: 1px solid #b59b07;
   outline-width: 0px;
   background-color: transparent;
 }
 
 #contactPage #chefForm #myForm input.inputText {
-  border-top: 0px;
-  border-left: 0px;
-  border-right: 0px;
-  border-bottom: 1px solid #b59b07;
+  border: 1px solid #b59b07;
+}
+
+#contactPage #chefForm #myForm select {
+  height: 28px;
+  font-family: 'Ledger';
+  font-size: 16px;
+  color: #000000;
+  border: 1px solid #b59b07;
+  background-color: transparent;
+}
+
+#contactPage #chefForm #myForm select:focus-visible {
+  border: 1px solid #b59b07 !important;
+  outline-width: 0px;
+}
+
+#contactPage #chefForm #myForm select.inputText {
+  border: 1px solid #b59b07 !important;
 }
 
 #contactPage #chefForm #myForm textarea {
   resize: none;
-  font-family: 'Inter';
-  font-size: 15px;
+  font-family: 'Ledger';
+  font-size: 16px;
   background-color: transparent;
   border: 1px solid #b59b07;
   padding: 5px;
@@ -119,6 +135,45 @@
   color: #b59b07 !important;
 }
 
+@media only screen and (max-width: 770px) {
+  #contactPage {
+    background-color: #4a4a4a;
+    height: 100% !important;
+  }
+  #contactPage #contactIntro {
+    position: absolute;
+    top: 40px;
+    width: 90% !important;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    color: #f8f8f5 !important;
+  }
+  #contactPage #contactIntro h3 {
+    font-size: 18px;
+  }
+  #contactPage #contactIntro p {
+    font-size: 14px;
+  }
+  #contactPage #chefForm {
+    margin-top: 0px !important;
+    height: 90vh !important;
+  }
+  #contactPage #chefForm #myForm {
+    top: 20vh !important;
+    max-width: 80% !important;
+    margin-top: 20px !important;
+    font-size: 14px !important;
+  }
+  #contactPage #chefForm #myForm input {
+    height: 20px !important;
+    font-size: 14px !important;
+  }
+  #contactPage #chefForm #myForm #messageSent {
+    font-size: 14px !important;
+  }
+}
+
 @media only screen and (min-width: 701px) and (max-width: 1100px) {
   #chefForm {
     margin-top: 14vh;
@@ -127,9 +182,16 @@
 
 @media only screen and (max-width: 1080px) {
   #contactPage {
-    background-color: #eeededfa;
     width: 100%;
     height: 80vh;
+  }
+  #contactPage #contactIntro {
+    position: absolute;
+    top: 40px;
+    width: 90% !important;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   #contactPage #chefForm {
     height: 90%;
@@ -158,7 +220,7 @@
     width: 100%;
     background-color: #b59b07;
     left: 0%;
-    bottom: 50px;
+    bottom: 30px;
   }
   #contactPage #chefForm #lineGold2 {
     position: absolute;
@@ -169,20 +231,20 @@
     height: 2px;
     background-color: #b59b07;
     left: 0%;
-    bottom: 40px;
+    bottom: 10px;
   }
   #contactPage #chefForm #logoPic {
     display: none !important;
   }
   #contactPage #chefForm #myForm {
-    margin-top: 70px;
+    top: 20vh !important;
     width: 90% !important;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     background-color: #fffffffa;
-    font-family: 'Inter';
-    font-size: 15px;
+    font-family: 'Ledger';
+    font-size: 16px;
     color: #b59b07;
     border: 1px solid #72727222;
     -webkit-box-shadow: 6px 6px 6px #75757525;
@@ -191,8 +253,8 @@
   }
   #contactPage #chefForm #myForm input {
     height: 25px;
-    font-family: 'Inter';
-    font-size: 15px;
+    font-family: 'Ledger';
+    font-size: 16px;
     color: #000000;
     background-color: transparent;
   }
@@ -205,6 +267,7 @@
     background-color: transparent;
   }
   #contactPage #chefForm #myForm input.inputText {
+    border-radius: 0px;
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
@@ -212,10 +275,11 @@
   }
   #contactPage #chefForm #myForm textarea {
     resize: none;
-    font-family: 'Inter';
-    font-size: 15px;
+    font-family: 'Ledger';
+    font-size: 16px;
     background-color: transparent;
     border: 1px solid #b59b07;
+    border-radius: 0px;
     padding: 5px;
   }
   #contactPage #chefForm #myForm textarea:focus-visible {

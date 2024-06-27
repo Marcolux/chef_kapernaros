@@ -86,6 +86,9 @@
 
 .carouselContainer #carousel .singleCarouselSlide #slidePic #picNote {
   text-shadow: 1px 1px 2px #000, -1px -1px 2px #000, 1px -1px 2px #000, -1px  1px 2px #000;
+  background-color: #00000093;
+  padding: 0px 10px;
+  font-size: 20px !important;
   -webkit-transition: opacity 1s ease;
   transition: opacity 1s ease;
 }
@@ -152,7 +155,7 @@
           transform: translateY(-1150%);
 }
 
-.carouselContainer #timeline #circleWhite:not(.circle_5).moveUp {
+.carouselContainer #timeline #circleWhite:not(.circle_6).moveUp {
   -webkit-transform: translateY(1150%);
           transform: translateY(1150%);
 }
@@ -285,6 +288,18 @@ section#career-highlights .highlights li:hover::before {
   color: #b59b07 !important;
 }
 
+@media only screen and (min-width: 930px) and (max-width: 1170px) {
+  .singleCarouselSlide {
+    width: 100% !important;
+  }
+  #slide_2 #slideText, #slide_3 #slideText, #slide_4 #slideText, #slide_6 #slideText {
+    padding: 15px !important;
+  }
+  #slide_2 #slideText p, #slide_3 #slideText p, #slide_4 #slideText p, #slide_6 #slideText p {
+    font-size: 15px !important;
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   #cardsContainer {
     width: 95% !important;
@@ -406,7 +421,7 @@ section#career-highlights .highlights li:hover::before {
     padding: 20px !important;
   }
   .singleCard .cardDescr .cardText {
-    margin-top: 0px !important;
+    margin-top: 10px !important;
     margin-bottom: 30px !important;
   }
   #cardsContainer {
@@ -440,18 +455,15 @@ section#career-highlights .highlights li:hover::before {
     font-size: 16px !important;
   }
   section#career-highlights p.textGold {
-    font-size: 22px !important;
+    font-size: 24px !important;
   }
   section p {
     text-align: left;
     font-size: 16px !important;
   }
-  section p span.textGold {
-    font-size: 22px !important;
-  }
   #carouselSec {
-    margin-top: 0px !important;
-    padding: 20px !important;
+    margin-top: 20px !important;
+    padding: 50px 20px 20px 20px !important;
     width: 100%;
     min-width: 330px;
     max-width: 400px !important;
@@ -464,7 +476,8 @@ section#career-highlights .highlights li:hover::before {
     font-size: 16px !important;
   }
   #carouselSec > div p span.textGold {
-    font-size: 22px !important;
+    margin-top: 20px !important;
+    font-size: 18px !important;
   }
   #carouselSec #carousel {
     margin-top: 30px;
@@ -500,7 +513,10 @@ section#career-highlights .highlights li:hover::before {
   #carouselSec #carousel .singleCarouselSlide #slideDescription #slideText {
     background-color: #000000a3;
     padding: 10px !important;
-    font-size: 14px;
+    scale: 1;
+  }
+  #carouselSec #carousel .singleCarouselSlide #slideDescription #slideText p {
+    font-size: 14px !important;
   }
   #carouselSec #carousel .singleCarouselSlide #slideDescription i {
     font-size: 45px !important;
@@ -517,6 +533,7 @@ section#career-highlights .highlights li:hover::before {
   }
   #carouselSec #carousel .singleCarouselSlide #slidePic img {
     height: 400px !important;
+    width: 100%;
   }
   #carouselSec #carousel .singleCarouselSlide #slidePic #picNote {
     display: none;
@@ -542,7 +559,7 @@ section#career-highlights .highlights li:hover::before {
     padding: 0px !important;
   }
   .cardDescr .cardText {
-    margin-top: 0px !important;
+    margin-top: 10px !important;
     margin-bottom: 30px !important;
   }
   #cardsContainer {

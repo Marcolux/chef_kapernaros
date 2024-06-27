@@ -33,7 +33,7 @@ $gold: #b59b07;
         .picDescr:not(.noBG){
             height: 0%;
             width: 100%;
-            background-color: #00000096;
+            background-color: #000000b7;
             color: #f8f8f5;
             transition: all 0.4s ease-in-out;
             position: absolute;
@@ -44,14 +44,17 @@ $gold: #b59b07;
             align-items: start;
             h3{
                 display: flex;
-                margin:  0px 0px 0px 35px;
-                font-size: 16px;
-                text-shadow:     
-                    -1px -1px 1px #000000,
-                    1px -1px 1px #000000,
-                    -1px 1px 1px #000000,
-                    1px 1px 1px #000000;
+                margin:  0px 0px 0px 25px;
+                font-size: 15px;
+                // text-shadow:     
+                //     -1px -1px 1px #000000,
+                //     1px -1px 1px #000000,
+                //     -1px 1px 1px #000000,
+                //     1px 1px 1px #000000;
                 text-align: start;
+                background-color: #b59b07b7;
+                color: #000000 !important;
+                padding: 0px 5px !important;
             }
             ul{
                 font-size: 14px !important;
@@ -60,7 +63,10 @@ $gold: #b59b07;
                 margin-left: 10px;
                 color: #fafafa;
 
-                li{ width: fit-content;}
+                li{ width: fit-content;
+                
+                    // background-color: #000000ab;
+                }
 
                 text-shadow:     
                     -1px -1px 1px #000000,
@@ -80,7 +86,7 @@ $gold: #b59b07;
                 width: 100%;
                 h3, ul{
                     scale: 1;
-                    font-family: 'Inter';
+                    font-family: 'Ledger';
                     font-size: 20px;
                 }
             }
@@ -102,6 +108,15 @@ $gold: #b59b07;
 
 }
 @media only screen and (max-width: 700px) {
+    .fontSize18 {
+        font-size: 16px !important;
+    }
+    p.fontSize20.mb-0.font-ledger.textGold.text-bold{
+        margin-top: 0px !important;
+    }
+    .maxWidth1500{
+        padding: 60px 15px 30px 15px !important;
+    }
     #chefTableSec{
         margin-top: 0px !important;
         padding-top: 0px !important;
@@ -111,14 +126,21 @@ $gold: #b59b07;
     }
     #tablePicContainer{
         background-color: #2F2F2F;
+        >div{
+            padding: 30px 0px !important;
+        }
     
         .singlePicTable{
-            width: 30%;
+            width: 45%;
             margin-right: 5px;
             margin-top: 5px;
             .picDescr:not(.noBG){
                 display: none;
             }
+            &:hover{
+                scale: 1;
+                z-index:1;
+            } 
 
         }
     }
