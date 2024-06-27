@@ -46,7 +46,7 @@
         <!-- preload chef table's pics -->
         <script>
             document.addEventListener("DOMContentLoaded", function() {
-                fetch('chef-kapernaros/pages/preload-chef-table-links.html')
+                fetch('/pages/preload-chef-table-links.html')
                     .then(response => response.text())
                     .then(data => {
                         const head = document.querySelector('head')
