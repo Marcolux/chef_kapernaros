@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const friendsCelebList_src = [
         { src: 'friendsCelebList', caption: null },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1714608753/Niko/f_f_14_dulpgp.webp", caption: 'Jose Andres'},
-        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1714611082/Niko/f_f_16_i861kj.webp", caption: 'Tony Priolo'},
+        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1714611082/Niko/f_f_16_i861kj.webp", caption: 'Tony Priolo, Eva Davidman & Darren Gest'},
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1714611418/Niko/f_f_19_cygdn0.webp", caption: 'Sarah Grueneberg'},
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1714612983/Niko/f_f_32_jvdutb.webp", caption: 'Fabio Viviani'},
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1714607529/Niko/f_f_11_metou3.webp", caption: 'Sanaa Abourezk'},
