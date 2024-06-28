@@ -364,6 +364,9 @@ section#career-highlights{
 
 }
 @media only screen and (max-width: 700px) {
+    .highlightsIntro, .valueIntro{
+        text-align: justify
+    } 
     section{
         width: 88vw !important;
         padding: 0px !important;
@@ -488,6 +491,8 @@ section#career-highlights{
         .cardText{
             margin-top: 10px !important;
             margin-bottom: 30px !important;
+            text-align: justify;
+            
         } 
     }
     #cardsContainer {

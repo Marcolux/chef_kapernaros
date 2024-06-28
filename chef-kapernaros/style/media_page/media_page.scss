@@ -340,6 +340,9 @@ $shadowInset: #949494;
     
 }
 @media only screen and (max-width: 700px) {
+    .mediaIntro{
+        text-align: justify;
+    }
     body{
         width: 100% !important;
         .maxWidth1500{
