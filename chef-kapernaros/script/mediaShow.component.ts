@@ -253,7 +253,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1714613151/Niko/f_f_33_ke48sd.webp", caption: 'Kevin Warren'},
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1714613366/Niko/f_f_36_j484sl.webp", caption: 'Lisa Fielding'},
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1714613639/Niko/f_f_38_mfwtlr.webp", caption: 'Amy Rutledge & Tonya Francisco'},
-        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715304167/viber_image_2024-05-07_22-30-12-805_kndjk7.webp", caption: 'Gianluigi Buff'},
+        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715304167/viber_image_2024-05-07_22-30-12-805_kndjk7.webp", caption: 'Gianluigi Buffon'},
     ]
     const growingInGreeceList_src = [
         { src: 'growingInGreeceList', caption: null },
