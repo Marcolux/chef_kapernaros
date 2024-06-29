@@ -160,7 +160,7 @@
     height: 90vh !important;
   }
   #contactPage #chefForm #myForm {
-    top: 20vh !important;
+    top: 23vh !important;
     max-width: 80% !important;
     margin-top: 20px !important;
     font-size: 14px !important;
@@ -237,7 +237,7 @@
     display: none !important;
   }
   #contactPage #chefForm #myForm {
-    top: 20vh !important;
+    top: 20vh;
     width: 90% !important;
     height: -webkit-fit-content;
     height: -moz-fit-content;
