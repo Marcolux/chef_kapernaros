@@ -19,6 +19,72 @@ $primaryColorLight: #00000090;
 	background-color: $navBackGroundColor;
     font: $navFont;
 	color: $navBarTextColor;
+	#landingAd{
+		color: #000000;
+		font-weight: bold;
+		display: flex;
+		font-family: "Ledger";
+		// box-shadow: 4px 4px 4px #00000063;
+		border: 1px solid #000;
+		// position: absolute;
+		// top: 0vh;
+		// right: 0%;
+		#DuckImg, #KaperImg{
+			background-color: #2f2f2f59;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position-y: center;
+			height: 52px;
+			width: 52px;
+			// border: 1px solid #000;
+			// box-shadow: 6px 6px 6px #00000063;
+		}
+		#DuckImg{
+			background-image: url('./../../images/Dulk_1.png');
+			// margin-top: 1px;
+			
+		}
+		#KaperImg{
+			background-image: url('./../../images/Kapernaros_1.png');
+			
+		}
+		#eventTextBox{
+			background-color: #2f2f2f59;
+			padding: 5px 10px;
+			font-size: 12px;
+			align-items: center;
+			justify-content: center;
+			// box-shadow: 6px 6px 6px #00000063;
+			
+			// text-shadow: 0.5px 0.5px 0px rgba(158, 0, 13, 0.846),
+			// 0.5px -0.5px 0px rgba(158, 0, 13, 0.846),
+			// -0.5px -0.5px 0px rgba(158, 0, 13, 0.846),
+			// -0.5px 0.5px 0px rgba(158, 0, 13, 0.846);
+
+			a{
+				background-color: #B59A07;
+				padding: 0px 5px;
+				color: #000000;
+				// text-shadow: 0.5px 0.5px 0px rgba(0, 0, 0, 0.846),
+				// 0.5px -0.5px 0px rgba(0, 0, 0, 0.846),
+				// -0.5px -0.5px 0px rgba(0, 0, 0, 0.846),
+				// -0.5px 0.5px 0px rgba(0, 0, 0, 0.846);
+				margin-right: 0px !important;
+				&:hover{
+					scale: 1.1;
+					margin-left: -5px;
+					margin-right: 10px;
+				}
+			}
+			.shadowGold{
+				// text-shadow: 0.5px 0.5px 0px rgba(158, 0, 13, 0.846),
+				// 0.5px -0.5px 0px rgba(158, 0, 13, 0.846),
+				// -0.5px -0.5px 0px rgba(158, 0, 13, 0.846),
+				// -0.5px 0.5px 0px rgba(158, 0, 13, 0.846);
+				font-size: 14px;
+			}
+		}
+	}
 	#socialMedia a:not(.logoNav){
 		i{
 			font-size: 25px !important;
@@ -212,6 +278,31 @@ $primaryColorLight: #00000090;
 				}
 			} 
 		}
+		#landingAd{
+			border: 1px solid #000;
+			background-color: #aba4a4;
+			justify-self: end;
+			#DuckImg, #KaperImg{
+				background-color: #2f2f2f;
+				height: 52px !important;
+				width: 52px !important;
+				display: flex !important;
+			}
+			#eventTextBox{
+				background-color: #aba4a4;
+				padding: 5px 10px;
+				font-size: 10px !important;
+				#eventLink{
+					font-size: 12px;
+					width: fit-content !important;
+					margin: 0px;
+				}
+	
+				.shadowGold{
+					font-size: 12px !important;
+				}
+			}
+		}
 	}
 	&.biggerScreen{
 		position: fixed;
@@ -295,6 +386,7 @@ $primaryColorLight: #00000090;
     background-size: cover;
     background-position: right;
     height: 100%;
+
 	.picCpt{
 		position: absolute; 
 		bottom: 0px; 
@@ -756,6 +848,36 @@ $primaryColorLight: #00000090;
 	}
 }
 @media only screen and (min-width: 771px) and (max-width: 1050px)  {
+	#logoNavIndexPage{
+		.activePage{
+			margin-right: 20px !important;
+		}
+	}
+	.linkContainer{
+		width: 50%;
+		a{
+			font-size: 15px !important;
+		}
+	}
+	#landingAd{
+		border: 1px solid #000;
+		background-color: #aba4a4;
+		justify-self: end;
+		#DuckImg, #KaperImg{
+			background-color: #2f2f2f;
+			height: 42px !important;
+			width: 42px !important;
+		}
+		#eventTextBox{
+			background-color: #aba4a4;
+			padding: 5px 10px;
+			font-size: 10px !important;
+
+			.shadowGold{
+				font-size: 12px !important;
+			}
+		}
+	}
 
 
 	.chefQuote{
@@ -943,6 +1065,13 @@ $primaryColorLight: #00000090;
 				padding-right: 0px !important;
 			}
 		} 
+	}
+}
+@media only screen and (max-width: 870px){
+	#landingAd{
+		#DuckImg, #KaperImg{
+			display: none;
+		}
 	}
 }
 @media only screen and (max-width: 770px){
