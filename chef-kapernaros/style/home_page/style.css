@@ -1503,6 +1503,37 @@ html, body {
   }
 }
 
+@media only screen and (max-width: 380px) {
+  #landingAd #DuckImg, #landingAd #KaperImg {
+    display: none !important;
+    max-height: 0px !important;
+    max-width: 0px !important;
+  }
+  #landingAd #eventTextBox {
+    background-color: #aba4a4;
+    padding: 5px 10px;
+    font-size: 12px !important;
+    position: relative;
+    -webkit-box-shadow: 6px 6px 6px #0000003d;
+            box-shadow: 6px 6px 6px #0000003d;
+  }
+  #landingAd #eventTextBox #shadowGold {
+    font-weight: bold !important;
+  }
+  #landingAd #eventTextBox #eventLink {
+    font-size: 13px;
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+    margin: 0px;
+  }
+  #landingAd #eventTextBox .linkWrap {
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+  }
+}
+
 @media only screen and (max-height: 400px) {
   .landingPage {
     padding: 0px 0px !important;

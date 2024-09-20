@@ -1280,6 +1280,35 @@ $primaryColorLight: #00000090;
 			}
 		}
 	}
+
+}
+@media only screen and (max-width: 380px){
+	#landingAd{
+		#DuckImg, #KaperImg{
+			display: none !important;
+			max-height: 0px !important;
+			max-width: 0px !important;
+		}
+		#eventTextBox{
+			background-color: #aba4a4;
+			padding: 5px 10px;
+			font-size: 12px !important;
+			position: relative;
+			box-shadow: 6px 6px 6px #0000003d;
+			#shadowGold{
+				font-weight: bold !important;
+			}
+			#eventLink{
+				font-size: 13px;
+				width: fit-content !important;
+				margin: 0px;
+			}
+			.linkWrap{
+				width: fit-content !important;
+			}
+		}
+	}
+
 }
 @media only screen and (max-height: 400px){
 	.landingPage{
