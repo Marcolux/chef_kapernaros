@@ -298,6 +298,11 @@ document.addEventListener('DOMContentLoaded', function() {
     ]
     const competitionShows_src = [
         {src:"competitionShows", caption: null },
+        {src:"https://res.cloudinary.com/drdrs6pdq/image/upload/v1726763368/Niko/competitions/BobbyFlay_3_pwamwn.webp", caption: null },
+        {src:"https://res.cloudinary.com/drdrs6pdq/image/upload/v1726763368/Niko/competitions/BobbyFlay_2_flbrxf.webp", caption: null },
+        {src:"https://res.cloudinary.com/drdrs6pdq/image/upload/v1726763368/Niko/competitions/BobbyFlay_1_ln5jbt.webp", caption: null },
+        {src:"https://res.cloudinary.com/drdrs6pdq/image/upload/v1726763368/Niko/competitions/BobbyFlay_5_b9cztz.webp", caption: null },
+        {src:"https://res.cloudinary.com/drdrs6pdq/image/upload/v1726763368/Niko/competitions/BobbyFlay_4_u0abbm.webp", caption: null },
         {src:"https://res.cloudinary.com/drdrs6pdq/image/upload/v1714619837/Niko/competitions/c_s_8_a7ucnk.webp", caption: null },
         {src:"https://res.cloudinary.com/drdrs6pdq/image/upload/v1714619857/Niko/competitions/c_s_10_cgzqss.webp", caption: null },
         {src:"https://res.cloudinary.com/drdrs6pdq/image/upload/v1715043709/viber_image_2024-05-01_23-12-10-266_s3fepo.webp", caption: null },
@@ -369,7 +374,13 @@ document.addEventListener('DOMContentLoaded', function() {
             initPicCollection(picColl[0], picSource[0])
         })
     })
-    allNotActiveTi[0].click()
+    allNotActiveTi[3].addEventListener('click', () => {
+        if ( localStorage.getItem('loading_competions') === 'true' ) localStorage.removeItem('loading_competions')
+    })
+    localStorage.getItem('loading_competions') === 'true' ?
+        allNotActiveTi[3].click()
+    :
+        allNotActiveTi[0].click()
 })
 
   
