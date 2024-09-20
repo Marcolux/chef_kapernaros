@@ -602,7 +602,7 @@ $primaryColorLight: #00000090;
 		max-width: 680px;
 		max-height: 910px;
 		background-image: url('./../../images/niko_bobbyflay_pic.jpg');
-		background-size: contain;
+		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
 		display: grid;
@@ -1127,6 +1127,31 @@ $primaryColorLight: #00000090;
 	}
 
 }
+@media only screen and (max-width: 450px){
+	#bobbyFlay{
+		height: 100% !important;
+		width: 100% !important;
+		#bobbyFlayDiv{
+			background-size: cover;
+			width: 90%;
+			height: 95%;
+			min-width: 250px !important;
+			min-height: 250px !important;
+			#logoCont{
+				height: 47%;
+			}
+			#highlightsBob{
+				width: 80%; 
+				p{
+					font-size: 16px !important;
+				}
+				#clickToPics{
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
 @media only screen and (max-height: 400px){
 	.landingPage{
 		padding: 0px 0px !important;
@@ -1303,6 +1328,31 @@ $primaryColorLight: #00000090;
 		img{
 			align-self: baseline;
 			height: 11vh;
+		}
+	}
+	#bobbyFlay{
+		height: 100% !important;
+		width: 100% !important;
+		#bobbyFlayDiv{
+			background-size: cover;
+			background-position-y:  -100px;
+			width: 90%;
+			height: 95%;
+			min-width: 250px !important;
+			min-height: 250px !important;
+			#logoCont{
+				height: 47%;
+			}
+			#highlightsBob{
+				width: 70%; 
+				bottom: 85%;
+				p{
+					font-size: 14px !important;
+				}
+				#clickToPics{
+					font-size: 16px;
+				}
+			}
 		}
 	}
 
